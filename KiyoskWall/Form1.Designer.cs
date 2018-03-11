@@ -89,6 +89,7 @@
             this.pic1.TabIndex = 0;
             this.pic1.TabStop = false;
             this.pic1.Tag = "salam";
+            this.pic1.Click += new System.EventHandler(this.pic1_Click);
             // 
             // pic2
             // 
@@ -98,6 +99,7 @@
             this.pic2.Size = new System.Drawing.Size(256, 139);
             this.pic2.TabIndex = 1;
             this.pic2.TabStop = false;
+            this.pic2.Click += new System.EventHandler(this.pic2_Click);
             // 
             // pic3
             // 
@@ -108,6 +110,7 @@
             this.pic3.Size = new System.Drawing.Size(256, 139);
             this.pic3.TabIndex = 2;
             this.pic3.TabStop = false;
+            this.pic3.Click += new System.EventHandler(this.pic3_Click);
             // 
             // pic4
             // 
@@ -117,6 +120,7 @@
             this.pic4.Size = new System.Drawing.Size(256, 139);
             this.pic4.TabIndex = 3;
             this.pic4.TabStop = false;
+            this.pic4.Click += new System.EventHandler(this.pic4_Click);
             // 
             // pic5
             // 
@@ -126,6 +130,7 @@
             this.pic5.Size = new System.Drawing.Size(256, 139);
             this.pic5.TabIndex = 4;
             this.pic5.TabStop = false;
+            this.pic5.Click += new System.EventHandler(this.pic5_Click);
             // 
             // pic10
             // 
@@ -135,6 +140,8 @@
             this.pic10.Size = new System.Drawing.Size(256, 139);
             this.pic10.TabIndex = 9;
             this.pic10.TabStop = false;
+            this.pic10.Visible = false;
+            this.pic10.Click += new System.EventHandler(this.pic10_Click);
             // 
             // pic9
             // 
@@ -144,6 +151,8 @@
             this.pic9.Size = new System.Drawing.Size(256, 139);
             this.pic9.TabIndex = 8;
             this.pic9.TabStop = false;
+            this.pic9.Visible = false;
+            this.pic9.Click += new System.EventHandler(this.pic9_Click);
             // 
             // pic8
             // 
@@ -154,6 +163,8 @@
             this.pic8.Size = new System.Drawing.Size(256, 139);
             this.pic8.TabIndex = 7;
             this.pic8.TabStop = false;
+            this.pic8.Visible = false;
+            this.pic8.Click += new System.EventHandler(this.pic8_Click);
             // 
             // pic7
             // 
@@ -163,6 +174,8 @@
             this.pic7.Size = new System.Drawing.Size(256, 139);
             this.pic7.TabIndex = 6;
             this.pic7.TabStop = false;
+            this.pic7.Visible = false;
+            this.pic7.Click += new System.EventHandler(this.pic7_Click);
             // 
             // pic6
             // 
@@ -172,6 +185,8 @@
             this.pic6.Size = new System.Drawing.Size(256, 139);
             this.pic6.TabIndex = 5;
             this.pic6.TabStop = false;
+            this.pic6.Visible = false;
+            this.pic6.Click += new System.EventHandler(this.pic6_Click);
             // 
             // pic15
             // 
@@ -181,6 +196,8 @@
             this.pic15.Size = new System.Drawing.Size(256, 139);
             this.pic15.TabIndex = 14;
             this.pic15.TabStop = false;
+            this.pic15.Visible = false;
+            this.pic15.Click += new System.EventHandler(this.pic15_Click);
             // 
             // pic14
             // 
@@ -190,6 +207,8 @@
             this.pic14.Size = new System.Drawing.Size(256, 139);
             this.pic14.TabIndex = 13;
             this.pic14.TabStop = false;
+            this.pic14.Visible = false;
+            this.pic14.Click += new System.EventHandler(this.pic14_Click);
             // 
             // pic13
             // 
@@ -200,6 +219,8 @@
             this.pic13.Size = new System.Drawing.Size(256, 139);
             this.pic13.TabIndex = 12;
             this.pic13.TabStop = false;
+            this.pic13.Visible = false;
+            this.pic13.Click += new System.EventHandler(this.pic13_Click);
             // 
             // pic12
             // 
@@ -209,6 +230,8 @@
             this.pic12.Size = new System.Drawing.Size(256, 139);
             this.pic12.TabIndex = 11;
             this.pic12.TabStop = false;
+            this.pic12.Visible = false;
+            this.pic12.Click += new System.EventHandler(this.pic12_Click);
             // 
             // pic11
             // 
@@ -218,6 +241,8 @@
             this.pic11.Size = new System.Drawing.Size(256, 139);
             this.pic11.TabIndex = 10;
             this.pic11.TabStop = false;
+            this.pic11.Visible = false;
+            this.pic11.Click += new System.EventHandler(this.pic11_Click);
             // 
             // pic20
             // 
@@ -227,6 +252,8 @@
             this.pic20.Size = new System.Drawing.Size(256, 139);
             this.pic20.TabIndex = 19;
             this.pic20.TabStop = false;
+            this.pic20.Visible = false;
+            this.pic20.Click += new System.EventHandler(this.pic20_Click);
             // 
             // pic19
             // 
@@ -236,6 +263,8 @@
             this.pic19.Size = new System.Drawing.Size(256, 139);
             this.pic19.TabIndex = 18;
             this.pic19.TabStop = false;
+            this.pic19.Visible = false;
+            this.pic19.Click += new System.EventHandler(this.pic19_Click);
             // 
             // pic18
             // 
@@ -246,6 +275,8 @@
             this.pic18.Size = new System.Drawing.Size(256, 139);
             this.pic18.TabIndex = 17;
             this.pic18.TabStop = false;
+            this.pic18.Visible = false;
+            this.pic18.Click += new System.EventHandler(this.pic18_Click);
             // 
             // pic17
             // 
@@ -255,6 +286,8 @@
             this.pic17.Size = new System.Drawing.Size(256, 139);
             this.pic17.TabIndex = 16;
             this.pic17.TabStop = false;
+            this.pic17.Visible = false;
+            this.pic17.Click += new System.EventHandler(this.pic17_Click);
             // 
             // pic16
             // 
@@ -264,6 +297,8 @@
             this.pic16.Size = new System.Drawing.Size(256, 139);
             this.pic16.TabIndex = 15;
             this.pic16.TabStop = false;
+            this.pic16.Visible = false;
+            this.pic16.Click += new System.EventHandler(this.pic16_Click);
             // 
             // pic25
             // 
@@ -273,6 +308,8 @@
             this.pic25.Size = new System.Drawing.Size(256, 139);
             this.pic25.TabIndex = 24;
             this.pic25.TabStop = false;
+            this.pic25.Visible = false;
+            this.pic25.Click += new System.EventHandler(this.pic25_Click);
             // 
             // pic24
             // 
@@ -282,6 +319,8 @@
             this.pic24.Size = new System.Drawing.Size(256, 139);
             this.pic24.TabIndex = 23;
             this.pic24.TabStop = false;
+            this.pic24.Visible = false;
+            this.pic24.Click += new System.EventHandler(this.pic24_Click);
             // 
             // pic23
             // 
@@ -292,6 +331,8 @@
             this.pic23.Size = new System.Drawing.Size(256, 139);
             this.pic23.TabIndex = 22;
             this.pic23.TabStop = false;
+            this.pic23.Visible = false;
+            this.pic23.Click += new System.EventHandler(this.pic23_Click);
             // 
             // pic22
             // 
@@ -301,6 +342,8 @@
             this.pic22.Size = new System.Drawing.Size(256, 139);
             this.pic22.TabIndex = 21;
             this.pic22.TabStop = false;
+            this.pic22.Visible = false;
+            this.pic22.Click += new System.EventHandler(this.pic22_Click);
             // 
             // pic21
             // 
@@ -310,6 +353,8 @@
             this.pic21.Size = new System.Drawing.Size(256, 139);
             this.pic21.TabIndex = 20;
             this.pic21.TabStop = false;
+            this.pic21.Visible = false;
+            this.pic21.Click += new System.EventHandler(this.pic21_Click);
             // 
             // Form1
             // 

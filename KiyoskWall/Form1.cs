@@ -17,6 +17,9 @@ namespace KiyoskWall
         System.Resources.ResourceManager rm = new ResourceManager(typeof(Resource1));
         private string dtnow;
         private string person_id;
+        private int restaurant_id;
+        private Person p1;
+        private KiyoskWall.PoonehEntities db;
         public Form1()
         {
             InitializeComponent();
@@ -27,12 +30,11 @@ namespace KiyoskWall
             this.WindowState = FormWindowState.Maximized;
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            
-
-
-                        var db =new  PoonehEntities();
+           
+            db =new  PoonehEntities();
             dtnow = "1396/11/19";
-            Person p1=new Person(){NationalCode = "0440005191",WorkSheet_Id_FK = 22,LastName = "محمدی",Name = "سیدمنصور"};
+            restaurant_id = 26;
+            p1=new Person(){NationalCode = "0440005191",WorkSheet_Id_FK = 22,LastName = "محمدی",Name = "سیدمنصور"};
             Person p2 = new Person() { NationalCode = "0440005191", WorkSheet_Id_FK = 21, LastName = "مقدم", Name = "عباس" };
 
             ListDate ty=new ListDate(22);
@@ -41,7 +43,7 @@ namespace KiyoskWall
 
            SetPicturebox(uu);
 
-            MessageBox.Show(pic5.Name);
+            
 
         }
         public void SetPicturebox(List<Date> ll)
@@ -73,10 +75,12 @@ namespace KiyoskWall
             p.Add(pic24);
             p.Add(pic25);
 
-            for (int i = 0; i < p.Count; i++)
+            for (int i = 0; i < ll.Count; i++)
             {
                 p.ElementAt(i).Image = SetDate(ll.ElementAt(i), 1);
                 p.ElementAt(i).Name = ll.ElementAt(i).date;
+                p.ElementAt(i).Visible = true;
+
             }
         }
         public Bitmap SetDate(Date date, int meal)
@@ -104,6 +108,156 @@ namespace KiyoskWall
             g.Flush();
 
             return bmp;
+        }
+
+        private void pic1_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm=new ReserveFood(pic1.Name,restaurant_id,p1);
+            frm.Show();
+        }
+
+        private void pic2_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic2.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic3_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic3.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic4_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic4.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic5_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic5.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic6_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic6.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic7_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic7.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic8_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic8.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic9_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic9.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic10_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic10.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic11_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic11.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic12_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic12.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic13_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic13.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic14_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic14.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic15_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic15.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic16_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic16.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic17_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic17.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic18_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic18.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic19_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic19.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic20_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic20.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic21_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic21.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic22_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic22.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic23_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic23.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic24_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic24.Name, restaurant_id, p1);
+            frm.Show();
+        }
+
+        private void pic25_Click(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic25.Name, restaurant_id, p1);
+            frm.Show();
         }
     }
 }
