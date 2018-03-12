@@ -34,7 +34,7 @@ namespace KiyoskWall
             db =new  PoonehEntities();
             dtnow = "1396/11/19";
             restaurant_id = 26;
-            p1=new Person(){NationalCode = "0440005191",WorkSheet_Id_FK = 22,LastName = "محمدی",Name = "سیدمنصور"};
+            p1 = db.People.Where(p => p.NationalCode == "0440005191").FirstOrDefault();
             Person p2 = new Person() { NationalCode = "0440005191", WorkSheet_Id_FK = 21, LastName = "مقدم", Name = "عباس" };
 
             ListDate ty=new ListDate(22);
