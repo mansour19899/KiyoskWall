@@ -87,7 +87,7 @@ namespace KiyoskWall
         {
             Bitmap bmp;
             Brush br;
-            bmp = (Bitmap)rm.GetObject("lunch");
+            bmp = (Bitmap)rm.GetObject("ButtonBG");
             br = Brushes.Black;
             if (meal != 1)
             {
@@ -95,16 +95,16 @@ namespace KiyoskWall
                 br = Brushes.White;
             }
 
-            RectangleF rectf = new RectangleF(60, 10, 90, 50);
-            RectangleF rectf1 = new RectangleF(40, 50, 120, 50);
+            RectangleF rectf = new RectangleF(100, 40, 90, 50);
+            RectangleF rectf1 = new RectangleF(90, 90, 120, 50);
 
             Graphics g = Graphics.FromImage(bmp);
 
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
             g.PixelOffsetMode = PixelOffsetMode.HighQuality;
-            g.DrawString(date.day, new Font("B Nazanin", 16), br, rectf);
-            g.DrawString(date.date, new Font("B Nazanin", 14), br, rectf1);
+            g.DrawString(date.day, new Font("B Nazanin", 26), br, rectf);
+            g.DrawString(date.date, new Font("B Nazanin", 26), br, rectf1);
             g.Flush();
 
             return bmp;
@@ -258,6 +258,11 @@ namespace KiyoskWall
         {
             ReserveFood frm = new ReserveFood(pic25.Name, restaurant_id, p1);
             frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

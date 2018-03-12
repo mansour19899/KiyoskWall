@@ -19,7 +19,7 @@ namespace KiyoskWall
         public List<Date> GetList()
         {
             var db = new PoonehEntities();
-            string dtnow = "1396/11/06";
+            string dtnow = "1396/11/05";
            List<Date> q = (from p in db.Schedules
                 where p.SDate.CompareTo(dtnow) == 1
                 select new Date {date = p.SDate}).Distinct().ToList();

@@ -58,5 +58,10 @@ namespace KiyoskWall
             pictureBox3.Image = Image.FromStream(mStreammm);
             label3.Text = qq.ElementAt(2).Name;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

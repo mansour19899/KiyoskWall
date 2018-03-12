@@ -175,6 +175,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ButtonBG.png" />
     <None Include="Resources\blue.jpg" />
     <None Include="Resources\wallpaper1.jpg" />
     <None Include="Resources\1232337-blue-wallpaper.jpg" />
