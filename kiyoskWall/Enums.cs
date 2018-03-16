@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace KiyoskWall
 {
-   public class Date
+    public enum Shift
     {
-        public string date { get; set; }
-        public string day { get; set; }
-        public int meal { get; set; }
+        Rozkar=22,
+        A8 = 7,
+        B8 = 18,
+        C8 = 19,
+        D8 = 20,
+        A12=6,
+        B12=16,
+        C12=17
     }
 }

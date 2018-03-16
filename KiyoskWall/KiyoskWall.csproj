@@ -58,6 +58,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Date.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +176,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\ButtonBGd.png" />
     <None Include="Resources\ButtonBG.png" />
     <None Include="Resources\blue.jpg" />
     <None Include="Resources\wallpaper1.jpg" />

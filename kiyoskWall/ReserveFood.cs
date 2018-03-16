@@ -17,16 +17,18 @@ namespace KiyoskWall
         private Person _person;
         private int _restaurant_id;
         private string _date;
+        private int _meal;
         private KiyoskWall.PoonehEntities db;
         List<Schedule> Schedules;
         private PoonehReservation t;
 
-        public ReserveFood(string date,int restaurantId,Person person)
+        public ReserveFood(string date,int restaurantId,Person person,string meal)
         {
             InitializeComponent();
             _person = person;
             _date = date;
             _restaurant_id = restaurantId;
+            _meal = int.Parse(meal);
             db = new PoonehEntities();
             
         }
@@ -36,10 +38,20 @@ namespace KiyoskWall
             this.WindowState = FormWindowState.Maximized;
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+
+            if (_meal == 1)
+                lbMeal.Text = "ناهار";
+            else
+            {
+                lbMeal.Text = "شام";
+                
+            }
+                
+                
             lbDate.Text = _date;
             Schedules = (from p in db.Schedules
                 where p.SDate.Equals(_date) & p.Restaurant_Id_Fk == _restaurant_id
-                                           & p.Meal_Id_Fk == 1
+                                           & p.Meal_Id_Fk ==_meal
                 select p).ToList();
             int t = (int)Schedules.ElementAt(0).Tray_Id_Fk;
             int tt = (int)Schedules.ElementAt(1).Tray_Id_Fk;
@@ -71,89 +83,17 @@ namespace KiyoskWall
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             SetReserve(0);
-            //var x1 = trayIds.ElementAt(0).Id;
-            //var x2 = trayIds.ElementAt(1).Id;
-            //var x3 = trayIds.ElementAt(2).Id;
-            //PoonehReservation t = db.PoonehReservations.Where(i => i.Schedule_Id_Fk == x1 || i.Schedule_Id_Fk == x2 || i.Schedule_Id_Fk == x3).Where(p => p.Person_Id_Fk == _person.Id).FirstOrDefault();
-            //if (t != null)
-            //{
-            //    t.Tray_Id_Fk = trayIds.ElementAt(0).Tray_Id_Fk;
-            //    t.Schedule_Id_Fk = trayIds.ElementAt(0).Id;
-            //   int tt= db.SaveChanges();
-            //    MessageBox.Show(tt.ToString());
-            //}
-            //else
-            //{
-            //    PoonehReservation reserv = new PoonehReservation()
-            //    {
-            //        Tray_Id_Fk = trayIds.ElementAt(0).Tray_Id_Fk,
-            //        Person_Id_Fk = _person.Id,
-            //        Schedule_Id_Fk = trayIds.ElementAt(0).Id,
-            //        Company_Id_Fk = _person.Company_Id_Fk,
-            //        Unit_Id_Fk = _person.Unit_Id_Fk,
-            //        Restaurant_Id_Fk = trayIds.ElementAt(0).Restaurant_Id_Fk,
-            //        Meal_Id_Fk = trayIds.ElementAt(0).Meal_Id_Fk
-
-            //    };
-            //    db.PoonehReservations.Add(reserv);
-            //    int x = db.SaveChanges();
-            //    if (x > 0)
-            //    {
-            //        MessageBox.Show("رزرو انجام شد");
-            //        this.Close();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("خطا در رزرو");
-            //    }
-            //}
-
-
 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             SetReserve(1);
-            //var x1 = trayIds.ElementAt(0).Id;
-            //var x2 = trayIds.ElementAt(1).Id;
-            //var x3 = trayIds.ElementAt(2).Id;
-            //PoonehReservation t = db.PoonehReservations.Where(i => i.Schedule_Id_Fk == x1|| i.Schedule_Id_Fk == x2|| i.Schedule_Id_Fk == x3).Where(p=>p.Person_Id_Fk==_person.Id).FirstOrDefault();
-            //if (t != null)
-            //{
-            //    t.Tray_Id_Fk = trayIds.ElementAt(1).Tray_Id_Fk;
-            //    t.Schedule_Id_Fk = trayIds.ElementAt(1).Id;
-            //    int tt= db.SaveChanges();
-            //    MessageBox.Show(tt.ToString());
-            //    this.Close();
-
-            //}
-            //else
-            //{
-            //    PoonehReservation reserv = new PoonehReservation()
-            //    {
-            //        Tray_Id_Fk = trayIds.ElementAt(1).Tray_Id_Fk,
-            //        Person_Id_Fk = _person.Id,
-            //        Schedule_Id_Fk = trayIds.ElementAt(1).Id,
-            //        Company_Id_Fk = _person.Company_Id_Fk,
-            //        Unit_Id_Fk = _person.Unit_Id_Fk,
-            //        Restaurant_Id_Fk = trayIds.ElementAt(1).Restaurant_Id_Fk,
-            //        Meal_Id_Fk = trayIds.ElementAt(1).Meal_Id_Fk
-
-            //    };
-            //    db.PoonehReservations.Add(reserv);
-            //    int x = db.SaveChanges();
-            //    MessageBox.Show(x.ToString());
-            //    if (x > 0)
-            //    {
-            //        MessageBox.Show("رزرو انجام شد");
-            //        this.Close();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("خطا در رزرو");
-            //    }
-            //}
+           
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            SetReserve(2);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -211,9 +151,6 @@ namespace KiyoskWall
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            SetReserve(2);
-        }
+
     }
 }

@@ -66,5 +66,14 @@ namespace KiyoskWall
             }
             return dayy;
         }
+
+        public static int DiffDaysShamsi(this string FirstDate, string SecondtDate)
+        {
+            DateTime dt = FirstDate.ToGeorgianDateTime();
+            DateTime dtt = SecondtDate.ToGeorgianDateTime();
+            TimeSpan dif = dt - dtt;
+            
+            return dif.Days;
+        }
     }
 }

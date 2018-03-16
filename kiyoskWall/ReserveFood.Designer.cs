@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbMeal = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -56,17 +56,17 @@
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lbMeal
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("B Mitra", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(804, 0);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(83, 57);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "ناهار";
+            this.lbMeal.AutoSize = true;
+            this.lbMeal.BackColor = System.Drawing.Color.Transparent;
+            this.lbMeal.Font = new System.Drawing.Font("B Mitra", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbMeal.Location = new System.Drawing.Point(804, 0);
+            this.lbMeal.Name = "lbMeal";
+            this.lbMeal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbMeal.Size = new System.Drawing.Size(83, 57);
+            this.lbMeal.TabIndex = 6;
+            this.lbMeal.Text = "ناهار";
             // 
             // lbDate
             // 
@@ -116,7 +116,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(36, 821);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 57);
             this.button1.TabIndex = 8;
@@ -133,13 +133,13 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.lbDate);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lbMeal);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(45, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1695, 932);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
@@ -197,7 +197,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbMeal;
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
