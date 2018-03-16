@@ -34,21 +34,21 @@ namespace KiyoskWall
             db =new  PoonehEntities();
             dtnow = "1396/11/19";
             restaurant_id = 26;
-            p1 = db.People.Where(p => p.NationalCode == "0440005191").FirstOrDefault(); //rozkar
-            // p1 = db.People.Where(p => p.PersonelNo == "545642").FirstOrDefault();//c
+            //p1 = db.People.Where(p => p.NationalCode == "0440005191").FirstOrDefault(); //rozkar
+            p1 = db.People.Where(p => p.PersonelNo == "545642").FirstOrDefault();//c
             //p1 = db.People.Where(p => p.NationalCode == "1828039179").FirstOrDefault();  //b
             //p1 = db.People.Where(p => p.PersonelNo == "565807").FirstOrDefault();   //d
             //p1 = db.People.Where(p => p.PersonelNo == "568161").FirstOrDefault();   //a
 
-
+            lbName.Text = p1.Name + " " + p1.LastName;
             ListDate ty=new ListDate(p1.WorkSheet_Id_FK.Value);
 
             var uu = ty.GetList();
             
 
            SetPicturebox(uu);
-
-            
+      
+           
 
 
         }
@@ -89,6 +89,7 @@ namespace KiyoskWall
                 p.ElementAt(i).Visible = true;
 
             }
+           
         }
         public Bitmap SetDate(Date date, int meal)
         {
@@ -117,9 +118,15 @@ namespace KiyoskWall
             return bmp;
         }
 
-        private void pic1_Click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            ReserveFood frm=new ReserveFood(pic1.Name,restaurant_id,p1,pic1.Text);
+            this.Close();
+        }
+
+        private void pic1_Click_1(object sender, EventArgs e)
+        {
+            ReserveFood frm = new ReserveFood(pic1.Name, restaurant_id, p1, pic1.Text);
             frm.Show();
         }
 
@@ -259,17 +266,6 @@ namespace KiyoskWall
         {
             ReserveFood frm = new ReserveFood(pic24.Name, restaurant_id, p1, pic24.Text);
             frm.Show();
-        }
-
-        private void pic25_Click(object sender, EventArgs e)
-        {
-            ReserveFood frm = new ReserveFood(pic25.Name, restaurant_id, p1, pic25.Text);
-            frm.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
