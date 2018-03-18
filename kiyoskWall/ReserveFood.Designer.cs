@@ -46,12 +46,13 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Font = new System.Drawing.Font("B Mitra", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(1173, 73);
+            this.label1.Location = new System.Drawing.Point(804, 100);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(580, 48);
+            this.label1.Size = new System.Drawing.Size(347, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,12 +61,13 @@
             // 
             this.lbMeal.AutoSize = true;
             this.lbMeal.BackColor = System.Drawing.Color.Transparent;
-            this.lbMeal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbMeal.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbMeal.Font = new System.Drawing.Font("B Mitra", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbMeal.Location = new System.Drawing.Point(588, 73);
+            this.lbMeal.Location = new System.Drawing.Point(453, 100);
+            this.lbMeal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMeal.Name = "lbMeal";
             this.lbMeal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbMeal.Size = new System.Drawing.Size(579, 48);
+            this.lbMeal.Size = new System.Drawing.Size(347, 39);
             this.lbMeal.TabIndex = 6;
             this.lbMeal.Text = "ناهار";
             this.lbMeal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,10 +77,11 @@
             this.lbDate.BackColor = System.Drawing.Color.Transparent;
             this.lbDate.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbDate.Font = new System.Drawing.Font("B Mitra", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbDate.Location = new System.Drawing.Point(588, 18);
+            this.lbDate.Location = new System.Drawing.Point(453, 55);
+            this.lbDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDate.Name = "lbDate";
             this.lbDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbDate.Size = new System.Drawing.Size(579, 55);
+            this.lbDate.Size = new System.Drawing.Size(347, 45);
             this.lbDate.TabIndex = 7;
             this.lbDate.Text = "تاریخ";
             this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,11 +89,10 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Location = new System.Drawing.Point(605, 559);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(20);
+            this.pictureBox3.Location = new System.Drawing.Point(466, 463);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(545, 391);
+            this.pictureBox3.Size = new System.Drawing.Size(300, 254);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -99,11 +101,10 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 141);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(20);
+            this.pictureBox2.Location = new System.Drawing.Point(115, 155);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(545, 378);
+            this.pictureBox2.Size = new System.Drawing.Size(321, 228);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -112,11 +113,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(1190, 141);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(20);
+            this.pictureBox1.Location = new System.Drawing.Point(817, 155);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(546, 378);
+            this.pictureBox1.Size = new System.Drawing.Size(321, 228);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -125,12 +125,13 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("B Mitra", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(3, 73);
+            this.label2.Location = new System.Drawing.Point(102, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(579, 48);
+            this.label2.Size = new System.Drawing.Size(347, 39);
             this.label2.TabIndex = 9;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,27 +139,32 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackgroundImage = global::KiyoskWall.Resource1.blue;
-            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbDate, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbMeal, 1, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lbDate, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbMeal, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.33058F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.66942F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 418F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 430F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1756, 970);
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1256, 788);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // label3
@@ -167,22 +173,23 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label3.Font = new System.Drawing.Font("B Mitra", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(588, 482);
+            this.label3.Location = new System.Drawing.Point(453, 402);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(579, 57);
+            this.label3.Size = new System.Drawing.Size(347, 45);
             this.label3.TabIndex = 10;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ReserveFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
-            this.ClientSize = new System.Drawing.Size(1756, 970);
+            this.ClientSize = new System.Drawing.Size(1256, 788);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ReserveFood";
             this.Text = "ReserveFood";
             this.Load += new System.EventHandler(this.ReserveFood_Load);
