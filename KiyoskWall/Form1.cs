@@ -19,10 +19,11 @@ namespace KiyoskWall
         private string person_id;
         private int restaurant_id;
         private Person p1;
-        private KiyoskWall.PoonehEntities db;
+        private KiyoskWall.PoonehEntities1 db;
         public Form1()
         {
             InitializeComponent();
+            tableLayoutPanel1.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,24 +32,27 @@ namespace KiyoskWall
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
            
-            db =new  PoonehEntities();
+            db =new  PoonehEntities1();
             dtnow = "1396/11/19";
+
             restaurant_id = 26;
             //p1 = db.People.Where(p => p.NationalCode == "0440005191").FirstOrDefault(); //rozkar
-            p1 = db.People.Where(p => p.PersonelNo == "545642").FirstOrDefault();//c
+            //p1 = db.People.Where(p => p.PersonelNo == "545642").FirstOrDefault();//c
             //p1 = db.People.Where(p => p.NationalCode == "1828039179").FirstOrDefault();  //b
-            //p1 = db.People.Where(p => p.PersonelNo == "565807").FirstOrDefault();   //d
+            p1 = db.People.Where(p => p.PersonelNo == "565807").FirstOrDefault();   //d
             //p1 = db.People.Where(p => p.PersonelNo == "568161").FirstOrDefault();   //a
 
             lbName.Text = p1.Name + " " + p1.LastName;
+            lbRestuarent.Text = "رستوران مجاز:  "+db.Restaurants.FirstOrDefault(p => p.Id == restaurant_id).Name;
             ListDate ty=new ListDate(p1.WorkSheet_Id_FK.Value);
 
             var uu = ty.GetList();
             
 
            SetPicturebox(uu);
-      
-           
+            tableLayoutPanel1.Visible = true;
+
+
 
 
         }
@@ -104,15 +108,15 @@ namespace KiyoskWall
             }
 
             RectangleF rectf = new RectangleF(100, 40, 90, 50);
-            RectangleF rectf1 = new RectangleF(90, 90, 120, 50);
+            RectangleF rectf1 = new RectangleF(90, 90, 140, 50);
 
             Graphics g = Graphics.FromImage(bmp);
 
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
             g.PixelOffsetMode = PixelOffsetMode.HighQuality;
-            g.DrawString(date.day, new Font("B Nazanin", 26), br, rectf);
-            g.DrawString(date.date, new Font("B Nazanin", 26), br, rectf1);
+            g.DrawString(date.day, new Font("B Nazanin", 20), br, rectf);
+            g.DrawString(date.date, new Font("B Nazanin", 20), br, rectf1);
             g.Flush();
 
             return bmp;

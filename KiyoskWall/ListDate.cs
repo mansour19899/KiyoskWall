@@ -18,12 +18,14 @@ namespace KiyoskWall
 
         public List<Date> GetList()
         {
-            var db = new PoonehEntities();
+            var db = new PoonehEntities1();
             List<Date> q;
-            string dtnow = "1396/11/01";
+            string dtnow = "1396/12/26";
+            //string dtnow = DateTime.Now.ToPersianDateString();
             q = (from p in db.Schedules
                 where p.SDate.CompareTo(dtnow) == 1
-                select new Date { date = p.SDate }).Distinct().ToList();
+                select new Date { date = p.SDate } 
+                ).Distinct().OrderBy(o => o.date).ToList();
 
             if (_worksheet == (int)Shift.Rozkar)
             {
@@ -33,7 +35,7 @@ namespace KiyoskWall
 
                 for (int i = 0; i < qq.Count; i++)
                 {
-                    var ee = q.Where(p => p.date == qq.ElementAt(i).date).Single();
+                    var ee = q.Where(p => p.date == qq.ElementAt(i).date).FirstOrDefault();
                     q.Remove(ee);
                 }
 

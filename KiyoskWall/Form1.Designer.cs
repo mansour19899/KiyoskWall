@@ -56,6 +56,8 @@
             this.pic24 = new System.Windows.Forms.PictureBox();
             this.pic25 = new System.Windows.Forms.PictureBox();
             this.lbName = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbRestuarent = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -83,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic25)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -91,17 +94,18 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.660333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.33967F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbName, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.25167F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.74833F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1827, 970);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1040, 640);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -133,20 +137,20 @@
             this.flowLayoutPanel1.Controls.Add(this.pic24);
             this.flowLayoutPanel1.Controls.Add(this.pic25);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(132, 122);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(73, 79);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1549, 773);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(857, 500);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // pic1
             // 
             this.pic1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic1.Location = new System.Drawing.Point(1285, 4);
-            this.pic1.Margin = new System.Windows.Forms.Padding(4);
+            this.pic1.Location = new System.Drawing.Point(659, 3);
             this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(260, 200);
+            this.pic1.Size = new System.Drawing.Size(195, 162);
             this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic1.TabIndex = 30;
             this.pic1.TabStop = false;
@@ -156,10 +160,9 @@
             // 
             this.pic2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic2.Location = new System.Drawing.Point(1017, 4);
-            this.pic2.Margin = new System.Windows.Forms.Padding(4);
+            this.pic2.Location = new System.Drawing.Point(458, 3);
             this.pic2.Name = "pic2";
-            this.pic2.Size = new System.Drawing.Size(260, 200);
+            this.pic2.Size = new System.Drawing.Size(195, 162);
             this.pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic2.TabIndex = 29;
             this.pic2.TabStop = false;
@@ -169,10 +172,10 @@
             // 
             this.pic3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic3.Location = new System.Drawing.Point(748, 5);
-            this.pic3.Margin = new System.Windows.Forms.Padding(5);
+            this.pic3.Location = new System.Drawing.Point(256, 4);
+            this.pic3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic3.Name = "pic3";
-            this.pic3.Size = new System.Drawing.Size(260, 200);
+            this.pic3.Size = new System.Drawing.Size(195, 162);
             this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic3.TabIndex = 28;
             this.pic3.TabStop = false;
@@ -182,10 +185,10 @@
             // 
             this.pic4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic4.Location = new System.Drawing.Point(478, 5);
-            this.pic4.Margin = new System.Windows.Forms.Padding(5);
+            this.pic4.Location = new System.Drawing.Point(53, 4);
+            this.pic4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic4.Name = "pic4";
-            this.pic4.Size = new System.Drawing.Size(260, 200);
+            this.pic4.Size = new System.Drawing.Size(195, 162);
             this.pic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic4.TabIndex = 27;
             this.pic4.TabStop = false;
@@ -194,10 +197,10 @@
             // pic5
             // 
             this.pic5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic5.Location = new System.Drawing.Point(208, 5);
-            this.pic5.Margin = new System.Windows.Forms.Padding(5);
+            this.pic5.Location = new System.Drawing.Point(658, 174);
+            this.pic5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic5.Name = "pic5";
-            this.pic5.Size = new System.Drawing.Size(260, 200);
+            this.pic5.Size = new System.Drawing.Size(195, 162);
             this.pic5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic5.TabIndex = 33;
             this.pic5.TabStop = false;
@@ -207,10 +210,10 @@
             // pic6
             // 
             this.pic6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic6.Location = new System.Drawing.Point(1284, 215);
-            this.pic6.Margin = new System.Windows.Forms.Padding(5);
+            this.pic6.Location = new System.Drawing.Point(455, 174);
+            this.pic6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic6.Name = "pic6";
-            this.pic6.Size = new System.Drawing.Size(260, 200);
+            this.pic6.Size = new System.Drawing.Size(195, 162);
             this.pic6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic6.TabIndex = 32;
             this.pic6.TabStop = false;
@@ -220,10 +223,9 @@
             // pic7
             // 
             this.pic7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic7.Location = new System.Drawing.Point(1015, 214);
-            this.pic7.Margin = new System.Windows.Forms.Padding(4);
+            this.pic7.Location = new System.Drawing.Point(253, 173);
             this.pic7.Name = "pic7";
-            this.pic7.Size = new System.Drawing.Size(260, 200);
+            this.pic7.Size = new System.Drawing.Size(195, 162);
             this.pic7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic7.TabIndex = 45;
             this.pic7.TabStop = false;
@@ -233,10 +235,9 @@
             // pic8
             // 
             this.pic8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic8.Location = new System.Drawing.Point(747, 214);
-            this.pic8.Margin = new System.Windows.Forms.Padding(4);
+            this.pic8.Location = new System.Drawing.Point(52, 173);
             this.pic8.Name = "pic8";
-            this.pic8.Size = new System.Drawing.Size(260, 200);
+            this.pic8.Size = new System.Drawing.Size(195, 162);
             this.pic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic8.TabIndex = 44;
             this.pic8.TabStop = false;
@@ -246,10 +247,9 @@
             // pic9
             // 
             this.pic9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic9.Location = new System.Drawing.Point(479, 214);
-            this.pic9.Margin = new System.Windows.Forms.Padding(4);
+            this.pic9.Location = new System.Drawing.Point(659, 343);
             this.pic9.Name = "pic9";
-            this.pic9.Size = new System.Drawing.Size(260, 200);
+            this.pic9.Size = new System.Drawing.Size(195, 162);
             this.pic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic9.TabIndex = 34;
             this.pic9.TabStop = false;
@@ -259,10 +259,10 @@
             // pic10
             // 
             this.pic10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic10.Location = new System.Drawing.Point(210, 215);
-            this.pic10.Margin = new System.Windows.Forms.Padding(5);
+            this.pic10.Location = new System.Drawing.Point(457, 344);
+            this.pic10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic10.Name = "pic10";
-            this.pic10.Size = new System.Drawing.Size(260, 200);
+            this.pic10.Size = new System.Drawing.Size(195, 162);
             this.pic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic10.TabIndex = 43;
             this.pic10.TabStop = false;
@@ -272,10 +272,9 @@
             // pic11
             // 
             this.pic11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic11.Location = new System.Drawing.Point(1285, 424);
-            this.pic11.Margin = new System.Windows.Forms.Padding(4);
+            this.pic11.Location = new System.Drawing.Point(255, 343);
             this.pic11.Name = "pic11";
-            this.pic11.Size = new System.Drawing.Size(260, 200);
+            this.pic11.Size = new System.Drawing.Size(195, 162);
             this.pic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic11.TabIndex = 35;
             this.pic11.TabStop = false;
@@ -285,10 +284,10 @@
             // pic12
             // 
             this.pic12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic12.Location = new System.Drawing.Point(1016, 425);
-            this.pic12.Margin = new System.Windows.Forms.Padding(5);
+            this.pic12.Location = new System.Drawing.Point(53, 344);
+            this.pic12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic12.Name = "pic12";
-            this.pic12.Size = new System.Drawing.Size(260, 200);
+            this.pic12.Size = new System.Drawing.Size(195, 162);
             this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic12.TabIndex = 42;
             this.pic12.TabStop = false;
@@ -299,10 +298,10 @@
             // 
             this.pic13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic13.Location = new System.Drawing.Point(746, 425);
-            this.pic13.Margin = new System.Windows.Forms.Padding(5);
+            this.pic13.Location = new System.Drawing.Point(658, 514);
+            this.pic13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic13.Name = "pic13";
-            this.pic13.Size = new System.Drawing.Size(260, 200);
+            this.pic13.Size = new System.Drawing.Size(195, 162);
             this.pic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic13.TabIndex = 26;
             this.pic13.TabStop = false;
@@ -312,10 +311,10 @@
             // pic14
             // 
             this.pic14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic14.Location = new System.Drawing.Point(476, 425);
-            this.pic14.Margin = new System.Windows.Forms.Padding(5);
+            this.pic14.Location = new System.Drawing.Point(455, 514);
+            this.pic14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic14.Name = "pic14";
-            this.pic14.Size = new System.Drawing.Size(260, 200);
+            this.pic14.Size = new System.Drawing.Size(195, 162);
             this.pic14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic14.TabIndex = 41;
             this.pic14.TabStop = false;
@@ -325,10 +324,10 @@
             // pic15
             // 
             this.pic15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic15.Location = new System.Drawing.Point(206, 425);
-            this.pic15.Margin = new System.Windows.Forms.Padding(5);
+            this.pic15.Location = new System.Drawing.Point(252, 514);
+            this.pic15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic15.Name = "pic15";
-            this.pic15.Size = new System.Drawing.Size(260, 200);
+            this.pic15.Size = new System.Drawing.Size(195, 162);
             this.pic15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic15.TabIndex = 31;
             this.pic15.TabStop = false;
@@ -338,10 +337,9 @@
             // pic16
             // 
             this.pic16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic16.Location = new System.Drawing.Point(1285, 634);
-            this.pic16.Margin = new System.Windows.Forms.Padding(4);
+            this.pic16.Location = new System.Drawing.Point(50, 513);
             this.pic16.Name = "pic16";
-            this.pic16.Size = new System.Drawing.Size(260, 200);
+            this.pic16.Size = new System.Drawing.Size(195, 162);
             this.pic16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic16.TabIndex = 40;
             this.pic16.TabStop = false;
@@ -351,10 +349,10 @@
             // pic17
             // 
             this.pic17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic17.Location = new System.Drawing.Point(1016, 635);
-            this.pic17.Margin = new System.Windows.Forms.Padding(5);
+            this.pic17.Location = new System.Drawing.Point(658, 684);
+            this.pic17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic17.Name = "pic17";
-            this.pic17.Size = new System.Drawing.Size(260, 200);
+            this.pic17.Size = new System.Drawing.Size(195, 162);
             this.pic17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic17.TabIndex = 36;
             this.pic17.TabStop = false;
@@ -364,10 +362,9 @@
             // pic18
             // 
             this.pic18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic18.Location = new System.Drawing.Point(747, 634);
-            this.pic18.Margin = new System.Windows.Forms.Padding(4);
+            this.pic18.Location = new System.Drawing.Point(456, 683);
             this.pic18.Name = "pic18";
-            this.pic18.Size = new System.Drawing.Size(260, 200);
+            this.pic18.Size = new System.Drawing.Size(195, 162);
             this.pic18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic18.TabIndex = 39;
             this.pic18.TabStop = false;
@@ -377,10 +374,10 @@
             // pic19
             // 
             this.pic19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic19.Location = new System.Drawing.Point(478, 635);
-            this.pic19.Margin = new System.Windows.Forms.Padding(5);
+            this.pic19.Location = new System.Drawing.Point(254, 684);
+            this.pic19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic19.Name = "pic19";
-            this.pic19.Size = new System.Drawing.Size(260, 200);
+            this.pic19.Size = new System.Drawing.Size(195, 162);
             this.pic19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic19.TabIndex = 37;
             this.pic19.TabStop = false;
@@ -390,10 +387,10 @@
             // pic20
             // 
             this.pic20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic20.Location = new System.Drawing.Point(208, 635);
-            this.pic20.Margin = new System.Windows.Forms.Padding(5);
+            this.pic20.Location = new System.Drawing.Point(51, 684);
+            this.pic20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic20.Name = "pic20";
-            this.pic20.Size = new System.Drawing.Size(260, 200);
+            this.pic20.Size = new System.Drawing.Size(195, 162);
             this.pic20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic20.TabIndex = 38;
             this.pic20.TabStop = false;
@@ -403,10 +400,10 @@
             // pic21
             // 
             this.pic21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic21.Location = new System.Drawing.Point(1284, 845);
-            this.pic21.Margin = new System.Windows.Forms.Padding(5);
+            this.pic21.Location = new System.Drawing.Point(658, 854);
+            this.pic21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic21.Name = "pic21";
-            this.pic21.Size = new System.Drawing.Size(260, 200);
+            this.pic21.Size = new System.Drawing.Size(195, 162);
             this.pic21.TabIndex = 47;
             this.pic21.TabStop = false;
             this.pic21.Visible = false;
@@ -415,10 +412,10 @@
             // pic22
             // 
             this.pic22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic22.Location = new System.Drawing.Point(1014, 845);
-            this.pic22.Margin = new System.Windows.Forms.Padding(5);
+            this.pic22.Location = new System.Drawing.Point(455, 854);
+            this.pic22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic22.Name = "pic22";
-            this.pic22.Size = new System.Drawing.Size(260, 200);
+            this.pic22.Size = new System.Drawing.Size(195, 162);
             this.pic22.TabIndex = 46;
             this.pic22.TabStop = false;
             this.pic22.Visible = false;
@@ -427,11 +424,11 @@
             // pic23
             // 
             this.pic23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic23.Location = new System.Drawing.Point(744, 845);
-            this.pic23.Margin = new System.Windows.Forms.Padding(5);
+            this.pic23.Location = new System.Drawing.Point(252, 854);
+            this.pic23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic23.Name = "pic23";
-            this.pic23.Padding = new System.Windows.Forms.Padding(5);
-            this.pic23.Size = new System.Drawing.Size(260, 200);
+            this.pic23.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic23.Size = new System.Drawing.Size(195, 162);
             this.pic23.TabIndex = 48;
             this.pic23.TabStop = false;
             this.pic23.Visible = false;
@@ -440,10 +437,9 @@
             // pic24
             // 
             this.pic24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic24.Location = new System.Drawing.Point(475, 844);
-            this.pic24.Margin = new System.Windows.Forms.Padding(4);
+            this.pic24.Location = new System.Drawing.Point(50, 853);
             this.pic24.Name = "pic24";
-            this.pic24.Size = new System.Drawing.Size(260, 200);
+            this.pic24.Size = new System.Drawing.Size(195, 162);
             this.pic24.TabIndex = 49;
             this.pic24.TabStop = false;
             this.pic24.Visible = false;
@@ -451,43 +447,74 @@
             // 
             // pic25
             // 
-            this.pic25.Location = new System.Drawing.Point(207, 844);
-            this.pic25.Margin = new System.Windows.Forms.Padding(4);
+            this.pic25.Location = new System.Drawing.Point(659, 1023);
             this.pic25.Name = "pic25";
-            this.pic25.Size = new System.Drawing.Size(260, 200);
+            this.pic25.Size = new System.Drawing.Size(195, 162);
             this.pic25.TabIndex = 50;
             this.pic25.TabStop = false;
             this.pic25.Visible = false;
             // 
             // lbName
             // 
-            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lbName.AutoSize = true;
             this.lbName.BackColor = System.Drawing.Color.Transparent;
-            this.lbName.Font = new System.Drawing.Font("B Yekan", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbName.Location = new System.Drawing.Point(835, 32);
+            this.lbName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbName.Font = new System.Drawing.Font("B Yekan", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbName.Location = new System.Drawing.Point(560, 18);
+            this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Padding = new System.Windows.Forms.Padding(0, 0, 0, 30);
-            this.lbName.Size = new System.Drawing.Size(142, 87);
+            this.lbName.Padding = new System.Windows.Forms.Padding(0, 0, 0, 24);
+            this.lbName.Size = new System.Drawing.Size(293, 53);
             this.lbName.TabIndex = 5;
             this.lbName.Text = "label1";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 296F));
+            this.tableLayoutPanel2.Controls.Add(this.lbRestuarent, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbName, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(74, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(855, 71);
+            this.tableLayoutPanel2.TabIndex = 6;
+            // 
+            // lbRestuarent
+            // 
+            this.lbRestuarent.AutoSize = true;
+            this.lbRestuarent.BackColor = System.Drawing.Color.Transparent;
+            this.lbRestuarent.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbRestuarent.Font = new System.Drawing.Font("B Yekan", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbRestuarent.Location = new System.Drawing.Point(2, 18);
+            this.lbRestuarent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbRestuarent.Name = "lbRestuarent";
+            this.lbRestuarent.Padding = new System.Windows.Forms.Padding(0, 0, 0, 24);
+            this.lbRestuarent.Size = new System.Drawing.Size(275, 53);
+            this.lbRestuarent.TabIndex = 6;
+            this.lbRestuarent.Text = "label1";
+            this.lbRestuarent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1827, 970);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
@@ -514,6 +541,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic25)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -547,7 +576,9 @@
         private System.Windows.Forms.PictureBox pic23;
         private System.Windows.Forms.PictureBox pic24;
         private System.Windows.Forms.PictureBox pic25;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbRestuarent;
     }
 }
 

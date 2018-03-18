@@ -18,7 +18,7 @@ namespace KiyoskWall
         private int _restaurant_id;
         private string _date;
         private int _meal;
-        private KiyoskWall.PoonehEntities db;
+        private KiyoskWall.PoonehEntities1 db;
         List<Schedule> Schedules;
         private PoonehReservation t;
 
@@ -29,8 +29,9 @@ namespace KiyoskWall
             _date = date;
             _restaurant_id = restaurantId;
             _meal = int.Parse(meal);
-            db = new PoonehEntities();
-            
+            db = new PoonehEntities1();
+            tableLayoutPanel1.Visible = false;
+
         }
 
         private void ReserveFood_Load(object sender, EventArgs e)
@@ -38,17 +39,17 @@ namespace KiyoskWall
             this.WindowState = FormWindowState.Maximized;
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-
+            string meall;
             if (_meal == 1)
-                lbMeal.Text = "ناهار";
+                meall = "ناهار";
             else
             {
-                lbMeal.Text = "شام";
+                meall = "شام";
                 
             }
-                
-                
-            lbDate.Text = _date;
+
+
+            lbDate.Text = _date + "\n" + meall;
             Schedules = (from p in db.Schedules
                 where p.SDate.Equals(_date) & p.Restaurant_Id_Fk == _restaurant_id
                                            & p.Meal_Id_Fk ==_meal
@@ -73,6 +74,8 @@ namespace KiyoskWall
             MemoryStream mStreammm = new MemoryStream(qq.ElementAt(2).Image);
             pictureBox3.Image = Image.FromStream(mStreammm);
             label3.Text = qq.ElementAt(2).Name;
+
+            tableLayoutPanel1.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -118,7 +121,7 @@ namespace KiyoskWall
             {
                 t.Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk;
                 t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
-                int tt = db.SaveChanges();
+                //int tt = db.SaveChanges();
                 MessageBox.Show("رزرو تغیر کرد");
                 this.Close();
 
@@ -137,7 +140,8 @@ namespace KiyoskWall
 
                 };
                 db.PoonehReservations.Add(reserv);
-                int x = db.SaveChanges();
+                //int x = db.SaveChanges();
+                int x = 1;
              
                 if (x != 0)
                 {
@@ -151,6 +155,9 @@ namespace KiyoskWall
             }
         }
 
-
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
