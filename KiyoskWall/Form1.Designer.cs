@@ -55,9 +55,9 @@
             this.pic23 = new System.Windows.Forms.PictureBox();
             this.pic24 = new System.Windows.Forms.PictureBox();
             this.pic25 = new System.Windows.Forms.PictureBox();
-            this.lbName = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbRestuarent = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -99,7 +99,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.25167F));
@@ -138,7 +138,7 @@
             this.flowLayoutPanel1.Controls.Add(this.pic25);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(73, 79);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.flowLayoutPanel1.Size = new System.Drawing.Size(857, 500);
@@ -173,7 +173,7 @@
             this.pic3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic3.Location = new System.Drawing.Point(256, 4);
-            this.pic3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic3.Margin = new System.Windows.Forms.Padding(4);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(195, 162);
             this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -186,7 +186,7 @@
             this.pic4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic4.Location = new System.Drawing.Point(53, 4);
-            this.pic4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic4.Margin = new System.Windows.Forms.Padding(4);
             this.pic4.Name = "pic4";
             this.pic4.Size = new System.Drawing.Size(195, 162);
             this.pic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +198,7 @@
             // 
             this.pic5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic5.Location = new System.Drawing.Point(658, 174);
-            this.pic5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic5.Margin = new System.Windows.Forms.Padding(4);
             this.pic5.Name = "pic5";
             this.pic5.Size = new System.Drawing.Size(195, 162);
             this.pic5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -211,7 +211,7 @@
             // 
             this.pic6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic6.Location = new System.Drawing.Point(455, 174);
-            this.pic6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic6.Margin = new System.Windows.Forms.Padding(4);
             this.pic6.Name = "pic6";
             this.pic6.Size = new System.Drawing.Size(195, 162);
             this.pic6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -260,7 +260,7 @@
             // 
             this.pic10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic10.Location = new System.Drawing.Point(457, 344);
-            this.pic10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic10.Margin = new System.Windows.Forms.Padding(4);
             this.pic10.Name = "pic10";
             this.pic10.Size = new System.Drawing.Size(195, 162);
             this.pic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -285,7 +285,7 @@
             // 
             this.pic12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic12.Location = new System.Drawing.Point(53, 344);
-            this.pic12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic12.Margin = new System.Windows.Forms.Padding(4);
             this.pic12.Name = "pic12";
             this.pic12.Size = new System.Drawing.Size(195, 162);
             this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -299,7 +299,7 @@
             this.pic13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic13.Location = new System.Drawing.Point(658, 514);
-            this.pic13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic13.Margin = new System.Windows.Forms.Padding(4);
             this.pic13.Name = "pic13";
             this.pic13.Size = new System.Drawing.Size(195, 162);
             this.pic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -312,7 +312,7 @@
             // 
             this.pic14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic14.Location = new System.Drawing.Point(455, 514);
-            this.pic14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic14.Margin = new System.Windows.Forms.Padding(4);
             this.pic14.Name = "pic14";
             this.pic14.Size = new System.Drawing.Size(195, 162);
             this.pic14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -325,7 +325,7 @@
             // 
             this.pic15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic15.Location = new System.Drawing.Point(252, 514);
-            this.pic15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic15.Margin = new System.Windows.Forms.Padding(4);
             this.pic15.Name = "pic15";
             this.pic15.Size = new System.Drawing.Size(195, 162);
             this.pic15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -350,7 +350,7 @@
             // 
             this.pic17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic17.Location = new System.Drawing.Point(658, 684);
-            this.pic17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic17.Margin = new System.Windows.Forms.Padding(4);
             this.pic17.Name = "pic17";
             this.pic17.Size = new System.Drawing.Size(195, 162);
             this.pic17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -375,7 +375,7 @@
             // 
             this.pic19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic19.Location = new System.Drawing.Point(254, 684);
-            this.pic19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic19.Margin = new System.Windows.Forms.Padding(4);
             this.pic19.Name = "pic19";
             this.pic19.Size = new System.Drawing.Size(195, 162);
             this.pic19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -388,7 +388,7 @@
             // 
             this.pic20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic20.Location = new System.Drawing.Point(51, 684);
-            this.pic20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic20.Margin = new System.Windows.Forms.Padding(4);
             this.pic20.Name = "pic20";
             this.pic20.Size = new System.Drawing.Size(195, 162);
             this.pic20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -401,7 +401,7 @@
             // 
             this.pic21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic21.Location = new System.Drawing.Point(658, 854);
-            this.pic21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic21.Margin = new System.Windows.Forms.Padding(4);
             this.pic21.Name = "pic21";
             this.pic21.Size = new System.Drawing.Size(195, 162);
             this.pic21.TabIndex = 47;
@@ -413,7 +413,7 @@
             // 
             this.pic22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic22.Location = new System.Drawing.Point(455, 854);
-            this.pic22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic22.Margin = new System.Windows.Forms.Padding(4);
             this.pic22.Name = "pic22";
             this.pic22.Size = new System.Drawing.Size(195, 162);
             this.pic22.TabIndex = 46;
@@ -425,9 +425,9 @@
             // 
             this.pic23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic23.Location = new System.Drawing.Point(252, 854);
-            this.pic23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic23.Margin = new System.Windows.Forms.Padding(4);
             this.pic23.Name = "pic23";
-            this.pic23.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic23.Padding = new System.Windows.Forms.Padding(4);
             this.pic23.Size = new System.Drawing.Size(195, 162);
             this.pic23.TabIndex = 48;
             this.pic23.TabStop = false;
@@ -454,28 +454,13 @@
             this.pic25.TabStop = false;
             this.pic25.Visible = false;
             // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.BackColor = System.Drawing.Color.Transparent;
-            this.lbName.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbName.Font = new System.Drawing.Font("B Yekan", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbName.Location = new System.Drawing.Point(560, 18);
-            this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbName.Name = "lbName";
-            this.lbName.Padding = new System.Windows.Forms.Padding(0, 0, 0, 24);
-            this.lbName.Size = new System.Drawing.Size(293, 53);
-            this.lbName.TabIndex = 5;
-            this.lbName.Text = "label1";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 296F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297F));
             this.tableLayoutPanel2.Controls.Add(this.lbRestuarent, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbName, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -500,6 +485,21 @@
             this.lbRestuarent.TabIndex = 6;
             this.lbRestuarent.Text = "label1";
             this.lbRestuarent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.BackColor = System.Drawing.Color.Transparent;
+            this.lbName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbName.Font = new System.Drawing.Font("B Yekan", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbName.Location = new System.Drawing.Point(560, 18);
+            this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbName.Name = "lbName";
+            this.lbName.Padding = new System.Windows.Forms.Padding(0, 0, 0, 24);
+            this.lbName.Size = new System.Drawing.Size(293, 53);
+            this.lbName.TabIndex = 5;
+            this.lbName.Text = "label1";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 

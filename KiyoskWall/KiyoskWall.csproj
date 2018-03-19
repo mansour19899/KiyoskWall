@@ -106,6 +106,7 @@
       <DependentUpon>Model2.edmx</DependentUpon>
     </Compile>
     <Compile Include="MyPersianDate.cs" />
+    <Compile Include="NeedToReserve.cs" />
     <Compile Include="Person.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
