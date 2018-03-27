@@ -33,5 +33,6 @@ namespace KiyoskWall
         public virtual DbSet<Schedule> Schedules { get; set; }
         public virtual DbSet<Tray> Trays { get; set; }
         public virtual DbSet<WorkSheet> WorkSheets { get; set; }
+        public virtual DbSet<Person_Restaurant> Person_Restaurant { get; set; }
     }
 }

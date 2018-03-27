@@ -36,23 +36,23 @@ namespace KiyoskWall
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             needs=new NeedToReserve();
             db =new  PoonehEntities1();
-            dtnow = "1396/11/19";
-            restaurant_id = 26;
-            
+            dtnow = DateTime.Now.ToPersianDateString();
+
+
             //p1 = db.People.Where(p => p.NationalCode == "0440005191").FirstOrDefault(); //rozkar
             //p1 = db.People.Where(p => p.PersonelNo == "545642").FirstOrDefault();//c
             //p1 = db.People.Where(p => p.NationalCode == "1828039179").FirstOrDefault();  //b
             p1 = db.People.Where(p => p.PersonelNo == "565807").FirstOrDefault();   //d
             //p1 = db.People.Where(p => p.PersonelNo == "568161").FirstOrDefault();   //a
 
+            restaurant_id = db.Person_Restaurant.FirstOrDefault(p => p.Person_Id_Fk == p1.Id).Restaurant_Id_Fk.Value;
+
             lbName.Text = p1.Name + " " + p1.LastName;
-            lbRestuarent.Text = "رستوران مجاز:  "+db.Restaurants.FirstOrDefault(p => p.Id == restaurant_id).Name;
-            ListDate ty=new ListDate(p1.WorkSheet_Id_FK.Value);
-
+           ListDate ty=new ListDate(p1);
             var uu = ty.GetList();
-            
+            lbRestuarent.Text = "رستوران مجاز:  " + db.Restaurants.FirstOrDefault(p => p.Id == restaurant_id).Name;
 
-           SetPicturebox(uu);
+            SetPicturebox(uu);
             tableLayoutPanel1.Visible = true;
             string y = uu.ElementAt(0).date.AddDaysToShamsiDate(-1);
             tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).ToList();
@@ -65,7 +65,7 @@ namespace KiyoskWall
 
             needs.restaurent = restaurant_id;
             needs.Person = p1;
-
+            lbShift.Text = GiveMeShiftName();
 
         }
         public void SetPicturebox(List<Date> ll)
@@ -119,16 +119,19 @@ namespace KiyoskWall
                 br = Brushes.White;
             }
 
-            RectangleF rectf = new RectangleF(100, 40, 90, 50);
-            RectangleF rectf1 = new RectangleF(90, 90, 140, 50);
+            RectangleF rectf = new RectangleF(30, 10, 190, 150);
+          
+
+            StringFormat stringFormat = new StringFormat();
+            stringFormat.Alignment = StringAlignment.Center;
+            stringFormat.LineAlignment = StringAlignment.Center;
 
             Graphics g = Graphics.FromImage(bmp);
 
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.InterpolationMode = InterpolationMode.HighQualityBicubic;
             g.PixelOffsetMode = PixelOffsetMode.HighQuality;
-            g.DrawString(date.day, new Font("B Nazanin", 20), br, rectf);
-            g.DrawString(date.date, new Font("B Nazanin", 20), br, rectf1);
+            g.DrawString(date.day+"\n"+date.date, new Font("B Mitra",30), br, rectf,stringFormat);
             g.Flush();
 
             return bmp;
@@ -138,7 +141,7 @@ namespace KiyoskWall
         {
             needs.Schedules = (from p in tempSchedules
                 where p.SDate.Equals(needs.date) & p.Restaurant_Id_Fk == needs.restaurent
-                                                 & p.Meal_Id_Fk == 1
+                                                 & p.Meal_Id_Fk == needs.meal
                 select p).ToList();
 
             int t = (int)needs.Schedules.ElementAt(0).Tray_Id_Fk;
@@ -159,7 +162,23 @@ namespace KiyoskWall
             frm.Show();
         }
 
-
+        public string GiveMeShiftName()
+        {
+            Shift x;
+            x =(Shift) p1.WorkSheet_Id_FK.Value;
+            if (x == Shift.Rozkar)
+                return "روزکار ";
+            else if (x == Shift.A8)
+                return "A  شیفت ";
+            else if (x == Shift.B8)
+                return "B  شیفت ";
+            else if (x == Shift.C8)
+                return " C  شیفت ";
+            else if (x == Shift.D8)
+                return "D  شیفت ";
+            else
+            return "";
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -290,6 +309,11 @@ namespace KiyoskWall
         {
             ReserveFood frm = new ReserveFood(needs);
             frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

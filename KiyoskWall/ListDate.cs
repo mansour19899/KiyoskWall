@@ -9,20 +9,26 @@ namespace KiyoskWall
     class ListDate
     {
         private int _worksheet;
-        public ListDate(int WorkSheet)
+        private int _resturentid;
+        private Person _person;
+        public ListDate(Person person)
         {
             
-            _worksheet = WorkSheet;
-            
+            _worksheet = person.WorkSheet_Id_FK.Value;
+            _person = person;
+
         }
 
         public List<Date> GetList()
         {
             var db = new PoonehEntities1();
             List<Date> q;
-            string dtnow = "1396/12/26";
+            string dtnow = DateTime.Now.ToPersianDateString();
             //string dtnow = DateTime.Now.ToPersianDateString();
+            _resturentid = db.Person_Restaurant.FirstOrDefault(p => p.Person_Id_Fk ==_person.Id ).Restaurant_Id_Fk.Value;
+
             q = (from p in db.Schedules
+                where p.Restaurant_Id_Fk==_resturentid
                 where p.SDate.CompareTo(dtnow) == 1
                 select new Date { date = p.SDate } 
                 ).Distinct().OrderBy(o => o.date).ToList();

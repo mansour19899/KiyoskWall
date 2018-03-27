@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PoonehModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PoonehModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Company">
           <Key>
             <PropertyRef Name="Id" />
@@ -48,6 +48,15 @@
           <Property Name="ImageAccept" Type="bit" />
           <Property Name="WorkSheet_Id_FK" Type="int" />
           <Property Name="PoonehArchived" Type="date" />
+        </EntityType>
+        <EntityType Name="Person_Restaurant">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Person_Id_Fk" Type="int" />
+          <Property Name="Restaurant_Id_Fk" Type="int" />
+          <Property Name="PoonehArchived" Type="datetime" />
         </EntityType>
         <EntityType Name="PoonehReservation">
           <Key>
@@ -125,6 +134,30 @@
             </Principal>
             <Dependent Role="Person">
               <PropertyRef Name="Company_Id_Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Person_Restaurant_Person">
+          <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+          <End Role="Person_Restaurant" Type="Self.Person_Restaurant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Person_Restaurant">
+              <PropertyRef Name="Person_Id_Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Person_Restaurant_Restaurant">
+          <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="0..1" />
+          <End Role="Person_Restaurant" Type="Self.Person_Restaurant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Person_Restaurant">
+              <PropertyRef Name="Restaurant_Id_Fk" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -240,6 +273,7 @@
           <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoliDay" EntityType="Self.HoliDay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person_Restaurant" EntityType="Self.Person_Restaurant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PoonehReservation" EntityType="Self.PoonehReservation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
@@ -248,6 +282,14 @@
           <AssociationSet Name="FK_Person_Company" Association="Self.FK_Person_Company">
             <End Role="Company" EntitySet="Company" />
             <End Role="Person" EntitySet="Person" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Person_Restaurant_Person" Association="Self.FK_Person_Restaurant_Person">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Person_Restaurant" EntitySet="Person_Restaurant" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Person_Restaurant_Restaurant" Association="Self.FK_Person_Restaurant_Restaurant">
+            <End Role="Restaurant" EntitySet="Restaurant" />
+            <End Role="Person_Restaurant" EntitySet="Person_Restaurant" />
           </AssociationSet>
           <AssociationSet Name="FK_Person_WorkSheet1" Association="Self.FK_Person_WorkSheet1">
             <End Role="WorkSheet" EntitySet="WorkSheet" />
@@ -286,8 +328,7 @@
             <End Role="Schedule" EntitySet="Schedule" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PoonehModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -340,6 +381,7 @@
           <NavigationProperty Name="Company" Relationship="Self.FK_Person_Company" FromRole="Person" ToRole="Company" />
           <NavigationProperty Name="WorkSheet" Relationship="Self.FK_Person_WorkSheet1" FromRole="Person" ToRole="WorkSheet" />
           <NavigationProperty Name="PoonehReservations" Relationship="Self.FK_PoonehReservation_Person" FromRole="Person" ToRole="PoonehReservation" />
+          <NavigationProperty Name="Person_Restaurant" Relationship="PoonehModel1.FK_Person_Restaurant_Person" FromRole="Person" ToRole="Person_Restaurant" />
         </EntityType>
         <EntityType Name="PoonehReservation">
           <Key>
@@ -379,6 +421,7 @@
           <NavigationProperty Name="Company" Relationship="Self.FK_Restaurant_Company" FromRole="Restaurant" ToRole="Company" />
           <NavigationProperty Name="PoonehReservations" Relationship="Self.FK_PoonehReservation_Restaurant" FromRole="Restaurant" ToRole="PoonehReservation" />
           <NavigationProperty Name="Schedules" Relationship="Self.FK_Schedule_Restaurant" FromRole="Restaurant" ToRole="Schedule" />
+          <NavigationProperty Name="Person_Restaurant" Relationship="PoonehModel1.FK_Person_Restaurant_Restaurant" FromRole="Restaurant" ToRole="Person_Restaurant" />
         </EntityType>
         <EntityType Name="Schedule">
           <Key>
@@ -591,7 +634,51 @@
             <End Role="Tray" EntitySet="Trays" />
             <End Role="Schedule" EntitySet="Schedules" />
           </AssociationSet>
+          <EntitySet Name="Person_Restaurant" EntityType="PoonehModel1.Person_Restaurant" />
+          <AssociationSet Name="FK_Person_Restaurant_Person" Association="PoonehModel1.FK_Person_Restaurant_Person">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Person_Restaurant" EntitySet="Person_Restaurant" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Person_Restaurant_Restaurant" Association="PoonehModel1.FK_Person_Restaurant_Restaurant">
+            <End Role="Restaurant" EntitySet="Restaurants" />
+            <End Role="Person_Restaurant" EntitySet="Person_Restaurant" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Person_Restaurant">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Person_Id_Fk" Type="Int32" />
+          <Property Name="Restaurant_Id_Fk" Type="Int32" />
+          <Property Name="PoonehArchived" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Person" Relationship="PoonehModel1.FK_Person_Restaurant_Person" FromRole="Person_Restaurant" ToRole="Person" />
+          <NavigationProperty Name="Restaurant" Relationship="PoonehModel1.FK_Person_Restaurant_Restaurant" FromRole="Person_Restaurant" ToRole="Restaurant" />
+        </EntityType>
+        <Association Name="FK_Person_Restaurant_Person">
+          <End Type="PoonehModel1.Person" Role="Person" Multiplicity="0..1" />
+          <End Type="PoonehModel1.Person_Restaurant" Role="Person_Restaurant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Person_Restaurant">
+              <PropertyRef Name="Person_Id_Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Person_Restaurant_Restaurant">
+          <End Type="PoonehModel1.Restaurant" Role="Restaurant" Multiplicity="0..1" />
+          <End Type="PoonehModel1.Person_Restaurant" Role="Person_Restaurant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Person_Restaurant">
+              <PropertyRef Name="Restaurant_Id_Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -714,6 +801,16 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Duration" ColumnName="Duration" />
                 <ScalarProperty Name="Rc_Id" ColumnName="Rc_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_Restaurant">
+            <EntityTypeMapping TypeName="PoonehModel1.Person_Restaurant">
+              <MappingFragment StoreEntitySet="Person_Restaurant">
+                <ScalarProperty Name="PoonehArchived" ColumnName="PoonehArchived" />
+                <ScalarProperty Name="Restaurant_Id_Fk" ColumnName="Restaurant_Id_Fk" />
+                <ScalarProperty Name="Person_Id_Fk" ColumnName="Person_Id_Fk" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

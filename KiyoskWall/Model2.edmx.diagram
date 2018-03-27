@@ -23,6 +23,9 @@
         <AssociationConnector Association="PoonehModel1.FK_PoonehReservation_Tray" ManuallyRouted="false" />
         <AssociationConnector Association="PoonehModel1.FK_Schedule_Restaurant" ManuallyRouted="false" />
         <AssociationConnector Association="PoonehModel1.FK_Schedule_Tray" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PoonehModel1.Person_Restaurant" Width="1.5" PointX="5.25" PointY="7.25" />
+        <AssociationConnector Association="PoonehModel1.FK_Person_Restaurant_Person" />
+        <AssociationConnector Association="PoonehModel1.FK_Person_Restaurant_Restaurant" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -58,6 +58,9 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbRestuarent = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
+            this.lbShift = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
@@ -86,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic25)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -97,6 +101,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -461,6 +466,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297F));
+            this.tableLayoutPanel2.Controls.Add(this.lbShift, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbRestuarent, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbName, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -481,10 +487,11 @@
             this.lbRestuarent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbRestuarent.Name = "lbRestuarent";
             this.lbRestuarent.Padding = new System.Windows.Forms.Padding(0, 0, 0, 24);
+            this.lbRestuarent.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbRestuarent.Size = new System.Drawing.Size(275, 53);
             this.lbRestuarent.TabIndex = 6;
             this.lbRestuarent.Text = "label1";
-            this.lbRestuarent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbRestuarent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbName
             // 
@@ -499,7 +506,47 @@
             this.lbName.Size = new System.Drawing.Size(293, 53);
             this.lbName.TabIndex = 5;
             this.lbName.Text = "label1";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbShift
+            // 
+            this.lbShift.AutoSize = true;
+            this.lbShift.BackColor = System.Drawing.Color.Transparent;
+            this.lbShift.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbShift.Font = new System.Drawing.Font("B Yekan", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbShift.Location = new System.Drawing.Point(281, 18);
+            this.lbShift.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbShift.Name = "lbShift";
+            this.lbShift.Padding = new System.Windows.Forms.Padding(0, 0, 0, 24);
+            this.lbShift.Size = new System.Drawing.Size(275, 53);
+            this.lbShift.TabIndex = 7;
+            this.lbShift.Text = "label1";
+            this.lbShift.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 559F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(74, 584);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(855, 53);
+            this.tableLayoutPanel3.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 41);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "بستن";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -543,6 +590,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic25)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -579,6 +627,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbRestuarent;
+        private System.Windows.Forms.Label lbShift;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

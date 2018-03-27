@@ -31,6 +31,7 @@ namespace KiyoskWall
             _date = need.date;
             _restaurant_id = need.restaurent;
             _meal = need.meal;
+            Schedules = need.Schedules;
             db = new PoonehEntities1();
             tableLayoutPanel1.Visible = false;
 
@@ -153,5 +154,7 @@ namespace KiyoskWall
         {
             this.Close();
         }
+
+       
     }
 }
