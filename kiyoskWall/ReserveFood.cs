@@ -20,6 +20,9 @@ namespace KiyoskWall
         private int _meal;
         private KiyoskWall.PoonehEntities1 db;
         List<Schedule> Schedules;
+        List<Schedule> AllSchedules;
+        private List<Tray> AllTrays;
+        private List<Tray> Trays;
         private PoonehReservation t;
         private NeedToReserve _need;
 
@@ -32,6 +35,9 @@ namespace KiyoskWall
             _restaurant_id = need.restaurent;
             _meal = need.meal;
             Schedules = need.Schedules;
+            Trays = _need.Trays;
+            AllSchedules = need.Schedules;
+            AllTrays = need.Trays;
             db = new PoonehEntities1();
             tableLayoutPanel1.Visible = false;
 
@@ -43,34 +49,45 @@ namespace KiyoskWall
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             string meall;
-            if (_meal == 1)
-                meall = "ناهار";
+            if (_date == "")
+            {
+                MessageBox.Show("");
+            }
             else
             {
-                meall = "شام";
-                
+                if (_meal == 1)
+                    meall = "ناهار";
+                else
+                {
+                    meall = "شام";
+
+                }
+
+
+                lbDate.Text = _date + "\n" + meall;
+
+
+                SetPicture(Trays.ElementAt(0),Trays.ElementAt(1),Trays.ElementAt(2));
+
             }
-
-
-            lbDate.Text = _date + "\n" + meall;
-         
-
-
-      
-
-            MemoryStream mStream = new MemoryStream(_need.Trays.ElementAt(0).Image);
-            pictureBox1.Image= Image.FromStream(mStream);
-            label1.Text = _need.Trays.ElementAt(0).Name;
-
-            MemoryStream mStreamm = new MemoryStream(_need.Trays.ElementAt(1).Image);
-            pictureBox2.Image = Image.FromStream(mStreamm);
-            label2.Text = _need.Trays.ElementAt(1).Name;
-
-            MemoryStream mStreammm = new MemoryStream(_need.Trays.ElementAt(2).Image);
-            pictureBox3.Image = Image.FromStream(mStreammm);
-            label3.Text = _need.Trays.ElementAt(2).Name;
+           
 
             tableLayoutPanel1.Visible = true;
+        }
+
+        private void SetPicture(Tray t1, Tray t2, Tray t3)
+        {
+            MemoryStream mStream = new MemoryStream(t1.Image);
+            pictureBox1.Image = Image.FromStream(mStream);
+            label1.Text = t1.Name;
+
+            MemoryStream mStreamm = new MemoryStream(t2.Image);
+            pictureBox2.Image = Image.FromStream(mStreamm);
+            label2.Text = t2.Name;
+
+            MemoryStream mStreammm = new MemoryStream(t3.Image);
+            pictureBox3.Image = Image.FromStream(mStreammm);
+            label3.Text = t3.Name;
         }
 
         private void button1_Click(object sender, EventArgs e)

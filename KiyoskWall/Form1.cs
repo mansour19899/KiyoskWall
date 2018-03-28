@@ -34,7 +34,7 @@ namespace KiyoskWall
             this.WindowState = FormWindowState.Maximized;
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            needs=new NeedToReserve();
+          
             db =new  PoonehEntities1();
             dtnow = DateTime.Now.ToPersianDateString();
 
@@ -45,26 +45,22 @@ namespace KiyoskWall
             p1 = db.People.Where(p => p.PersonelNo == "565807").FirstOrDefault();   //d
             //p1 = db.People.Where(p => p.PersonelNo == "568161").FirstOrDefault();   //a
 
+            needs = new NeedToReserve(p1);
+            
+            
             restaurant_id = db.Person_Restaurant.FirstOrDefault(p => p.Person_Id_Fk == p1.Id).Restaurant_Id_Fk.Value;
-
+            restaurant_id = 26;
             lbName.Text = p1.Name + " " + p1.LastName;
-           ListDate ty=new ListDate(p1);
-            var uu = ty.GetList();
-            lbRestuarent.Text = "رستوران مجاز:  " + db.Restaurants.FirstOrDefault(p => p.Id == restaurant_id).Name;
+         
+            
 
-            SetPicturebox(uu);
+            SetPicturebox(needs.AllDays);
             tableLayoutPanel1.Visible = true;
-            string y = uu.ElementAt(0).date.AddDaysToShamsiDate(-1);
-            tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).ToList();
-
-            var ew=tempSchedules.Where(p => uu.Any(pe=>pe.date==p.SDate)).Select(p=>p.Tray_Id_Fk).Distinct().ToList();
-             TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s=>s).ToList();
+      
             int x = 0;
 
-
-
             needs.restaurent = restaurant_id;
-            needs.Person = p1;
+            lbRestuarent.Text = "رستوران مجاز:  "+ db.Restaurants.FirstOrDefault(p => p.Id == restaurant_id).Name;
             lbShift.Text = GiveMeShiftName();
 
         }
@@ -137,27 +133,13 @@ namespace KiyoskWall
             return bmp;
         }
 
-        public void GiveTraysSchedle()
-        {
-            needs.Schedules = (from p in tempSchedules
-                where p.SDate.Equals(needs.date) & p.Restaurant_Id_Fk == needs.restaurent
-                                                 & p.Meal_Id_Fk == needs.meal
-                select p).ToList();
-
-            int t = (int)needs.Schedules.ElementAt(0).Tray_Id_Fk;
-            int tt = (int)needs.Schedules.ElementAt(1).Tray_Id_Fk;
-            int ttt = (int)needs.Schedules.ElementAt(2).Tray_Id_Fk;
-            needs.Trays = (from qqq in TempTrays
-                where qqq.Id == t || qqq.Id == tt || qqq.Id == ttt
-                select qqq).ToList();
-
-        }
+   
 
         public void RunReserve(PictureBox pic)
         {
             needs.date = pic.Name;
             needs.meal = int.Parse(pic.Text);
-            GiveTraysSchedle();
+            needs.GiveTraysSchedle();
             ReserveFood frm = new ReserveFood(needs);
             frm.Show();
         }
@@ -271,49 +253,51 @@ namespace KiyoskWall
 
         private void pic18_Click(object sender, EventArgs e)
         {
-            ReserveFood frm = new ReserveFood(needs);
-            frm.Show();
+            RunReserve(pic18);
         }
 
         private void pic19_Click(object sender, EventArgs e)
         {
-            ReserveFood frm = new ReserveFood(needs);
-            frm.Show();
+            RunReserve(pic19);
         }
 
         private void pic20_Click(object sender, EventArgs e)
         {
-            ReserveFood frm = new ReserveFood(needs);
-            frm.Show();
+            RunReserve(pic20);
         }
 
         private void pic21_Click(object sender, EventArgs e)
         {
-            ReserveFood frm = new ReserveFood(needs);
-            frm.Show();
+            RunReserve(pic21);
         }
 
         private void pic22_Click(object sender, EventArgs e)
         {
-            ReserveFood frm = new ReserveFood(needs);
-            frm.Show();
+            RunReserve(pic22);
         }
 
         private void pic23_Click(object sender, EventArgs e)
         {
-            ReserveFood frm = new ReserveFood(needs);
-            frm.Show();
+            RunReserve(pic23);
         }
 
         private void pic24_Click(object sender, EventArgs e)
         {
-            ReserveFood frm = new ReserveFood(needs);
-            frm.Show();
+            RunReserve(pic24);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            needs.date ="";
+            needs.GiveAllTraysSchedle();
+            ReserveFood frm = new ReserveFood(needs);
+            frm.Show();
+
         }
     }
 }

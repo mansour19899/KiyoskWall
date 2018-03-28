@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KiyoskWall
 {
@@ -15,10 +16,47 @@ namespace KiyoskWall
         public int restaurent { get; set; }
         public Person Person { get; set; }
         public int meal { get; set; }
+        public List<Date> AllDays { get; set; }
+        public List<Schedule> tempSchedules;
+        public List<Tray> TempTrays;
 
-        public NeedToReserve()
+        public NeedToReserve(Person person)
         {
-            
+        PoonehEntities1 db=new PoonehEntities1();
+
+        Person = person;
+            date = "";
+            ListDate ty = new ListDate(person);
+            AllDays = ty.GetList();
+
+            string y = AllDays.ElementAt(0).date.AddDaysToShamsiDate(-1);
+            tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).ToList();
+
+            var ew = tempSchedules.Where(p => AllDays.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
+            TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s => s).ToList();
+
+        }
+        public void GiveTraysSchedle()
+        {
+            Schedules = (from p in tempSchedules
+                         where p.SDate.Equals(date) & p.Restaurant_Id_Fk == restaurent
+                                                          & p.Meal_Id_Fk == meal
+                         select p).ToList();
+
+            int t = (int)Schedules.ElementAt(0).Tray_Id_Fk;
+            int tt = (int)Schedules.ElementAt(1).Tray_Id_Fk;
+            int ttt = (int)Schedules.ElementAt(2).Tray_Id_Fk;
+            Trays = (from qqq in TempTrays
+                     where qqq.Id == t || qqq.Id == tt || qqq.Id == ttt
+                     select qqq).ToList();
+
+        }
+
+        public void GiveAllTraysSchedle()
+        {
+            Schedules = tempSchedules.Where(p=>p.Restaurant_Id_Fk==restaurent).ToList();
+            Trays = TempTrays;
+            MessageBox.Show("");
         }
     }
 }
