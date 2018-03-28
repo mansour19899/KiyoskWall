@@ -25,6 +25,10 @@ namespace KiyoskWall
         private List<Tray> Trays;
         private PoonehReservation t;
         private NeedToReserve _need;
+        private List<Date> AllDays;
+        string meall;
+        private bool loop;
+        private int j;
 
         public ReserveFood(NeedToReserve need)
         {
@@ -38,9 +42,11 @@ namespace KiyoskWall
             Trays = _need.Trays;
             AllSchedules = need.Schedules;
             AllTrays = need.Trays;
+            AllDays = need.AllDays;
             db = new PoonehEntities1();
             tableLayoutPanel1.Visible = false;
-
+            loop = false;
+            
         }
 
         private void ReserveFood_Load(object sender, EventArgs e)
@@ -48,14 +54,54 @@ namespace KiyoskWall
             this.WindowState = FormWindowState.Maximized;
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            string meall;
+
             if (_date == "")
             {
-                MessageBox.Show("");
+                j = 0;
+                loop = true;
+                AllSchedules = Schedules;
+                AllTrays = Trays;
+                ReserveAllDay(AllDays.ElementAt(j));
             }
-            else
-            {
-                if (_meal == 1)
+
+            
+            SetForm();
+
+            
+           
+
+            tableLayoutPanel1.Visible = true;
+        }
+
+        public void SetTtaysSchedle(Date date)
+        {
+
+            Schedules = (from p in AllSchedules
+                where p.SDate.Equals(date.date) & p.Restaurant_Id_Fk == _restaurant_id
+                                           & p.Meal_Id_Fk == date.meal
+                select p).ToList();
+
+            int t = (int)Schedules.ElementAt(0).Tray_Id_Fk;
+            int tt = (int)Schedules.ElementAt(1).Tray_Id_Fk;
+            int ttt = (int)Schedules.ElementAt(2).Tray_Id_Fk;
+            Trays = (from qqq in AllTrays
+                where qqq.Id == t || qqq.Id == tt || qqq.Id == ttt
+                select qqq).ToList();
+
+
+        }
+        public void ReserveAllDay(Date date)
+        {
+            _date = date.date;
+            _meal = date.meal;
+            SetTtaysSchedle(date);
+            SetForm();
+
+        }
+        private void SetForm()
+        {
+
+              if (_meal == 1)
                     meall = "ناهار";
                 else
                 {
@@ -66,28 +112,17 @@ namespace KiyoskWall
 
                 lbDate.Text = _date + "\n" + meall;
 
-
-                SetPicture(Trays.ElementAt(0),Trays.ElementAt(1),Trays.ElementAt(2));
-
-            }
-           
-
-            tableLayoutPanel1.Visible = true;
-        }
-
-        private void SetPicture(Tray t1, Tray t2, Tray t3)
-        {
-            MemoryStream mStream = new MemoryStream(t1.Image);
+            MemoryStream mStream = new MemoryStream(Trays.ElementAt(0).Image);
             pictureBox1.Image = Image.FromStream(mStream);
-            label1.Text = t1.Name;
+            label1.Text = Trays.ElementAt(0).Name;
 
-            MemoryStream mStreamm = new MemoryStream(t2.Image);
+            MemoryStream mStreamm = new MemoryStream(Trays.ElementAt(1).Image);
             pictureBox2.Image = Image.FromStream(mStreamm);
-            label2.Text = t2.Name;
+            label2.Text = Trays.ElementAt(1).Name;
 
-            MemoryStream mStreammm = new MemoryStream(t3.Image);
+            MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(2).Image);
             pictureBox3.Image = Image.FromStream(mStreammm);
-            label3.Text = t3.Name;
+            label3.Text = Trays.ElementAt(2).Name;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -135,7 +170,19 @@ namespace KiyoskWall
                 t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
                 //int tt = db.SaveChanges();
                 MessageBox.Show("رزرو تغیر کرد");
-                this.Close();
+                if (loop)
+                {
+                    j = j + 1;
+                    if (j < AllDays.Count)
+                        ReserveAllDay(AllDays.ElementAt(j));
+                    else
+                        this.Close();
+                }
+                else
+                {
+                    this.Close();
+                }
+               
 
             }
             else
@@ -158,7 +205,18 @@ namespace KiyoskWall
                 if (x != 0)
                 {
                     MessageBox.Show("رزرو انجام شد");
-                    this.Close();
+                    if (loop)
+                    {
+                        j = j + 1;
+                        if(j<AllDays.Count)
+                        ReserveAllDay(AllDays.ElementAt(j));
+                        else
+                        this.Close();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
                 }
                 else
                 {
