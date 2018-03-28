@@ -39,10 +39,10 @@ namespace KiyoskWall
             dtnow = DateTime.Now.ToPersianDateString();
 
 
-            //p1 = db.People.Where(p => p.NationalCode == "0440005191").FirstOrDefault(); //rozkar
+            p1 = db.People.Where(p => p.NationalCode == "0440005191").FirstOrDefault(); //rozkar
             //p1 = db.People.Where(p => p.PersonelNo == "545642").FirstOrDefault();//c
             //p1 = db.People.Where(p => p.NationalCode == "1828039179").FirstOrDefault();  //b
-            p1 = db.People.Where(p => p.PersonelNo == "565807").FirstOrDefault();   //d
+            //p1 = db.People.Where(p => p.PersonelNo == "565807").FirstOrDefault();   //d
             //p1 = db.People.Where(p => p.PersonelNo == "568161").FirstOrDefault();   //a
 
             needs = new NeedToReserve(p1);
