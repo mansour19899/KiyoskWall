@@ -68,6 +68,12 @@
     <Compile Include="HoliDay.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="KeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyPad.Designer.cs">
+      <DependentUpon>KeyPad.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListDate.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -156,6 +162,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KeyPad.resx">
+      <DependentUpon>KeyPad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +248,13 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <LastGenOutput>Model2.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\weekly.png" />
+    <None Include="Resources\mahaneh.png" />
+    <None Include="Resources\fars.png" />
+    <None Include="Resources\fars-600x400.png" />
+    <None Include="Resources\n00081426-b.png" />
+    <None Include="Resources\PoonehLogo.png" />
+    <None Include="Resources\PoonehLogo.ico" />
     <None Include="Resources\ButtonBGd.png" />
     <None Include="Resources\ButtonBG.png" />
     <None Include="Resources\blue.jpg" />

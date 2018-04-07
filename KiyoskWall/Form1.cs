@@ -23,10 +23,11 @@ namespace KiyoskWall
         private NeedToReserve needs;
         private List<Schedule> tempSchedules;
         private List<Tray> TempTrays;
-        public Form1()
+        public Form1(Person per)
         {
             InitializeComponent();
             tableLayoutPanel1.Visible = false;
+            p1 = per;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace KiyoskWall
             dtnow = DateTime.Now.ToPersianDateString();
 
 
-            p1 = db.People.Where(p => p.NationalCode == "0440005191").FirstOrDefault(); //rozkar
+            //p1 = db.People.Where(p => p.NationalCode == "0440005191").FirstOrDefault(); //rozkar
             //p1 = db.People.Where(p => p.PersonelNo == "545642").FirstOrDefault();//c
             //p1 = db.People.Where(p => p.NationalCode == "1828039179").FirstOrDefault();  //b
             //p1 = db.People.Where(p => p.PersonelNo == "565807").FirstOrDefault();   //d
@@ -60,7 +61,8 @@ namespace KiyoskWall
             int x = 0;
 
             needs.restaurent = restaurant_id;
-            lbRestuarent.Text = "رستوران مجاز:  "+ db.Restaurants.FirstOrDefault(p => p.Id == restaurant_id).Name;
+            var dbb = db.Restaurants;
+            lbRestuarent.Text = "رستوران مجاز:  "+ dbb.FirstOrDefault(p => p.Id == restaurant_id).Name;
             lbShift.Text = GiveMeShiftName();
 
         }

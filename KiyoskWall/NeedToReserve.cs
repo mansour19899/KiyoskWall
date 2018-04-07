@@ -56,7 +56,7 @@ namespace KiyoskWall
         {
             Schedules = tempSchedules.Where(p=>p.Restaurant_Id_Fk==restaurent).ToList();
             Trays = TempTrays;
-            MessageBox.Show("");
+            
         }
     }
 }

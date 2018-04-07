@@ -26,10 +26,11 @@ namespace KiyoskWall
         private PoonehReservation t;
         private int restaurant_id;
         System.Resources.ResourceManager rm = new ResourceManager(typeof(Resource1));
-        public ReserveFoodQuickly()
+        public ReserveFoodQuickly(Person per)
         {
             InitializeComponent();
             tableLayoutPanel1.Visible = false;
+            p1 = per;
         }
 
    
@@ -45,7 +46,7 @@ namespace KiyoskWall
             //p1 = db.People.Where(pp => pp.NationalCode == "0440005191").FirstOrDefault(); //rozkar
          
            
-            p1 = db.People.Where(p => p.PersonelNo == "545642").FirstOrDefault();//c
+            //p1 = db.People.Where(p => p.PersonelNo == "545642").FirstOrDefault();//c
             //p1 = db.People.Where(p => p.NationalCode == "1828039179").FirstOrDefault();  //b
             //p1 = db.People.Where(p => p.PersonelNo == "565807").FirstOrDefault();   //d
             //p1 = db.People.Where(p => p.PersonelNo == "568161").FirstOrDefault();   //a
@@ -112,11 +113,12 @@ namespace KiyoskWall
 
             ReservedFood();
 
-            
-            
-            lbResaturentName.Text="رستوران مجاز  :"+"    "+ db.Restaurants.FirstOrDefault(p => p.Id ==restaurant_id).Name;
+
+            var dbb = db.Restaurants.ToList();
+            lbResaturentName.Text="رستوران مجاز  :"+"    "+ dbb.FirstOrDefault(p => p.Id ==restaurant_id).Name;
 
             tableLayoutPanel1.Visible = true;
+          
             int x = 0;
 
 
@@ -342,6 +344,11 @@ namespace KiyoskWall
         private void pic19_Click(object sender, EventArgs e)
         {
             SetReserve(14, 4);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
