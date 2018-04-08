@@ -30,6 +30,7 @@ namespace KiyoskWall
         {
             InitializeComponent();
             tableLayoutPanel1.Visible = false;
+            
             p1 = per;
         }
 
@@ -117,6 +118,7 @@ namespace KiyoskWall
             var dbb = db.Restaurants.ToList();
             lbResaturentName.Text="رستوران مجاز  :"+"    "+ dbb.FirstOrDefault(p => p.Id ==restaurant_id).Name;
 
+            
             tableLayoutPanel1.Visible = true;
           
             int x = 0;
