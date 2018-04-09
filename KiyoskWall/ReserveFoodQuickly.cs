@@ -30,7 +30,9 @@ namespace KiyoskWall
         {
             InitializeComponent();
             tableLayoutPanel1.Visible = false;
-            
+            this.WindowState = FormWindowState.Maximized;
+            this.Location = new Point(0, 0);
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             p1 = per;
         }
 
@@ -38,9 +40,7 @@ namespace KiyoskWall
 
         private void ReserveFoodQuickly_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+          
 
             db = new PoonehEntities1();
 

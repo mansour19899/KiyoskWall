@@ -26,15 +26,17 @@ namespace KiyoskWall
         public Form1(Person per)
         {
             InitializeComponent();
-            tableLayoutPanel1.Visible = false;
             p1 = per;
+
+            this.WindowState = FormWindowState.Maximized;
+            this.Location = new Point(0, 0);
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            tableLayoutPanel1.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+           
           
             db =new  PoonehEntities1();
             dtnow = DateTime.Now.ToPersianDateString();
@@ -50,7 +52,7 @@ namespace KiyoskWall
             
             
             restaurant_id = db.Person_Restaurant.FirstOrDefault(p => p.Person_Id_Fk == p1.Id).Restaurant_Id_Fk.Value;
-            restaurant_id = 26;
+            //restaurant_id = 26;
             lbName.Text = p1.Name + " " + p1.LastName;
          
             

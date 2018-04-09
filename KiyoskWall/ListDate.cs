@@ -72,6 +72,21 @@ namespace KiyoskWall
 
             else
             {
+                List<Date> qq = (from pp in db.HoliDays
+                                 where pp.HolidayDate.CompareTo(dtnow) == 1
+                                 select new Date { date = pp.HolidayDate, meal = 1 }).Distinct().ToList();
+
+                for (int i = 0; i < qq.Count; i++)
+                {
+                    var ee = q.Where(p => p.date == qq.ElementAt(i).date).FirstOrDefault();
+                    q.Remove(ee);
+                }
+
+                foreach (var item in q)
+                {
+                    item.day = item.date.ToPersianday();
+                    item.meal = 1;
+                }
                 return q;
             }
 
@@ -82,7 +97,7 @@ namespace KiyoskWall
         {
             int x = 0;
 
-            string datee = "1396/10/27".AddDaysToShamsiDate(skip);
+            string datee = "1397/01/11".AddDaysToShamsiDate(skip);
             List<Date> qqq=new List<Date>();
             for (int i = 0; i < d.Count; i++)
                
