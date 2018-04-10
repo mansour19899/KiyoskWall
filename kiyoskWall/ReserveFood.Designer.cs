@@ -76,7 +76,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Location = new System.Drawing.Point(477, 302);
+            this.pictureBox3.Location = new System.Drawing.Point(125, 302);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(25);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(302, 204);
@@ -89,7 +89,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(125, 302);
+            this.pictureBox2.Location = new System.Drawing.Point(477, 302);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(25);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(302, 204);
@@ -116,7 +116,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Font = new System.Drawing.Font("B Mitra", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(102, 238);
+            this.label2.Location = new System.Drawing.Point(454, 238);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -137,11 +137,11 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbDate, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.button1, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -161,7 +161,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label3.Font = new System.Drawing.Font("B Mitra", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(454, 236);
+            this.label3.Location = new System.Drawing.Point(102, 236);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(348, 41);
@@ -171,9 +171,11 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.button1.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.Location = new System.Drawing.Point(103, 640);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 49);
+            this.button1.Size = new System.Drawing.Size(131, 83);
             this.button1.TabIndex = 11;
             this.button1.Text = "بستن";
             this.button1.UseVisualStyleBackColor = true;

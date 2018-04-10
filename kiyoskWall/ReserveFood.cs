@@ -201,7 +201,7 @@ namespace KiyoskWall
                 db.PoonehReservations.Add(reserv);
                 //int x = db.SaveChanges();
                 int x = 1;
-             
+
                 if (x != 0)
                 {
                     MessageBox.Show("رزرو انجام شد");
