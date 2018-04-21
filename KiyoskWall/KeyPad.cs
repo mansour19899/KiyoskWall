@@ -120,13 +120,13 @@ namespace KiyoskWall
                     if (week)
                     {
                         ReserveFoodQuickly frm = new ReserveFoodQuickly(qq);
-                        frm.Show();
+                        frm.ShowDialog();
                         this.Close();
                     }
                     else
                     {
                         Form1 frm = new Form1(qq);
-                        frm.Show();
+                        frm.ShowDialog();
                         this.Close();
                     }
                     sb.Clear();
@@ -139,13 +139,13 @@ namespace KiyoskWall
                 if(week)
                 {
                     ReserveFoodQuickly frm = new ReserveFoodQuickly(q);
-                    frm.Show();
+                    frm.ShowDialog();
                     this.Close();
                 }
                 else
                 {
                     Form1 frm = new Form1(q);
-                    frm.Show();
+                    frm.ShowDialog();
                     this.Close();
                 }
                

@@ -35,7 +35,7 @@ namespace KiyoskWall
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
             KeyPad frm = new KeyPad(false);
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
