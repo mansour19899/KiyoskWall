@@ -23,6 +23,7 @@ namespace KiyoskWall
         private NeedToReserve needs;
         private List<Schedule> tempSchedules;
         private List<Tray> TempTrays;
+       
         public Form1(Person per)
         {
             InitializeComponent();
@@ -32,6 +33,8 @@ namespace KiyoskWall
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             tableLayoutPanel1.Visible = false;
+
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)

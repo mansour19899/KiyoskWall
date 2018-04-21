@@ -29,11 +29,11 @@ namespace KiyoskWall
             ListDate ty = new ListDate(person);
             AllDays = ty.GetList();
 
-            string y = AllDays.ElementAt(0).date.AddDaysToShamsiDate(-1);
-            tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).ToList();
+            // string y = AllDays.ElementAt(0).date.AddDaysToShamsiDate(-1);
+            tempSchedules = Login.tempSchedules;
 
-            var ew = tempSchedules.Where(p => AllDays.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
-            TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s => s).ToList();
+           // var ew = tempSchedules.Where(p => AllDays.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
+            TempTrays = Login.TempTrays;
 
         }
         public void GiveTraysSchedle()

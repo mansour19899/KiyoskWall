@@ -12,10 +12,21 @@ namespace KiyoskWall
 {
     public partial class Login : Form
     {
-        
+        public static List<Schedule> tempSchedules;
+        public static List<Tray> TempTrays;
+        string y;
+        string yy;
+        PoonehEntities1 db;
+
         public Login()
         {
             InitializeComponent();
+
+          db = new PoonehEntities1();
+          y = DateTime.Now.ToPersianDateString();
+          LoadCash();
+           
+
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -34,14 +45,37 @@ namespace KiyoskWall
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
+            yy = DateTime.Now.ToPersianDateString();
+            if (y.CompareTo(yy) == -1)
+            {
+                LoadCash();
+                y = yy;
+            }
             KeyPad frm = new KeyPad(false);
             frm.ShowDialog();
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
+            yy = DateTime.Now.ToPersianDateString();
+            if (y.CompareTo(yy) == -1)
+            {
+                LoadCash();
+                y = yy;
+            }
             KeyPad frm = new KeyPad(true);
             frm.Show();
+        }
+
+        private void LoadCash()
+        {
+            tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).Distinct().ToList();
+            var AllDays = tempSchedules.Select(p => new Date { date = p.SDate }).Distinct();
+
+
+            var ew = tempSchedules.Where(p => AllDays.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
+            TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s => s).ToList();
+
         }
     }
 }

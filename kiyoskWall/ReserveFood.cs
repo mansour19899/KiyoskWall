@@ -169,7 +169,7 @@ namespace KiyoskWall
                 t.Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk;
                 t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
                 //int tt = db.SaveChanges();
-                MessageBox.Show("رزرو تغیر کرد");
+                //MessageBox.Show("رزرو تغیر کرد");
                 if (loop)
                 {
                     j = j + 1;
@@ -204,7 +204,7 @@ namespace KiyoskWall
 
                 if (x != 0)
                 {
-                    MessageBox.Show("رزرو انجام شد");
+                   // MessageBox.Show("رزرو انجام شد");
                     if (loop)
                     {
                         j = j + 1;
