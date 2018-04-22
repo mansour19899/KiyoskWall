@@ -55,21 +55,33 @@ namespace KiyoskWall
 
             else if (_worksheet == (int)Shift.A8)
             {
-                return ShiftFilter(q, 0);
+                return ShiftFilter8(q, 0);
             }
             else if (_worksheet == (int)Shift.B8)
             {
-                return ShiftFilter(q, 4);
+                return ShiftFilter8(q, 4);
             }
             else if (_worksheet == (int)Shift.C8)
             {
-                return ShiftFilter(q, 8);
+                return ShiftFilter8(q, 8);
             }
             else if (_worksheet == (int)Shift.D8)
             {
-                return ShiftFilter(q, 12);
+                return ShiftFilter8(q, 12);
             }
 
+            else if (_worksheet == (int)Shift.A12)
+            {
+                return ShiftFilter12(q, 8);
+            }
+            else if (_worksheet == (int)Shift.B12)
+            {
+                return ShiftFilter12(q, 4);
+            }
+            else if (_worksheet == (int)Shift.C12)
+            {
+                return ShiftFilter12(q, 0);
+            }
             else
             {
                 List<Date> qq = (from pp in db.HoliDays
@@ -93,7 +105,7 @@ namespace KiyoskWall
 
         }
 
-        private List<Date> ShiftFilter(List<Date> d, int skip)
+        private List<Date> ShiftFilter8(List<Date> d, int skip)
         {
             int x = 0;
 
@@ -125,5 +137,36 @@ namespace KiyoskWall
             return qqq;
         }
 
+        private List<Date> ShiftFilter12(List<Date> d, int skip)
+        {
+            int x = 0;
+
+            string datee = "1397/01/31".AddDaysToShamsiDate(skip);
+            List<Date> qqq = new List<Date>();
+            for (int i = 0; i < d.Count; i++)
+
+            {
+                x = d.ElementAt(i).date.DiffDaysShamsi(datee);
+                x = x % 12;
+                if (x >= 0 & x < 4)
+                {
+                    d.ElementAt(i).meal = 1;
+                    qqq.Add(d.ElementAt(i));
+                }
+
+                if (x >= 4 & x < 8)
+                {
+                    d.ElementAt(i).meal = 2;
+                    qqq.Add(d.ElementAt(i));
+                }
+
+            }
+
+            foreach (var item in qqq)
+            {
+                item.day = item.date.ToPersianday();
+            }
+            return qqq;
+        }
     }
 }

@@ -165,6 +165,12 @@ namespace KiyoskWall
                 return " C  شیفت ";
             else if (x == Shift.D8)
                 return "D  شیفت ";
+            else if (x == Shift.A12)
+                return "A(12)  شیفت ";
+            else if (x == Shift.B12)
+                return "B(12)  شیفت ";
+            else if (x == Shift.C12)
+                return "C(12)  شیفت ";
             else
             return "";
         }

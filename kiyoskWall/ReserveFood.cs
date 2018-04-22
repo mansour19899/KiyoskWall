@@ -168,7 +168,7 @@ namespace KiyoskWall
             {
                 t.Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk;
                 t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
-                //int tt = db.SaveChanges();
+                int tt = db.SaveChanges();
                 //MessageBox.Show("رزرو تغیر کرد");
                 if (loop)
                 {
@@ -199,8 +199,8 @@ namespace KiyoskWall
 
                 };
                 db.PoonehReservations.Add(reserv);
-                //int x = db.SaveChanges();
-                int x = 1;
+                int x = db.SaveChanges();
+                //int x = 1;
 
                 if (x != 0)
                 {

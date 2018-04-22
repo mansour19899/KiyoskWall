@@ -105,31 +105,43 @@ namespace KiyoskWall
         private void Button12_Click(object sender, EventArgs e)
         {
             string t = sb.ToString();
-            var q = db.People.SingleOrDefault(p => p.NationalCode.Equals(t));
+            var q = db.People.FirstOrDefault(p => p.NationalCode.Equals(t));
             if (q == null)
             {
-                var qq = db.People.SingleOrDefault(p => p.PersonelNo.Equals(t));
-                if(qq==null)
+                var qq = db.People.FirstOrDefault(p => p.PersonelNo.Equals(t));
+                if (qq == null)
                 {
                     sb.Clear();
                     lbNumber.ForeColor = Color.Red;
                     lbNumber.Text = "شخص مورد نظر ثبت نمی باشد";
                 }
-              
+
                 else
                 {
                     if (week)
                     {
-                        ReserveFoodQuickly frm = new ReserveFoodQuickly(qq);
-                        frm.ShowDialog();
-                        this.Close();
+                        if (db.Person_Restaurant.Any(p => p.Person_Id_Fk == qq.Id))
+                        {
+                            ReserveFoodQuickly frm = new ReserveFoodQuickly(qq);
+                            frm.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            sb.Clear();
+                            lbNumber.ForeColor = Color.Red;
+                            lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
+                        }
                     }
-                    else
-                    {
-                        Form1 frm = new Form1(qq);
-                        frm.ShowDialog();
-                        this.Close();
-                    }
+
+                
+            
+            else
+            {
+                Form1 frm = new Form1(qq);
+                frm.ShowDialog();
+                this.Close();
+            }
                     sb.Clear();
                     lbNumber.Text = "";
                 }
@@ -139,19 +151,40 @@ namespace KiyoskWall
             {
                 if(week)
                 {
-                    ReserveFoodQuickly frm = new ReserveFoodQuickly(q);
-                    frm.ShowDialog();
-                    this.Close();
+                    if (db.Person_Restaurant.Any(p => p.Person_Id_Fk == q.Id))
+                    {
+                        ReserveFoodQuickly frm = new ReserveFoodQuickly(q);
+                        this.Hide();
+                        frm.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        sb.Clear();
+                        lbNumber.ForeColor = Color.Red;
+                        lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
+                    }
+
                 }
                 else
                 {
-                    Form1 frm = new Form1(q);
-                    frm.ShowDialog();
-                    this.Close();
+                    if (db.Person_Restaurant.Any(p => p.Person_Id_Fk == q.Id))
+                    {
+                        Form1 frm = new Form1(q);
+                        this.Hide();
+                        frm.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        sb.Clear();
+                        lbNumber.ForeColor = Color.Red;
+                        lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
+                    }
                 }
                
-                sb.Clear();
-                lbNumber.Text = "";
+                //sb.Clear();
+                //lbNumber.Text = "";
             }
         }
     }

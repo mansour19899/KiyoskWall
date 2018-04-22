@@ -62,10 +62,9 @@ namespace KiyoskWall
             var uu = ty.GetList().OrderBy(p => p.date).Take(5);
             SetPicture();
             string y = uu.ElementAt(0).date.AddDaysToShamsiDate(-1);
-           var tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).ToList();
-
-           var ew = tempSchedules.Where(p => uu.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
-           var TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s => s).ToList();
+           var tempSchedules = Login.tempSchedules;
+           
+           var TempTrays = Login.TempTrays;
 
             int j = 0;
             for (int i = 0; i < 5; i++)
@@ -204,8 +203,8 @@ namespace KiyoskWall
             {
                 t.Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk;
                 t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
-                //int tt = db.SaveChanges();
-                MessageBox.Show("رزرو تغیر کرد");
+                int tt = db.SaveChanges();
+                //MessageBox.Show("رزرو تغیر کرد");
                 MemoryStream mStreammmm = new MemoryStream(Trays.ElementAt(food).Image);
                 pic.ElementAt(jj).Image = Image.FromStream(mStreammmm);
 
@@ -224,12 +223,12 @@ namespace KiyoskWall
 
                 };
                 db.PoonehReservations.Add(reserv);
-                //int x = db.SaveChanges();
-                int x = 1;
+                int x = db.SaveChanges();
+                //int x = 1;
 
                 if (x != 0)
                 {
-                    MessageBox.Show("رزرو انجام شد");
+                    //MessageBox.Show("رزرو انجام شد");
                     MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(food).Image);
                     pic.ElementAt(jj).Image = Image.FromStream(mStreammm);
                 }
