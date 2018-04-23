@@ -146,9 +146,18 @@ namespace KiyoskWall
         {
             needs.date = pic.Name;
             needs.meal = int.Parse(pic.Text);
-            needs.GiveTraysSchedle();
-            ReserveFood frm = new ReserveFood(needs);
-            frm.Show();
+            needs.GiveAllTraysSchedle();
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+            {
+                ReserveFood frm = new ReserveFood(needs);
+                frm.Show();
+            }
+            else
+            {
+                Alarm frm = new Alarm();
+                frm.ShowDialog();
+                this.Close();
+            }
         }
 
         public string GiveMeShiftName()

@@ -32,21 +32,30 @@ namespace KiyoskWall
 
         public ReserveFood(NeedToReserve need)
         {
-            _need = need;
-            InitializeComponent();
-            _person = need.Person;
-            _date = need.date;
-            _restaurant_id = need.restaurent;
-            _meal = need.meal;
-            Schedules = need.Schedules;
-            Trays = _need.Trays;
-            AllSchedules = need.Schedules;
-            AllTrays = need.Trays;
-            AllDays = need.AllDays;
-            db = new PoonehEntities1();
-            tableLayoutPanel1.Visible = false;
-            loop = false;
-            
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+            {
+                _need = need;
+                InitializeComponent();
+                _person = need.Person;
+                _date = need.date;
+                _restaurant_id = need.restaurent;
+                _meal = need.meal;
+                Schedules = need.Schedules;
+                Trays = _need.Trays;
+                AllSchedules = need.Schedules;
+                AllTrays = need.Trays;
+                AllDays = need.AllDays;
+                db = new PoonehEntities1();
+                tableLayoutPanel1.Visible = false;
+                loop = false;
+            }
+            else
+            {
+                Alarm frm = new Alarm();
+                frm.ShowDialog();
+                this.Close();
+            }
+
         }
 
         private void ReserveFood_Load(object sender, EventArgs e)
@@ -64,7 +73,13 @@ namespace KiyoskWall
                 ReserveAllDay(AllDays.ElementAt(j));
             }
 
-            
+            else
+            {
+                j = AllDays.FindIndex(c => c.date == _date);
+                AllSchedules = Schedules;
+                AllTrays = Trays;
+                ReserveAllDay(AllDays.ElementAt(j));
+            }
             SetForm();
 
             
@@ -153,75 +168,89 @@ namespace KiyoskWall
 
         private void SetReserve(int food)
         {
-            var x1 = Schedules.ElementAt(0).Id;
-            var x2 = Schedules.ElementAt(1).Id;
-            var x3 = Schedules.ElementAt(2).Id;
-            t = null;
-            t =( from r in db.PoonehReservations
-                where r.Person_Id_Fk == _person.Id
-                      where r.Schedule_Id_Fk ==x1 || r.Schedule_Id_Fk == x2 || r.Schedule_Id_Fk == x3 
-                select  r).SingleOrDefault();
-
-
-
-            if (t != null)
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                t.Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk;
-                t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
-                int tt = db.SaveChanges();
-                //MessageBox.Show("رزرو تغیر کرد");
-                if (loop)
-                {
-                    j = j + 1;
-                    if (j < AllDays.Count)
-                        ReserveAllDay(AllDays.ElementAt(j));
-                    else
-                        this.Close();
-                }
-                else
-                {
-                    this.Close();
-                }
-               
+                var x1 = Schedules.ElementAt(0).Id;
+                var x2 = Schedules.ElementAt(1).Id;
+                var x3 = Schedules.ElementAt(2).Id;
+                t = null;
+                t = (from r in db.PoonehReservations
+                     where r.Person_Id_Fk == _person.Id
+                     where r.Schedule_Id_Fk == x1 || r.Schedule_Id_Fk == x2 || r.Schedule_Id_Fk == x3
+                     select r).SingleOrDefault();
 
-            }
-            else
-            {
-                PoonehReservation reserv = new PoonehReservation()
-                {
-                    Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk,
-                    Person_Id_Fk = _person.Id,
-                    Schedule_Id_Fk = Schedules.ElementAt(food).Id,
-                    Company_Id_Fk = _person.Company_Id_Fk,
-                    Unit_Id_Fk = _person.Unit_Id_Fk,
-                    Restaurant_Id_Fk = Schedules.ElementAt(food).Restaurant_Id_Fk,
-                    Meal_Id_Fk = Schedules.ElementAt(food).Meal_Id_Fk
 
-                };
-                db.PoonehReservations.Add(reserv);
-                int x = db.SaveChanges();
-                //int x = 1;
 
-                if (x != 0)
+                if (t != null)
                 {
-                   // MessageBox.Show("رزرو انجام شد");
+                    t.Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk;
+                    t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
+
+
+                    int tt = db.SaveChanges();
+                    //MessageBox.Show("رزرو تغیر کرد");
                     if (loop)
                     {
                         j = j + 1;
-                        if(j<AllDays.Count)
-                        ReserveAllDay(AllDays.ElementAt(j));
+                        if (j < AllDays.Count)
+                            ReserveAllDay(AllDays.ElementAt(j));
                         else
-                        this.Close();
+                            this.Close();
                     }
                     else
                     {
                         this.Close();
                     }
+
+
                 }
                 else
                 {
-                    MessageBox.Show("خطا در رزرو");
+                    PoonehReservation reserv = new PoonehReservation()
+                    {
+                        Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk,
+                        Person_Id_Fk = _person.Id,
+                        Schedule_Id_Fk = Schedules.ElementAt(food).Id,
+                        Company_Id_Fk = _person.Company_Id_Fk,
+                        Unit_Id_Fk = _person.Unit_Id_Fk,
+                        Restaurant_Id_Fk = Schedules.ElementAt(food).Restaurant_Id_Fk,
+                        Meal_Id_Fk = Schedules.ElementAt(food).Meal_Id_Fk
+
+                    };
+                    db.PoonehReservations.Add(reserv);
+
+
+                    int x = db.SaveChanges();
+                    //int x = 1;
+
+                    if (x != 0)
+                    {
+                        // MessageBox.Show("رزرو انجام شد");
+                        if (loop)
+                        {
+                            j = j + 1;
+                            if (j < AllDays.Count)
+                                ReserveAllDay(AllDays.ElementAt(j));
+                            else
+                                this.Close();
+                        }
+                        else
+                        {
+                            this.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("خطا در رزرو");
+                    }
                 }
+            }
+
+            else
+            {
+                Alarm frm = new Alarm();
+                frm.ShowDialog();
+                this.Close();
             }
         }
 
@@ -230,6 +259,23 @@ namespace KiyoskWall
             this.Close();
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            j = j - 1;
+            if (j < 0)
+                this.Close();
+            else
+              ReserveAllDay(AllDays.ElementAt(j));
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            j = j + 1;
+            if (j < AllDays.Count())
+                ReserveAllDay(AllDays.ElementAt(j));
+            else
+                this.Close();
+        }
     }
 }

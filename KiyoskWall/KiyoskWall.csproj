@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alarm.Designer.cs">
+      <DependentUpon>Alarm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Company.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -159,6 +165,9 @@
     <Compile Include="WorkSheet.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Alarm.resx">
+      <DependentUpon>Alarm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +257,7 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <LastGenOutput>Model2.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\alarm.jpg" />
     <None Include="Resources\weekly.png" />
     <None Include="Resources\mahaneh.png" />
     <None Include="Resources\fars.png" />

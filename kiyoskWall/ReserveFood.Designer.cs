@@ -35,8 +35,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -142,6 +144,8 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -154,6 +158,18 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.11321F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1256, 788);
             this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.button1.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button1.Location = new System.Drawing.Point(103, 640);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 83);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "بستن";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label3
             // 
@@ -169,17 +185,31 @@
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // button2
             // 
-            this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
-            this.button1.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Location = new System.Drawing.Point(103, 640);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 83);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "بستن";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.button2.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button2.Location = new System.Drawing.Point(1019, 57);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(134, 80);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "روز قبل";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.button3.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button3.Location = new System.Drawing.Point(103, 50);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(131, 87);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "روز بعد";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ReserveFood
             // 
@@ -213,5 +243,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

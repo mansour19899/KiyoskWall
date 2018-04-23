@@ -21,10 +21,14 @@ namespace KiyoskWall
         public Login()
         {
             InitializeComponent();
-
-          db = new PoonehEntities1();
-          y = DateTime.Now.ToPersianDateString();
-          LoadCash();
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+            {
+               
+                y = DateTime.Now.ToPersianDateString();
+                LoadCash();
+            }
+            else
+                y = "1397/01/01";
            
 
         }
@@ -45,36 +49,63 @@ namespace KiyoskWall
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
-            yy = DateTime.Now.ToPersianDateString();
-            if (y.CompareTo(yy) == -1)
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                LoadCash();
-                y = yy;
+                yy = DateTime.Now.ToPersianDateString();
+                if (y.CompareTo(yy) == -1)
+                {
+                    LoadCash();
+                    y = yy;
+                }
+                KeyPad frm = new KeyPad(false);
+                frm.ShowDialog();
+
             }
-            KeyPad frm = new KeyPad(false);
-            frm.ShowDialog();
+            else
+            {
+                Alarm frm = new Alarm();
+                frm.Show();
+            }
+               
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
-            yy = DateTime.Now.ToPersianDateString();
-            if (y.CompareTo(yy) == -1)
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                LoadCash();
-                y = yy;
+                yy = DateTime.Now.ToPersianDateString();
+                if (y.CompareTo(yy) == -1)
+                {
+                    LoadCash();
+                    y = yy;
+                }
+                KeyPad frm = new KeyPad(true);
+                frm.Show();
+
             }
-            KeyPad frm = new KeyPad(true);
-            frm.Show();
+
+            else
+            {
+                Alarm frm = new Alarm();
+                frm.Show();
+            }
         }
 
         private void LoadCash()
         {
-            tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).Distinct().ToList();
-            var AllDays = tempSchedules.Select(p => new Date { date = p.SDate }).Distinct();
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+            {
+                y = DateTime.Now.ToPersianDateString();
+                db = new PoonehEntities1();
+
+                tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).Distinct().ToList();
+                var AllDays = tempSchedules.Select(p => new Date { date = p.SDate }).Distinct();
 
 
-            var ew = tempSchedules.Where(p => AllDays.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
-            TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s => s).ToList();
+                var ew = tempSchedules.Where(p => AllDays.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
+                TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s => s).ToList();
+            }
+                
 
         }
     }
