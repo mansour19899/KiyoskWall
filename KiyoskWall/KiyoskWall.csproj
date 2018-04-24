@@ -257,6 +257,7 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <LastGenOutput>Model2.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Close_Box_Red.png" />
     <None Include="Resources\alarm.jpg" />
     <None Include="Resources\weekly.png" />
     <None Include="Resources\mahaneh.png" />

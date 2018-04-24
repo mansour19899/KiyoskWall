@@ -39,6 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.lbReserved = new System.Windows.Forms.Label();
+            this.btnDeleteReserved = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -129,6 +131,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.BackgroundImage = global::KiyoskWall.Resource1.blue;
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -146,6 +149,8 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.button2, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbReserved, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnDeleteReserved, 4, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -211,10 +216,39 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // lbReserved
+            // 
+            this.lbReserved.AutoSize = true;
+            this.lbReserved.BackColor = System.Drawing.Color.Transparent;
+            this.lbReserved.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbReserved.Font = new System.Drawing.Font("B Nazanin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbReserved.Location = new System.Drawing.Point(807, 637);
+            this.lbReserved.Name = "lbReserved";
+            this.lbReserved.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbReserved.Size = new System.Drawing.Size(346, 151);
+            this.lbReserved.TabIndex = 14;
+            this.lbReserved.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnDeleteReserved
+            // 
+            this.btnDeleteReserved.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteReserved.BackgroundImage = global::KiyoskWall.Resource1.Close_Box_Red;
+            this.btnDeleteReserved.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteReserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteReserved.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnDeleteReserved.Location = new System.Drawing.Point(1159, 640);
+            this.btnDeleteReserved.Name = "btnDeleteReserved";
+            this.btnDeleteReserved.Size = new System.Drawing.Size(85, 83);
+            this.btnDeleteReserved.TabIndex = 15;
+            this.btnDeleteReserved.UseVisualStyleBackColor = false;
+            this.btnDeleteReserved.Visible = false;
+            this.btnDeleteReserved.Click += new System.EventHandler(this.btnDeleteReserved_Click);
+            // 
             // ReserveFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
             this.ClientSize = new System.Drawing.Size(1256, 788);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -245,5 +279,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lbReserved;
+        private System.Windows.Forms.Button btnDeleteReserved;
     }
 }

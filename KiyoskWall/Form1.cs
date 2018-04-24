@@ -23,16 +23,19 @@ namespace KiyoskWall
         private NeedToReserve needs;
         private List<Schedule> tempSchedules;
         private List<Tray> TempTrays;
-       
+        public static List<PoonehReservation> Reserved;
         public Form1(Person per)
         {
             InitializeComponent();
             p1 = per;
+            
 
             this.WindowState = FormWindowState.Maximized;
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             tableLayoutPanel1.Visible = false;
+
+            
 
            
         }
@@ -57,8 +60,13 @@ namespace KiyoskWall
             restaurant_id = db.Person_Restaurant.FirstOrDefault(p => p.Person_Id_Fk == p1.Id).Restaurant_Id_Fk.Value;
             //restaurant_id = 26;
             lbName.Text = p1.Name + " " + p1.LastName;
-         
-            
+
+            var y = Login.tempSchedules.Min(pp => pp.Id);
+            Reserved =( from p in db.PoonehReservations 
+                       where p.Person_Id_Fk.Value == p1.Id & p.Schedule_Id_Fk > y
+                        select p).ToList();
+
+
 
             SetPicturebox(needs.AllDays);
             tableLayoutPanel1.Visible = true;

@@ -103,6 +103,16 @@ namespace KiyoskWall {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Close_Box_Red {
+            get {
+                object obj = ResourceManager.GetObject("Close_Box_Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fars {
             get {
                 object obj = ResourceManager.GetObject("fars", resourceCulture);

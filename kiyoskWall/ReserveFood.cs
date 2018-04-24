@@ -30,6 +30,7 @@ namespace KiyoskWall
         string meall;
         private bool loop;
         private int j;
+        private PoonehReservation Reserved_id;
 
         public ReserveFood(NeedToReserve need)
         {
@@ -113,6 +114,9 @@ namespace KiyoskWall
             _meal = date.meal;
             _dayName = date.day;
             SetTtaysSchedle(date);
+            btnDeleteReserved.Visible = false;
+            lbReserved.Text = "";
+            btnDeleteReserved.Visible = false;
             SetForm();
 
         }
@@ -141,6 +145,25 @@ namespace KiyoskWall
             MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(2).Image);
             pictureBox3.Image = Image.FromStream(mStreammm);
             label3.Text = Trays.ElementAt(2).Name;
+
+
+
+            var ew = Form1.Reserved.Where(p => Schedules.Any(pe => pe.Id == p.Schedule_Id_Fk)).Select(p => p).SingleOrDefault();
+            string eww="";
+            if (ew != null)
+            {
+                 eww = Trays.Where(p => p.Id == ew.Tray_Id_Fk).Select(pp => pp.Name).FirstOrDefault();
+                lbReserved.Text = "غذای رزرو شده:" + eww;
+                btnDeleteReserved.Visible = true;
+            }
+           
+            Reserved_id = ew;
+
+           // MessageBox.Show(ew.Id.ToString());
+         
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -182,12 +205,22 @@ namespace KiyoskWall
                      where r.Schedule_Id_Fk == x1 || r.Schedule_Id_Fk == x2 || r.Schedule_Id_Fk == x3
                      select r).SingleOrDefault();
 
+               var tReserved = (from r in Form1.Reserved
+                    where r.Schedule_Id_Fk == x1 || r.Schedule_Id_Fk == x2 || r.Schedule_Id_Fk == x3
+                     select r).SingleOrDefault();
+                if(tReserved !=null)
+                {
+                    tReserved.Tray_Id_Fk= Schedules.ElementAt(food).Tray_Id_Fk;
+                    tReserved.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
+                }
+
 
 
                 if (t != null)
                 {
                     t.Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk;
                     t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
+
 
 
                     int tt = db.SaveChanges();
@@ -222,8 +255,29 @@ namespace KiyoskWall
                     };
                     db.PoonehReservations.Add(reserv);
 
+                    int x = 0;
+                    try
+                    {
+                       x = db.SaveChanges();
 
-                    int x = db.SaveChanges();
+                        Form1.Reserved.Add(reserv);
+
+
+
+
+
+
+                    }
+                    catch (Exception)
+                    {
+                        Alarm frm = new Alarm();
+                        frm.ShowDialog();
+                        this.Close();
+
+                    }
+                    
+
+
                     //int x = 1;
 
                     if (x != 0)
@@ -279,6 +333,35 @@ namespace KiyoskWall
                 ReserveAllDay(AllDays.ElementAt(j));
             else
                 this.Close();
+        }
+
+        private void btnDeleteReserved_Click(object sender, EventArgs e)
+        {
+            if(Reserved_id != null)
+            {
+                var t = db.PoonehReservations.Where(p => p.Id == Reserved_id.Id).SingleOrDefault();
+                var tt = Form1.Reserved.Where(p => p.Id == Reserved_id.Id).SingleOrDefault();
+
+                if (t != null)
+                {
+                    db.PoonehReservations.Remove(t);
+                    Form1.Reserved.Remove(tt);
+                    if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+                    {
+                        db.SaveChanges();
+                        btnDeleteReserved.Visible = false;
+                        lbReserved.Text = "";
+
+                    }
+                    else
+                    {
+                        Alarm frm = new Alarm();
+                        frm.ShowDialog();
+                        this.Close();
+                    }
+                }
+                    
+            }
         }
     }
 }
