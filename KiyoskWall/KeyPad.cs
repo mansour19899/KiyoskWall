@@ -209,5 +209,11 @@ namespace KiyoskWall
                 this.Close();
             
         }
+
+        private void lbNumber_Click_1(object sender, EventArgs e)
+        {
+            sb.Remove(sb.Length - 1, 1);
+            lbNumber.Text = sb.ToString();
+        }
     }
 }

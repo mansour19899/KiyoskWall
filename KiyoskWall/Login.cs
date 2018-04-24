@@ -95,15 +95,24 @@ namespace KiyoskWall
         {
             if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                y = DateTime.Now.ToPersianDateString();
-                db = new PoonehEntities1();
+                try
+                {
+                    y = DateTime.Now.ToPersianDateString();
+                    db = new PoonehEntities1();
 
-                tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).Distinct().ToList();
-                var AllDays = tempSchedules.Select(p => new Date { date = p.SDate }).Distinct();
+                    tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).Distinct().ToList();
+                    var AllDays = tempSchedules.Select(p => new Date { date = p.SDate }).Distinct();
 
 
-                var ew = tempSchedules.Where(p => AllDays.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
-                TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s => s).ToList();
+                    var ew = tempSchedules.Where(p => AllDays.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
+                    TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s => s).ToList();
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("مشکل در لود");
+                }
+              
             }
                 
 

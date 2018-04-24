@@ -287,6 +287,7 @@
             this.lbNumber.Size = new System.Drawing.Size(597, 73);
             this.lbNumber.TabIndex = 1;
             this.lbNumber.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lbNumber.Click += new System.EventHandler(this.lbNumber_Click_1);
             // 
             // lbTimer
             // 

@@ -17,6 +17,7 @@ namespace KiyoskWall
         private Person _person;
         private int _restaurant_id;
         private string _date;
+        private string _dayName;
         private int _meal;
         private KiyoskWall.PoonehEntities1 db;
         List<Schedule> Schedules;
@@ -38,6 +39,7 @@ namespace KiyoskWall
                 InitializeComponent();
                 _person = need.Person;
                 _date = need.date;
+               // _dayName = need.date.ToPersianday();
                 _restaurant_id = need.restaurent;
                 _meal = need.meal;
                 Schedules = need.Schedules;
@@ -109,6 +111,7 @@ namespace KiyoskWall
         {
             _date = date.date;
             _meal = date.meal;
+            _dayName = date.day;
             SetTtaysSchedle(date);
             SetForm();
 
@@ -125,7 +128,7 @@ namespace KiyoskWall
                 }
 
 
-                lbDate.Text = _date + "\n" + meall;
+                lbDate.Text = _date + "\n" + meall+"\n"+_dayName;
 
             MemoryStream mStream = new MemoryStream(Trays.ElementAt(0).Image);
             pictureBox1.Image = Image.FromStream(mStream);
