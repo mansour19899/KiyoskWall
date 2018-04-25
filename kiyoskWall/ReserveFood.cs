@@ -136,25 +136,27 @@ namespace KiyoskWall
 
             MemoryStream mStream = new MemoryStream(Trays.ElementAt(0).Image);
             pictureBox1.Image = Image.FromStream(mStream);
-            label1.Text = Trays.ElementAt(0).Name;
+            label1.Text = Trays.ElementAt(0).Name + "\n" +"("+ Trays.ElementAt(0).Note+")";
 
             MemoryStream mStreamm = new MemoryStream(Trays.ElementAt(1).Image);
             pictureBox2.Image = Image.FromStream(mStreamm);
-            label2.Text = Trays.ElementAt(1).Name;
+            label2.Text = Trays.ElementAt(1).Name + "\n" + "(" + Trays.ElementAt(1).Note + ")";
 
             MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(2).Image);
             pictureBox3.Image = Image.FromStream(mStreammm);
-            label3.Text = Trays.ElementAt(2).Name;
+            label3.Text = Trays.ElementAt(2).Name + "\n" + "(" + Trays.ElementAt(2).Note + ")";
 
 
 
             var ew = Form1.Reserved.Where(p => Schedules.Any(pe => pe.Id == p.Schedule_Id_Fk)).Select(p => p).SingleOrDefault();
-            string eww="";
+            Tray eww;
             if (ew != null)
             {
-                 eww = Trays.Where(p => p.Id == ew.Tray_Id_Fk).Select(pp => pp.Name).FirstOrDefault();
-                lbReserved.Text = "غذای رزرو شده:" + eww;
+                 eww = Trays.Where(p => p.Id == ew.Tray_Id_Fk).Select(pp => pp).FirstOrDefault();
+                lbReserved.Text = "غذای رزرو شده:" + eww.Name+"\n"+eww.Note;
                 btnDeleteReserved.Visible = true;
+
+                
             }
            
             Reserved_id = ew;

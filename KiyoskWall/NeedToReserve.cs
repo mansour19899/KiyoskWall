@@ -36,6 +36,7 @@ namespace KiyoskWall
             TempTrays = Login.TempTrays;
 
         }
+     
         public void GiveTraysSchedle()
         {
             Schedules = (from p in tempSchedules

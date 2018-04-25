@@ -26,6 +26,7 @@ namespace KiyoskWall
         private PoonehReservation t;
         private int restaurant_id;
         System.Resources.ResourceManager rm = new ResourceManager(typeof(Resource1));
+        private List<Date> meals;
         public ReserveFoodQuickly(Person per)
         {
             InitializeComponent();
@@ -59,9 +60,9 @@ namespace KiyoskWall
             ListDate ty = new ListDate(p1);
             List<Label> label =new List<Label>(){label1,label2,label3,label4,label5};
 
-            var uu = ty.GetList().OrderBy(p => p.date).Take(5);
+            meals = ty.GetList().OrderBy(p => p.date).Take(5).ToList();
             SetPicture();
-            string y = uu.ElementAt(0).date.AddDaysToShamsiDate(-1);
+            string y = meals.ElementAt(0).date.AddDaysToShamsiDate(-1);
            var tempSchedules = Login.tempSchedules;
            
            var TempTrays = Login.TempTrays;
@@ -69,16 +70,16 @@ namespace KiyoskWall
             int j = 0;
             for (int i = 0; i < 5; i++)
             {
-                if(uu.ElementAt(i).meal==2)
-                    label.ElementAt(i).Text = uu.ElementAt(i).date + "\n" + uu.ElementAt(i).day+"\n"+"((شام))";
+                if(meals.ElementAt(i).meal==2)
+                    label.ElementAt(i).Text = meals.ElementAt(i).date + "\n" + meals.ElementAt(i).day+"\n"+"((شام))";
                 else
                 {
-                    label.ElementAt(i).Text = uu.ElementAt(i).date + "\n" + uu.ElementAt(i).day;
+                    label.ElementAt(i).Text = meals.ElementAt(i).date + "\n" + meals.ElementAt(i).day;
                 }
               
                 PerSchedules = (from p in tempSchedules
-                    where p.SDate.Equals(uu.ElementAt(i).date) & p.Restaurant_Id_Fk == restaurant_id
-                                                     & p.Meal_Id_Fk == uu.ElementAt(i).meal select p).ToList();
+                    where p.SDate.Equals(meals.ElementAt(i).date) & p.Restaurant_Id_Fk == restaurant_id
+                                                     & p.Meal_Id_Fk == meals.ElementAt(i).meal select p).ToList();
 
                 Schedules.Add(PerSchedules.ElementAt(0));
                 Schedules.Add(PerSchedules.ElementAt(1));
@@ -125,6 +126,25 @@ namespace KiyoskWall
 
         }
 
+        public void DeleteReserved(Date date)
+        {
+            var y = Login.tempSchedules.Where(pe => pe.SDate == date.date & pe.Meal_Id_Fk == date.meal&pe.Restaurant_Id_Fk==restaurant_id).Select(p=>p.Id);
+            var ew = db.PoonehReservations.Where(p => y.Any(pp=>p.Schedule_Id_Fk==pp)&p.Person_Id_Fk==p1.Id).Select(p => p).SingleOrDefault();
+          if(ew != null)
+            {
+                db.PoonehReservations.Remove(ew);
+                if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+                {
+                    db.SaveChanges();
+                }
+                else
+                {
+                    Alarm frm = new Alarm();
+                    frm.ShowDialog();
+                    this.Close();
+                }
+            }
+        }
         private void SetPicture()
         {
             pic = new List<PictureBox>();
@@ -349,7 +369,38 @@ namespace KiyoskWall
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
             this.Close();
+        }
+
+        private void pic4_Click(object sender, EventArgs e)
+        {
+            DeleteReserved(meals.ElementAt(0));
+            pic4.Image = null;
+        }
+
+        private void pic8_Click(object sender, EventArgs e)
+        {
+            DeleteReserved(meals.ElementAt(1));
+            pic8.Image = null;
+        }
+
+        private void pic12_Click(object sender, EventArgs e)
+        {
+            DeleteReserved(meals.ElementAt(2));
+            pic12.Image = null;
+        }
+
+        private void pic16_Click(object sender, EventArgs e)
+        {
+            DeleteReserved(meals.ElementAt(3));
+            pic16.Image = null;
+        }
+
+        private void pic20_Click(object sender, EventArgs e)
+        {
+            DeleteReserved(meals.ElementAt(4));
+            pic20.Image = null;
         }
     }
 }

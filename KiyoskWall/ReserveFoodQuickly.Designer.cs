@@ -197,6 +197,7 @@
             this.pic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic4.TabIndex = 3;
             this.pic4.TabStop = false;
+            this.pic4.Click += new System.EventHandler(this.pic4_Click);
             // 
             // pic5
             // 
@@ -244,6 +245,7 @@
             this.pic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic8.TabIndex = 7;
             this.pic8.TabStop = false;
+            this.pic8.Click += new System.EventHandler(this.pic8_Click);
             // 
             // pic9
             // 
@@ -291,6 +293,7 @@
             this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic12.TabIndex = 11;
             this.pic12.TabStop = false;
+            this.pic12.Click += new System.EventHandler(this.pic12_Click);
             // 
             // pic13
             // 
@@ -338,6 +341,7 @@
             this.pic16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic16.TabIndex = 15;
             this.pic16.TabStop = false;
+            this.pic16.Click += new System.EventHandler(this.pic16_Click);
             // 
             // pic18
             // 
@@ -373,6 +377,7 @@
             this.pic20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic20.TabIndex = 18;
             this.pic20.TabStop = false;
+            this.pic20.Click += new System.EventHandler(this.pic20_Click);
             // 
             // pic17
             // 
@@ -494,10 +499,12 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.button1.Font = new System.Drawing.Font("B Nazanin", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.Location = new System.Drawing.Point(40, 532);
             this.button1.Margin = new System.Windows.Forms.Padding(40, 5, 3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 45);
+            this.button1.Size = new System.Drawing.Size(126, 52);
             this.button1.TabIndex = 2;
             this.button1.Text = "بستن";
             this.button1.UseVisualStyleBackColor = true;
