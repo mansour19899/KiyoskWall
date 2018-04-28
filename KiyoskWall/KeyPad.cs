@@ -127,6 +127,7 @@ namespace KiyoskWall
                             if (db.Person_Restaurant.Any(p => p.Person_Id_Fk == qq.Id))
                             {
                                 ReserveFoodQuickly frm = new ReserveFoodQuickly(qq);
+                                timer1.Enabled = false;
                                 frm.ShowDialog();
                                 this.Close();
                             }
@@ -143,6 +144,7 @@ namespace KiyoskWall
                         else
                         {
                             Form1 frm = new Form1(qq);
+                            timer1.Enabled = false;
                             frm.ShowDialog();
                             this.Close();
                         }
@@ -167,6 +169,7 @@ namespace KiyoskWall
                             sb.Clear();
                             lbNumber.ForeColor = Color.Red;
                             lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
+                           
                         }
 
                     }
@@ -184,6 +187,7 @@ namespace KiyoskWall
                             sb.Clear();
                             lbNumber.ForeColor = Color.Red;
                             lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
+                           
                         }
                     }
 

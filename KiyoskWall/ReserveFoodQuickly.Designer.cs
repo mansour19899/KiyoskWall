@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pic3 = new System.Windows.Forms.PictureBox();
@@ -59,6 +60,9 @@
             this.lbResaturentName = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTimer = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
@@ -82,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic17)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -91,7 +96,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 10, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -101,7 +106,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1148, 587);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -394,6 +398,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label1.Location = new System.Drawing.Point(917, 0);
@@ -501,7 +506,7 @@
             // 
             this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.button1.Font = new System.Drawing.Font("B Nazanin", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Location = new System.Drawing.Point(40, 532);
+            this.button1.Location = new System.Drawing.Point(10, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(40, 5, 3, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 52);
@@ -509,6 +514,35 @@
             this.button1.Text = "بستن";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnTimer);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 530);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1142, 54);
+            this.panel1.TabIndex = 2;
+            // 
+            // btnTimer
+            // 
+            this.btnTimer.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnTimer.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.btnTimer.Font = new System.Drawing.Font("B Nazanin", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnTimer.Location = new System.Drawing.Point(908, 5);
+            this.btnTimer.Margin = new System.Windows.Forms.Padding(40, 5, 3, 3);
+            this.btnTimer.Name = "btnTimer";
+            this.btnTimer.Size = new System.Drawing.Size(231, 45);
+            this.btnTimer.TabIndex = 3;
+            this.btnTimer.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ReserveFoodQuickly
             // 
@@ -546,6 +580,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic17)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -583,5 +618,8 @@
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbResaturentName;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnTimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }

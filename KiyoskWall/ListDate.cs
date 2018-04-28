@@ -57,14 +57,17 @@ namespace KiyoskWall
             {
                 return ShiftFilter8(q, 0);
             }
+
             else if (_worksheet == (int)Shift.B8)
             {
                 return ShiftFilter8(q, 4);
             }
+
             else if (_worksheet == (int)Shift.C8)
             {
                 return ShiftFilter8(q, 8);
             }
+
             else if (_worksheet == (int)Shift.D8)
             {
                 return ShiftFilter8(q, 12);
@@ -74,10 +77,12 @@ namespace KiyoskWall
             {
                 return ShiftFilter12(q, 8);
             }
+
             else if (_worksheet == (int)Shift.B12)
             {
                 return ShiftFilter12(q, 4);
             }
+
             else if (_worksheet == (int)Shift.C12)
             {
                 return ShiftFilter12(q, 0);

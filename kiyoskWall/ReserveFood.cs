@@ -153,7 +153,7 @@ namespace KiyoskWall
             if (ew != null)
             {
                  eww = Trays.Where(p => p.Id == ew.Tray_Id_Fk).Select(pp => pp).FirstOrDefault();
-                lbReserved.Text = "غذای رزرو شده:" + eww.Name+"\n"+eww.Note;
+                lbReserved.Text = "غذای رزرو شده:" + eww.Name+"\n"+"("+eww.Note+")";
                 btnDeleteReserved.Visible = true;
 
                 
@@ -364,6 +364,12 @@ namespace KiyoskWall
                 }
                     
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            loop = true;
+            btnQuickReserved.FlatAppearance.BorderSize = 8;
         }
     }
 }

@@ -25,6 +25,7 @@ namespace KiyoskWall
         private List<PictureBox> pic;
         private PoonehReservation t;
         private int restaurant_id;
+        private int time;
         System.Resources.ResourceManager rm = new ResourceManager(typeof(Resource1));
         private List<Date> meals;
         public ReserveFoodQuickly(Person per)
@@ -35,6 +36,7 @@ namespace KiyoskWall
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             p1 = per;
+           time = 60;
         }
 
    
@@ -58,28 +60,50 @@ namespace KiyoskWall
             Schedules =new List<Schedule>();
             Trays=new List<Tray>();
             ListDate ty = new ListDate(p1);
-            List<Label> label =new List<Label>(){label1,label2,label3,label4,label5};
+            List<Label> label = new List<Label>() { label1, label2, label3, label4, label5 };
 
-            meals = ty.GetList().OrderBy(p => p.date).Take(5).ToList();
+            var uu = ty.GetList().OrderBy(p => p.date).ToList();
+            int countRow = 0;
+            if (uu.Count() > 4)
+            {
+                meals = ty.GetList().OrderBy(p => p.date).Take(5).ToList();
+                countRow = 5;
+            }
+
+            else
+            {
+                meals = ty.GetList().OrderBy(p => p.date).Take(uu.Count()).ToList();
+                countRow = uu.Count();
+            }
+
+
+
             SetPicture();
             string y = meals.ElementAt(0).date.AddDaysToShamsiDate(-1);
-           var tempSchedules = Login.tempSchedules;
-           
-           var TempTrays = Login.TempTrays;
+            var tempSchedules = Login.tempSchedules;
+
+            var TempTrays = Login.TempTrays;
 
             int j = 0;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < countRow; i++)
             {
-                if(meals.ElementAt(i).meal==2)
-                    label.ElementAt(i).Text = meals.ElementAt(i).date + "\n" + meals.ElementAt(i).day+"\n"+"((شام))";
+                if (meals.ElementAt(i).meal == 2)
+                {
+                    label.ElementAt(i).Text = meals.ElementAt(i).date + "\n" + meals.ElementAt(i).day + "\n" + "((شام))";
+                    label.ElementAt(i).BackColor = Color.Blue;
+                    
+                }
+
                 else
                 {
                     label.ElementAt(i).Text = meals.ElementAt(i).date + "\n" + meals.ElementAt(i).day;
+                    label.ElementAt(i).BackColor = Color.Transparent;
                 }
-              
+
                 PerSchedules = (from p in tempSchedules
-                    where p.SDate.Equals(meals.ElementAt(i).date) & p.Restaurant_Id_Fk == restaurant_id
-                                                     & p.Meal_Id_Fk == meals.ElementAt(i).meal select p).ToList();
+                                where p.SDate.Equals(meals.ElementAt(i).date) & p.Restaurant_Id_Fk == restaurant_id
+                                                                 & p.Meal_Id_Fk == meals.ElementAt(i).meal
+                                select p).ToList();
 
                 Schedules.Add(PerSchedules.ElementAt(0));
                 Schedules.Add(PerSchedules.ElementAt(1));
@@ -90,10 +114,10 @@ namespace KiyoskWall
                 int tt = (int)PerSchedules.ElementAt(1).Tray_Id_Fk;
                 int ttt = (int)PerSchedules.ElementAt(2).Tray_Id_Fk;
                 PerTrays = (from qqq in TempTrays
-                    where qqq.Id == t || qqq.Id == tt || qqq.Id == ttt
-                    select qqq).ToList();
+                            where qqq.Id == t || qqq.Id == tt || qqq.Id == ttt
+                            select qqq).ToList();
 
-               
+
                 Trays.Add(PerTrays.ElementAt(0));
                 Trays.Add(PerTrays.ElementAt(1));
                 Trays.Add(PerTrays.ElementAt(2));
@@ -203,6 +227,7 @@ namespace KiyoskWall
 
             return result;
         }
+
         private void SetReserve(int food,int day)
         {
             int j = 3;
@@ -286,11 +311,7 @@ namespace KiyoskWall
                 }
             }
         }
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-
-        }
+      
 
         private void pic1_Click(object sender, EventArgs e)
         {
@@ -401,6 +422,14 @@ namespace KiyoskWall
         {
             DeleteReserved(meals.ElementAt(4));
             pic20.Image = null;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            time = time - 1;
+            btnTimer.Text ="زمان باقیمانده :"+ time.ToString();
+            if (time == 0)
+                this.Close();
         }
     }
 }

@@ -41,6 +41,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.lbReserved = new System.Windows.Forms.Label();
             this.btnDeleteReserved = new System.Windows.Forms.Button();
+            this.btnQuickReserved = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -153,6 +154,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbReserved, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnDeleteReserved, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnQuickReserved, 2, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -246,6 +248,21 @@
             this.btnDeleteReserved.Visible = false;
             this.btnDeleteReserved.Click += new System.EventHandler(this.btnDeleteReserved_Click);
             // 
+            // btnQuickReserved
+            // 
+            this.btnQuickReserved.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.btnQuickReserved.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnQuickReserved.FlatAppearance.BorderSize = 0;
+            this.btnQuickReserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuickReserved.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnQuickReserved.Location = new System.Drawing.Point(455, 640);
+            this.btnQuickReserved.Name = "btnQuickReserved";
+            this.btnQuickReserved.Size = new System.Drawing.Size(346, 83);
+            this.btnQuickReserved.TabIndex = 16;
+            this.btnQuickReserved.Text = "رزرو سریع";
+            this.btnQuickReserved.UseVisualStyleBackColor = true;
+            this.btnQuickReserved.Click += new System.EventHandler(this.button4_Click);
+            // 
             // ReserveFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,5 +300,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lbReserved;
         private System.Windows.Forms.Button btnDeleteReserved;
+        private System.Windows.Forms.Button btnQuickReserved;
     }
 }
