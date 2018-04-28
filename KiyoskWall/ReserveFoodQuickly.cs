@@ -28,6 +28,7 @@ namespace KiyoskWall
         private int time;
         System.Resources.ResourceManager rm = new ResourceManager(typeof(Resource1));
         private List<Date> meals;
+        List<PictureBox> del;
         public ReserveFoodQuickly(Person per)
         {
             InitializeComponent();
@@ -37,6 +38,12 @@ namespace KiyoskWall
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             p1 = per;
            time = 60;
+            del = new List<PictureBox>();
+            del.Add(picDel1);
+            del.Add(picDel2);
+            del.Add(picDel3);
+            del.Add(picDel4);
+            del.Add(picDel5);
         }
 
    
@@ -276,6 +283,7 @@ namespace KiyoskWall
                     //MessageBox.Show("رزرو انجام شد");
                     MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(food).Image);
                     pic.ElementAt(jj).Image = Image.FromStream(mStreammm);
+                    del.ElementAt(day).Visible = true;
                 }
                 else
                 {
@@ -288,6 +296,7 @@ namespace KiyoskWall
         }
         private void ReservedFood()
         {
+           
             int j = 0;
             int x;
             t = null;
@@ -304,6 +313,7 @@ namespace KiyoskWall
                     MemoryStream mStreammmm = new MemoryStream(Trays.ElementAt(i).Image);
                     pic.ElementAt((j+1)*4-1).Image = Image.FromStream(mStreammmm);
                     t = null;
+                    del.ElementAt(j).Visible = true;
                 }
                 else
                 {
@@ -398,30 +408,35 @@ namespace KiyoskWall
         {
             DeleteReserved(meals.ElementAt(0));
             pic4.Image = null;
+            del.ElementAt(0).Visible = false;
         }
 
         private void pic8_Click(object sender, EventArgs e)
         {
             DeleteReserved(meals.ElementAt(1));
             pic8.Image = null;
+            del.ElementAt(1).Visible = false;
         }
 
         private void pic12_Click(object sender, EventArgs e)
         {
             DeleteReserved(meals.ElementAt(2));
             pic12.Image = null;
+            del.ElementAt(2).Visible = false;
         }
 
         private void pic16_Click(object sender, EventArgs e)
         {
             DeleteReserved(meals.ElementAt(3));
             pic16.Image = null;
+            del.ElementAt(3).Visible = false;
         }
 
         private void pic20_Click(object sender, EventArgs e)
         {
             DeleteReserved(meals.ElementAt(4));
             pic20.Image = null;
+            del.ElementAt(4).Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
