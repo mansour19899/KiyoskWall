@@ -54,7 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.panelLabel5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.picDel1 = new System.Windows.Forms.PictureBox();
             this.pic4 = new System.Windows.Forms.PictureBox();
@@ -73,6 +73,11 @@
             this.picDel3 = new System.Windows.Forms.PictureBox();
             this.picDel4 = new System.Windows.Forms.PictureBox();
             this.picDel5 = new System.Windows.Forms.PictureBox();
+            this.panelLabel1 = new System.Windows.Forms.Panel();
+            this.panelLabel2 = new System.Windows.Forms.Panel();
+            this.panelLabel3 = new System.Windows.Forms.Panel();
+            this.panelLabel4 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
@@ -107,6 +112,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picDel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDel5)).BeginInit();
+            this.panelLabel1.SuspendLayout();
+            this.panelLabel2.SuspendLayout();
+            this.panelLabel3.SuspendLayout();
+            this.panelLabel4.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -152,16 +162,16 @@
             this.tableLayoutPanel2.Controls.Add(this.pic18, 2, 4);
             this.tableLayoutPanel2.Controls.Add(this.pic19, 3, 4);
             this.tableLayoutPanel2.Controls.Add(this.pic17, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel3, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel4, 5, 2);
             this.tableLayoutPanel2.Controls.Add(this.panel5, 5, 3);
             this.tableLayoutPanel2.Controls.Add(this.panel6, 5, 4);
+            this.tableLayoutPanel2.Controls.Add(this.panelLabel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panelLabel2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panelLabel3, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.panelLabel4, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.panel10, 0, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 61);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -407,11 +417,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(917, 0);
+            this.label1.Location = new System.Drawing.Point(79, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 30, 3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 92);
+            this.label1.Size = new System.Drawing.Size(66, 30);
             this.label1.TabIndex = 20;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -419,11 +429,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(917, 92);
+            this.label2.Location = new System.Drawing.Point(79, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 92);
+            this.label2.Size = new System.Drawing.Size(68, 30);
             this.label2.TabIndex = 21;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -431,11 +440,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(917, 184);
+            this.label3.Location = new System.Drawing.Point(75, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 92);
+            this.label3.Size = new System.Drawing.Size(70, 30);
             this.label3.TabIndex = 22;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -443,26 +451,24 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(917, 276);
+            this.label4.Location = new System.Drawing.Point(78, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(222, 92);
+            this.label4.Size = new System.Drawing.Size(69, 30);
             this.label4.TabIndex = 23;
             this.label4.Text = "label4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // panelLabel5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(917, 368);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 95);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "label5";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panelLabel5.AutoSize = true;
+            this.panelLabel5.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.panelLabel5.Location = new System.Drawing.Point(75, 24);
+            this.panelLabel5.Name = "panelLabel5";
+            this.panelLabel5.Size = new System.Drawing.Size(69, 30);
+            this.panelLabel5.TabIndex = 24;
+            this.panelLabel5.Text = "label5";
+            this.panelLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -679,6 +685,53 @@
             this.picDel5.TabStop = false;
             this.picDel5.Visible = false;
             // 
+            // panelLabel1
+            // 
+            this.panelLabel1.BackgroundImage = global::KiyoskWall.Resource1.ButtonBG;
+            this.panelLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLabel1.Controls.Add(this.label1);
+            this.panelLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLabel1.Location = new System.Drawing.Point(917, 3);
+            this.panelLabel1.Name = "panelLabel1";
+            this.panelLabel1.Size = new System.Drawing.Size(222, 86);
+            this.panelLabel1.TabIndex = 31;
+            // 
+            // panelLabel2
+            // 
+            this.panelLabel2.Controls.Add(this.label2);
+            this.panelLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLabel2.Location = new System.Drawing.Point(917, 95);
+            this.panelLabel2.Name = "panelLabel2";
+            this.panelLabel2.Size = new System.Drawing.Size(222, 86);
+            this.panelLabel2.TabIndex = 32;
+            // 
+            // panelLabel3
+            // 
+            this.panelLabel3.Controls.Add(this.label3);
+            this.panelLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLabel3.Location = new System.Drawing.Point(917, 187);
+            this.panelLabel3.Name = "panelLabel3";
+            this.panelLabel3.Size = new System.Drawing.Size(222, 86);
+            this.panelLabel3.TabIndex = 33;
+            // 
+            // panelLabel4
+            // 
+            this.panelLabel4.Controls.Add(this.label4);
+            this.panelLabel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLabel4.Location = new System.Drawing.Point(917, 279);
+            this.panelLabel4.Name = "panelLabel4";
+            this.panelLabel4.Size = new System.Drawing.Size(222, 86);
+            this.panelLabel4.TabIndex = 34;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.panelLabel5);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(917, 371);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(222, 89);
+            this.panel10.TabIndex = 35;
+            // 
             // ReserveFoodQuickly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -692,7 +745,6 @@
             this.Load += new System.EventHandler(this.ReserveFoodQuickly_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
@@ -726,6 +778,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.picDel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDel5)).EndInit();
+            this.panelLabel1.ResumeLayout(false);
+            this.panelLabel1.PerformLayout();
+            this.panelLabel2.ResumeLayout(false);
+            this.panelLabel2.PerformLayout();
+            this.panelLabel3.ResumeLayout(false);
+            this.panelLabel3.PerformLayout();
+            this.panelLabel4.ResumeLayout(false);
+            this.panelLabel4.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -758,7 +820,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label panelLabel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbResaturentName;
@@ -776,5 +838,10 @@
         private System.Windows.Forms.PictureBox picDel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox picDel5;
+        private System.Windows.Forms.Panel panelLabel1;
+        private System.Windows.Forms.Panel panelLabel2;
+        private System.Windows.Forms.Panel panelLabel3;
+        private System.Windows.Forms.Panel panelLabel4;
+        private System.Windows.Forms.Panel panel10;
     }
 }

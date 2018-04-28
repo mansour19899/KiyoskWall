@@ -67,7 +67,7 @@ namespace KiyoskWall
             Schedules =new List<Schedule>();
             Trays=new List<Tray>();
             ListDate ty = new ListDate(p1);
-            List<Label> label = new List<Label>() { label1, label2, label3, label4, label5 };
+            List<Label> label = new List<Label>() { label1, label2, label3, label4, panelLabel5 };
 
             var uu = ty.GetList().OrderBy(p => p.date).ToList();
             int countRow = 0;

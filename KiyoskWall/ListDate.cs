@@ -11,6 +11,8 @@ namespace KiyoskWall
         private int _worksheet;
         private int _resturentid;
         private Person _person;
+        PoonehEntities1 db;
+        string dtnow;
         public ListDate(Person person)
         {
             _person = person;
@@ -21,9 +23,9 @@ namespace KiyoskWall
 
         public List<Date> GetList()
         {
-            var db = new PoonehEntities1();
+             db = new PoonehEntities1();
             List<Date> q;
-            string dtnow = DateTime.Now.ToPersianDateString();
+            dtnow = DateTime.Now.ToPersianDateString().AddDaysToShamsiDate(1);
             //string dtnow = DateTime.Now.ToPersianDateString();
             _resturentid = db.Person_Restaurant.FirstOrDefault(p => p.Person_Id_Fk ==_person.Id ).Restaurant_Id_Fk.Value;
 
@@ -32,6 +34,9 @@ namespace KiyoskWall
                 where p.SDate.CompareTo(dtnow) == 1
                 select new Date { date = p.SDate } 
                 ).Distinct().OrderBy(o => o.date).ToList();
+
+
+            var w = q;
 
             if (_worksheet == (int)Shift.Rozkar)
             {
@@ -50,12 +55,13 @@ namespace KiyoskWall
                     item.day = item.date.ToPersianday();
                     item.meal = 1;
                 }
-                return q;
+
+                return ExtraMealAdded(w, q);
             }
 
             else if (_worksheet == (int)Shift.A8)
             {
-                return ShiftFilter8(q, 0);
+                return ExtraMealAdded(w, ShiftFilter8(q, 0));
             }
 
             else if (_worksheet == (int)Shift.B8)
@@ -172,6 +178,37 @@ namespace KiyoskWall
                 item.day = item.date.ToPersianday();
             }
             return qqq;
+        }
+
+        private List<Date> ExtraMealAdded(List<Date> Mainlist,List<Date> FilterList)
+        {
+            List<Date> extralist = new List<Date>();
+            var r = from p in db.ExtraTimes
+                    where p.EndDate.CompareTo(dtnow)==1&p.Person_Id_Fk==_person.Id
+                    select p;
+
+            foreach (var item in Mainlist)
+            {
+                foreach (var items in r)
+                {
+                  
+                    if(item.date.CompareTo(items.StartDate.AddDaysToShamsiDate(-1)) ==1& item.date.CompareTo(items.EndDate.AddDaysToShamsiDate(1)) == -1)
+                    {
+                        if (items.Lunch.Value)
+                            extralist.Add(new Date { date = item.date, meal = 1 });
+                        if (items.Dinner.Value)
+                            extralist.Add(new Date { date = item.date, meal = 2 });
+
+                    }
+
+                }
+            }
+
+            foreach (var item in extralist)
+            {
+                item.day = item.date.ToPersianday();
+            }
+            return extralist;
         }
     }
 }

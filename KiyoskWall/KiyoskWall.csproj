@@ -65,6 +65,9 @@
     </Compile>
     <Compile Include="Date.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="ExtraTime.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

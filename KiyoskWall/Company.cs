@@ -20,6 +20,7 @@ namespace KiyoskWall
             this.People = new HashSet<Person>();
             this.PoonehReservations = new HashSet<PoonehReservation>();
             this.Restaurants = new HashSet<Restaurant>();
+            this.ExtraTimes = new HashSet<ExtraTime>();
         }
     
         public int Id { get; set; }
@@ -33,5 +34,7 @@ namespace KiyoskWall
         public virtual ICollection<PoonehReservation> PoonehReservations { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Restaurant> Restaurants { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ExtraTime> ExtraTimes { get; set; }
     }
 }

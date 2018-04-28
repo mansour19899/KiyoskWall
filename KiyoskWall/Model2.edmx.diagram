@@ -26,6 +26,9 @@
         <EntityTypeShape EntityType="PoonehModel1.Person_Restaurant" Width="1.5" PointX="5.25" PointY="7.25" />
         <AssociationConnector Association="PoonehModel1.FK_Person_Restaurant_Person" />
         <AssociationConnector Association="PoonehModel1.FK_Person_Restaurant_Restaurant" />
+        <EntityTypeShape EntityType="PoonehModel1.ExtraTime" Width="1.5" PointX="5.25" PointY="1.5" />
+        <AssociationConnector Association="PoonehModel1.FK_ExtraTime_Company" />
+        <AssociationConnector Association="PoonehModel1.FK_ExtraTime_Person" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
