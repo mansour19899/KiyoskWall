@@ -34,8 +34,7 @@ namespace KiyoskWall
 
         public ReserveFood(NeedToReserve need)
         {
-            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
-            {
+          
                 _need = need;
                 InitializeComponent();
                 _person = need.Person;
@@ -51,13 +50,7 @@ namespace KiyoskWall
                 db = new PoonehEntities1();
                 tableLayoutPanel1.Visible = false;
                 loop = false;
-            }
-            else
-            {
-                Alarm frm = new Alarm();
-                frm.ShowDialog();
-                this.Close();
-            }
+      
 
         }
 
@@ -160,7 +153,7 @@ namespace KiyoskWall
             }
            
             Reserved_id = ew;
-
+            tableLayoutPanel1.Visible = true;
            // MessageBox.Show(ew.Id.ToString());
          
 
@@ -196,6 +189,7 @@ namespace KiyoskWall
 
         private void SetReserve(int food)
         {
+            tableLayoutPanel1.Visible = false;
             if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
                 var x1 = Schedules.ElementAt(0).Id;

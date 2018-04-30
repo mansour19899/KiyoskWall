@@ -118,6 +118,8 @@ namespace KiyoskWall
                         sb.Clear();
                         lbNumber.ForeColor = Color.Red;
                         lbNumber.Text = "شخص مورد نظر ثبت نمی باشد";
+                        x = 25;
+                        lbTimer.Text = "";
                     }
 
                     else
@@ -136,6 +138,8 @@ namespace KiyoskWall
                                 sb.Clear();
                                 lbNumber.ForeColor = Color.Red;
                                 lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
+                                x = 15;
+                                lbTimer.Text = "";
                             }
                         }
 
@@ -149,7 +153,7 @@ namespace KiyoskWall
                             this.Close();
                         }
                         sb.Clear();
-                        lbNumber.Text = "";
+                        lbTimer.Text = ""; ;
                     }
 
                 }
@@ -170,7 +174,9 @@ namespace KiyoskWall
                             sb.Clear();
                             lbNumber.ForeColor = Color.Red;
                             lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
-                           
+                            x = 15;
+                            lbTimer.Text = "";
+
                         }
 
                     }
@@ -179,6 +185,7 @@ namespace KiyoskWall
                         if (db.Person_Restaurant.Any(p => p.Person_Id_Fk == q.Id))
                         {
                             Form1 frm = new Form1(q);
+                            timer1.Enabled = false;
                             this.Hide();
                             frm.ShowDialog();
                             this.Close();
@@ -188,7 +195,9 @@ namespace KiyoskWall
                             sb.Clear();
                             lbNumber.ForeColor = Color.Red;
                             lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
-                           
+                            x = 15;
+                            lbTimer.Text = "";
+
                         }
                     }
 

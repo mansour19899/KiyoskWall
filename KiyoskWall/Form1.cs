@@ -28,7 +28,9 @@ namespace KiyoskWall
         {
             InitializeComponent();
             p1 = per;
-            
+
+            if (p1.WorkSheet_Id_FK == null)
+                p1.WorkSheet_Id_FK = 22;
 
             this.WindowState = FormWindowState.Maximized;
             this.Location = new Point(0, 0);
@@ -155,17 +157,10 @@ namespace KiyoskWall
             needs.date = pic.Name;
             needs.meal = int.Parse(pic.Text);
             needs.GiveAllTraysSchedle();
-            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
-            {
+          
                 ReserveFood frm = new ReserveFood(needs);
-                frm.Show();
-            }
-            else
-            {
-                Alarm frm = new Alarm();
-                frm.ShowDialog();
-                this.Close();
-            }
+            frm.ShowDialog();
+      
         }
 
         public string GiveMeShiftName()

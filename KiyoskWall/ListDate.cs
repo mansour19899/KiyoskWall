@@ -16,7 +16,9 @@ namespace KiyoskWall
         public ListDate(Person person)
         {
             _person = person;
-            _worksheet = _person.WorkSheet_Id_FK.Value;
+            if (_person.WorkSheet_Id_FK == null)
+                _worksheet = 22;
+         
            
 
         }
