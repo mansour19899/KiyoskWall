@@ -78,7 +78,7 @@ namespace KiyoskWall
 
             else
             {
-                j = AllDays.FindIndex(c => c.date == _date);
+                j = AllDays.FindIndex(c => c.date == _date&c.meal==_meal);
                 AllSchedules = Schedules;
                 AllTrays = Trays;
                 ReserveAllDay(AllDays.ElementAt(j));

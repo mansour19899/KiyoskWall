@@ -36,7 +36,7 @@ namespace KiyoskWall
                 ).Distinct().OrderBy(o => o.date).ToList();
 
 
-            var w = q;
+            List<Date> w = q.ToList();
 
             if (_worksheet == (int)Shift.Rozkar)
             {
@@ -66,32 +66,32 @@ namespace KiyoskWall
 
             else if (_worksheet == (int)Shift.B8)
             {
-                return ShiftFilter8(q, 4);
+                return ExtraMealAdded(w, ShiftFilter8(q, 4));
             }
 
             else if (_worksheet == (int)Shift.C8)
             {
-                return ShiftFilter8(q, 8);
+                return ExtraMealAdded(w, ShiftFilter8(q, 8));
             }
 
             else if (_worksheet == (int)Shift.D8)
             {
-                return ShiftFilter8(q, 12);
+                return ExtraMealAdded(w, ShiftFilter8(q, 12));
             }
 
             else if (_worksheet == (int)Shift.A12)
             {
-                return ShiftFilter12(q, 8);
+                return ExtraMealAdded(w, ShiftFilter12(q,8));
             }
 
             else if (_worksheet == (int)Shift.B12)
             {
-                return ShiftFilter12(q, 4);
+                return ExtraMealAdded(w, ShiftFilter12(q, 4));
             }
 
             else if (_worksheet == (int)Shift.C12)
             {
-                return ShiftFilter12(q, 0);
+                return ExtraMealAdded(w, ShiftFilter12(q, 0));
             }
             else
             {
@@ -110,7 +110,7 @@ namespace KiyoskWall
                     item.day = item.date.ToPersianday();
                     item.meal = 1;
                 }
-                return q;
+                return ExtraMealAdded(w, q);
             }
 
 
@@ -183,6 +183,7 @@ namespace KiyoskWall
         private List<Date> ExtraMealAdded(List<Date> Mainlist,List<Date> FilterList)
         {
             List<Date> extralist = new List<Date>();
+           
             var r = from p in db.ExtraTimes
                     where p.EndDate.CompareTo(dtnow)==1&p.Person_Id_Fk==_person.Id
                     select p;
@@ -208,7 +209,25 @@ namespace KiyoskWall
             {
                 item.day = item.date.ToPersianday();
             }
-            return extralist;
+            string x = "";
+            int xxt = 0;
+            foreach (var item in extralist)
+            {
+                x = item.date;
+                xxt = item.meal;
+                var t = FilterList.Any(p => p.date == x&p.meal==xxt);
+                if(t)
+                {
+
+                }
+                else
+                {
+                    FilterList.Add(item);
+                }
+            }
+            
+            return FilterList.OrderBy(p=>p.date).Take(25).ToList();
+            
         }
     }
 }

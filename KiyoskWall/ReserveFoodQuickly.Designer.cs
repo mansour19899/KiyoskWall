@@ -37,27 +37,40 @@
             this.pic5 = new System.Windows.Forms.PictureBox();
             this.pic6 = new System.Windows.Forms.PictureBox();
             this.pic7 = new System.Windows.Forms.PictureBox();
-            this.pic8 = new System.Windows.Forms.PictureBox();
             this.pic9 = new System.Windows.Forms.PictureBox();
             this.pic10 = new System.Windows.Forms.PictureBox();
             this.pic11 = new System.Windows.Forms.PictureBox();
-            this.pic12 = new System.Windows.Forms.PictureBox();
             this.pic13 = new System.Windows.Forms.PictureBox();
             this.pic14 = new System.Windows.Forms.PictureBox();
             this.pic15 = new System.Windows.Forms.PictureBox();
-            this.pic16 = new System.Windows.Forms.PictureBox();
             this.pic18 = new System.Windows.Forms.PictureBox();
             this.pic19 = new System.Windows.Forms.PictureBox();
-            this.pic20 = new System.Windows.Forms.PictureBox();
             this.pic17 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panelLabel5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.picDel1 = new System.Windows.Forms.PictureBox();
             this.pic4 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.picDel2 = new System.Windows.Forms.PictureBox();
+            this.pic8 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.picDel3 = new System.Windows.Forms.PictureBox();
+            this.pic12 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.picDel4 = new System.Windows.Forms.PictureBox();
+            this.pic16 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.picDel5 = new System.Windows.Forms.PictureBox();
+            this.pic20 = new System.Windows.Forms.PictureBox();
+            this.panelLabel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelLabel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelLabel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelLabel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panelLabel5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbResaturentName = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
@@ -65,19 +78,6 @@
             this.btnTimer = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.picDel2 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.picDel3 = new System.Windows.Forms.PictureBox();
-            this.picDel4 = new System.Windows.Forms.PictureBox();
-            this.picDel5 = new System.Windows.Forms.PictureBox();
-            this.panelLabel1 = new System.Windows.Forms.Panel();
-            this.panelLabel2 = new System.Windows.Forms.Panel();
-            this.panelLabel3 = new System.Windows.Forms.Panel();
-            this.panelLabel4 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
@@ -86,37 +86,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic17)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic8)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic12)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic16)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic20)).BeginInit();
             this.panelLabel1.SuspendLayout();
             this.panelLabel2.SuspendLayout();
             this.panelLabel3.SuspendLayout();
             this.panelLabel4.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -257,18 +257,6 @@
             this.pic7.TabStop = false;
             this.pic7.Click += new System.EventHandler(this.pic7_Click);
             // 
-            // pic8
-            // 
-            this.pic8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic8.Location = new System.Drawing.Point(0, 0);
-            this.pic8.Margin = new System.Windows.Forms.Padding(10);
-            this.pic8.Name = "pic8";
-            this.pic8.Size = new System.Drawing.Size(167, 86);
-            this.pic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic8.TabIndex = 7;
-            this.pic8.TabStop = false;
-            this.pic8.Click += new System.EventHandler(this.pic8_Click);
-            // 
             // pic9
             // 
             this.pic9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -304,18 +292,6 @@
             this.pic11.TabIndex = 10;
             this.pic11.TabStop = false;
             this.pic11.Click += new System.EventHandler(this.pic11_Click);
-            // 
-            // pic12
-            // 
-            this.pic12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic12.Location = new System.Drawing.Point(0, 0);
-            this.pic12.Margin = new System.Windows.Forms.Padding(10);
-            this.pic12.Name = "pic12";
-            this.pic12.Size = new System.Drawing.Size(167, 86);
-            this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic12.TabIndex = 11;
-            this.pic12.TabStop = false;
-            this.pic12.Click += new System.EventHandler(this.pic12_Click);
             // 
             // pic13
             // 
@@ -353,18 +329,6 @@
             this.pic15.TabStop = false;
             this.pic15.Click += new System.EventHandler(this.pic15_Click);
             // 
-            // pic16
-            // 
-            this.pic16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic16.Location = new System.Drawing.Point(0, 0);
-            this.pic16.Margin = new System.Windows.Forms.Padding(10);
-            this.pic16.Name = "pic16";
-            this.pic16.Size = new System.Drawing.Size(167, 86);
-            this.pic16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic16.TabIndex = 15;
-            this.pic16.TabStop = false;
-            this.pic16.Click += new System.EventHandler(this.pic16_Click);
-            // 
             // pic18
             // 
             this.pic18.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -389,18 +353,6 @@
             this.pic19.TabStop = false;
             this.pic19.Click += new System.EventHandler(this.pic19_Click);
             // 
-            // pic20
-            // 
-            this.pic20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic20.Location = new System.Drawing.Point(0, 0);
-            this.pic20.Margin = new System.Windows.Forms.Padding(10);
-            this.pic20.Name = "pic20";
-            this.pic20.Size = new System.Drawing.Size(167, 89);
-            this.pic20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic20.TabIndex = 18;
-            this.pic20.TabStop = false;
-            this.pic20.Click += new System.EventHandler(this.pic20_Click);
-            // 
             // pic17
             // 
             this.pic17.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -412,63 +364,6 @@
             this.pic17.TabIndex = 19;
             this.pic17.TabStop = false;
             this.pic17.Click += new System.EventHandler(this.pic17_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(79, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 30, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 30);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(79, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 30);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(75, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 30);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "label3";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(78, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 30);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "label4";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelLabel5
-            // 
-            this.panelLabel5.AutoSize = true;
-            this.panelLabel5.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.panelLabel5.Location = new System.Drawing.Point(75, 24);
-            this.panelLabel5.Name = "panelLabel5";
-            this.panelLabel5.Size = new System.Drawing.Size(69, 30);
-            this.panelLabel5.TabIndex = 24;
-            this.panelLabel5.Text = "label5";
-            this.panelLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -504,6 +399,249 @@
             this.pic4.TabIndex = 3;
             this.pic4.TabStop = false;
             this.pic4.Click += new System.EventHandler(this.pic4_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.picDel2);
+            this.panel3.Controls.Add(this.pic8);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 95);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(167, 86);
+            this.panel3.TabIndex = 27;
+            // 
+            // picDel2
+            // 
+            this.picDel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.picDel2.BackColor = System.Drawing.Color.White;
+            this.picDel2.Image = global::KiyoskWall.Resource1.Close_Box_Red;
+            this.picDel2.Location = new System.Drawing.Point(120, 40);
+            this.picDel2.Name = "picDel2";
+            this.picDel2.Size = new System.Drawing.Size(47, 43);
+            this.picDel2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDel2.TabIndex = 28;
+            this.picDel2.TabStop = false;
+            this.picDel2.Visible = false;
+            // 
+            // pic8
+            // 
+            this.pic8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic8.Location = new System.Drawing.Point(0, 0);
+            this.pic8.Margin = new System.Windows.Forms.Padding(10);
+            this.pic8.Name = "pic8";
+            this.pic8.Size = new System.Drawing.Size(167, 86);
+            this.pic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic8.TabIndex = 7;
+            this.pic8.TabStop = false;
+            this.pic8.Click += new System.EventHandler(this.pic8_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.picDel3);
+            this.panel4.Controls.Add(this.pic12);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 187);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(167, 86);
+            this.panel4.TabIndex = 28;
+            // 
+            // picDel3
+            // 
+            this.picDel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.picDel3.BackColor = System.Drawing.Color.White;
+            this.picDel3.Image = global::KiyoskWall.Resource1.Close_Box_Red;
+            this.picDel3.Location = new System.Drawing.Point(120, 43);
+            this.picDel3.Name = "picDel3";
+            this.picDel3.Size = new System.Drawing.Size(47, 43);
+            this.picDel3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDel3.TabIndex = 31;
+            this.picDel3.TabStop = false;
+            this.picDel3.Visible = false;
+            // 
+            // pic12
+            // 
+            this.pic12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic12.Location = new System.Drawing.Point(0, 0);
+            this.pic12.Margin = new System.Windows.Forms.Padding(10);
+            this.pic12.Name = "pic12";
+            this.pic12.Size = new System.Drawing.Size(167, 86);
+            this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic12.TabIndex = 11;
+            this.pic12.TabStop = false;
+            this.pic12.Click += new System.EventHandler(this.pic12_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.picDel4);
+            this.panel5.Controls.Add(this.pic16);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 279);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(167, 86);
+            this.panel5.TabIndex = 29;
+            // 
+            // picDel4
+            // 
+            this.picDel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.picDel4.BackColor = System.Drawing.Color.White;
+            this.picDel4.Image = global::KiyoskWall.Resource1.Close_Box_Red;
+            this.picDel4.Location = new System.Drawing.Point(120, 40);
+            this.picDel4.Name = "picDel4";
+            this.picDel4.Size = new System.Drawing.Size(47, 43);
+            this.picDel4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDel4.TabIndex = 31;
+            this.picDel4.TabStop = false;
+            this.picDel4.Visible = false;
+            // 
+            // pic16
+            // 
+            this.pic16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic16.Location = new System.Drawing.Point(0, 0);
+            this.pic16.Margin = new System.Windows.Forms.Padding(10);
+            this.pic16.Name = "pic16";
+            this.pic16.Size = new System.Drawing.Size(167, 86);
+            this.pic16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic16.TabIndex = 15;
+            this.pic16.TabStop = false;
+            this.pic16.Click += new System.EventHandler(this.pic16_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.picDel5);
+            this.panel6.Controls.Add(this.pic20);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 371);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(167, 89);
+            this.panel6.TabIndex = 30;
+            // 
+            // picDel5
+            // 
+            this.picDel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.picDel5.BackColor = System.Drawing.Color.White;
+            this.picDel5.Image = global::KiyoskWall.Resource1.Close_Box_Red;
+            this.picDel5.Location = new System.Drawing.Point(117, 43);
+            this.picDel5.Name = "picDel5";
+            this.picDel5.Size = new System.Drawing.Size(47, 43);
+            this.picDel5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDel5.TabIndex = 31;
+            this.picDel5.TabStop = false;
+            this.picDel5.Visible = false;
+            // 
+            // pic20
+            // 
+            this.pic20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic20.Location = new System.Drawing.Point(0, 0);
+            this.pic20.Margin = new System.Windows.Forms.Padding(10);
+            this.pic20.Name = "pic20";
+            this.pic20.Size = new System.Drawing.Size(167, 89);
+            this.pic20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic20.TabIndex = 18;
+            this.pic20.TabStop = false;
+            this.pic20.Click += new System.EventHandler(this.pic20_Click);
+            // 
+            // panelLabel1
+            // 
+            this.panelLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelLabel1.Controls.Add(this.label1);
+            this.panelLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLabel1.Location = new System.Drawing.Point(917, 3);
+            this.panelLabel1.Name = "panelLabel1";
+            this.panelLabel1.Size = new System.Drawing.Size(222, 86);
+            this.panelLabel1.TabIndex = 31;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 30, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 86);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelLabel2
+            // 
+            this.panelLabel2.Controls.Add(this.label2);
+            this.panelLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLabel2.Location = new System.Drawing.Point(917, 95);
+            this.panelLabel2.Name = "panelLabel2";
+            this.panelLabel2.Size = new System.Drawing.Size(222, 86);
+            this.panelLabel2.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(222, 86);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelLabel3
+            // 
+            this.panelLabel3.Controls.Add(this.label3);
+            this.panelLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLabel3.Location = new System.Drawing.Point(917, 187);
+            this.panelLabel3.Name = "panelLabel3";
+            this.panelLabel3.Size = new System.Drawing.Size(222, 86);
+            this.panelLabel3.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(222, 86);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "label3";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelLabel4
+            // 
+            this.panelLabel4.Controls.Add(this.label4);
+            this.panelLabel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLabel4.Location = new System.Drawing.Point(917, 279);
+            this.panelLabel4.Name = "panelLabel4";
+            this.panelLabel4.Size = new System.Drawing.Size(222, 86);
+            this.panelLabel4.TabIndex = 34;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(222, 86);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "label4";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.panelLabel5);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(917, 371);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(222, 89);
+            this.panel10.TabIndex = 35;
+            // 
+            // panelLabel5
+            // 
+            this.panelLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLabel5.Font = new System.Drawing.Font("B Nazanin", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.panelLabel5.Location = new System.Drawing.Point(0, 0);
+            this.panelLabel5.Name = "panelLabel5";
+            this.panelLabel5.Size = new System.Drawing.Size(222, 89);
+            this.panelLabel5.TabIndex = 24;
+            this.panelLabel5.Text = "label5";
+            this.panelLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel3
             // 
@@ -593,145 +731,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.picDel2);
-            this.panel3.Controls.Add(this.pic8);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 95);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(167, 86);
-            this.panel3.TabIndex = 27;
-            // 
-            // picDel2
-            // 
-            this.picDel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.picDel2.BackColor = System.Drawing.Color.White;
-            this.picDel2.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.picDel2.Location = new System.Drawing.Point(120, 40);
-            this.picDel2.Name = "picDel2";
-            this.picDel2.Size = new System.Drawing.Size(47, 43);
-            this.picDel2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDel2.TabIndex = 28;
-            this.picDel2.TabStop = false;
-            this.picDel2.Visible = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.picDel3);
-            this.panel4.Controls.Add(this.pic12);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 187);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(167, 86);
-            this.panel4.TabIndex = 28;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.picDel4);
-            this.panel5.Controls.Add(this.pic16);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 279);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(167, 86);
-            this.panel5.TabIndex = 29;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.picDel5);
-            this.panel6.Controls.Add(this.pic20);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 371);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(167, 89);
-            this.panel6.TabIndex = 30;
-            // 
-            // picDel3
-            // 
-            this.picDel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.picDel3.BackColor = System.Drawing.Color.White;
-            this.picDel3.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.picDel3.Location = new System.Drawing.Point(120, 43);
-            this.picDel3.Name = "picDel3";
-            this.picDel3.Size = new System.Drawing.Size(47, 43);
-            this.picDel3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDel3.TabIndex = 31;
-            this.picDel3.TabStop = false;
-            this.picDel3.Visible = false;
-            // 
-            // picDel4
-            // 
-            this.picDel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.picDel4.BackColor = System.Drawing.Color.White;
-            this.picDel4.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.picDel4.Location = new System.Drawing.Point(120, 40);
-            this.picDel4.Name = "picDel4";
-            this.picDel4.Size = new System.Drawing.Size(47, 43);
-            this.picDel4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDel4.TabIndex = 31;
-            this.picDel4.TabStop = false;
-            this.picDel4.Visible = false;
-            // 
-            // picDel5
-            // 
-            this.picDel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.picDel5.BackColor = System.Drawing.Color.White;
-            this.picDel5.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.picDel5.Location = new System.Drawing.Point(117, 43);
-            this.picDel5.Name = "picDel5";
-            this.picDel5.Size = new System.Drawing.Size(47, 43);
-            this.picDel5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDel5.TabIndex = 31;
-            this.picDel5.TabStop = false;
-            this.picDel5.Visible = false;
-            // 
-            // panelLabel1
-            // 
-            this.panelLabel1.BackgroundImage = global::KiyoskWall.Resource1.ButtonBG;
-            this.panelLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelLabel1.Controls.Add(this.label1);
-            this.panelLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLabel1.Location = new System.Drawing.Point(917, 3);
-            this.panelLabel1.Name = "panelLabel1";
-            this.panelLabel1.Size = new System.Drawing.Size(222, 86);
-            this.panelLabel1.TabIndex = 31;
-            // 
-            // panelLabel2
-            // 
-            this.panelLabel2.Controls.Add(this.label2);
-            this.panelLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLabel2.Location = new System.Drawing.Point(917, 95);
-            this.panelLabel2.Name = "panelLabel2";
-            this.panelLabel2.Size = new System.Drawing.Size(222, 86);
-            this.panelLabel2.TabIndex = 32;
-            // 
-            // panelLabel3
-            // 
-            this.panelLabel3.Controls.Add(this.label3);
-            this.panelLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLabel3.Location = new System.Drawing.Point(917, 187);
-            this.panelLabel3.Name = "panelLabel3";
-            this.panelLabel3.Size = new System.Drawing.Size(222, 86);
-            this.panelLabel3.TabIndex = 33;
-            // 
-            // panelLabel4
-            // 
-            this.panelLabel4.Controls.Add(this.label4);
-            this.panelLabel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLabel4.Location = new System.Drawing.Point(917, 279);
-            this.panelLabel4.Name = "panelLabel4";
-            this.panelLabel4.Size = new System.Drawing.Size(222, 86);
-            this.panelLabel4.TabIndex = 34;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.panelLabel5);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(917, 371);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(222, 89);
-            this.panel10.TabIndex = 35;
-            // 
             // ReserveFoodQuickly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -751,43 +750,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic17)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picDel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic4)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picDel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic8)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picDel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic12)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picDel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic16)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picDel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic20)).EndInit();
+            this.panelLabel1.ResumeLayout(false);
+            this.panelLabel2.ResumeLayout(false);
+            this.panelLabel3.ResumeLayout(false);
+            this.panelLabel4.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picDel2)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picDel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDel5)).EndInit();
-            this.panelLabel1.ResumeLayout(false);
-            this.panelLabel1.PerformLayout();
-            this.panelLabel2.ResumeLayout(false);
-            this.panelLabel2.PerformLayout();
-            this.panelLabel3.ResumeLayout(false);
-            this.panelLabel3.PerformLayout();
-            this.panelLabel4.ResumeLayout(false);
-            this.panelLabel4.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

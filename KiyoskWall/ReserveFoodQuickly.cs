@@ -68,6 +68,7 @@ namespace KiyoskWall
             Trays=new List<Tray>();
             ListDate ty = new ListDate(p1);
             List<Label> label = new List<Label>() { label1, label2, label3, label4, panelLabel5 };
+            List<Panel> panels = new List<Panel>() {panelLabel1, panelLabel2, panelLabel3, panelLabel4, panel10 };
 
             var uu = ty.GetList().OrderBy(p => p.date).ToList();
             int countRow = 0;
@@ -97,14 +98,14 @@ namespace KiyoskWall
                 if (meals.ElementAt(i).meal == 2)
                 {
                     label.ElementAt(i).Text = meals.ElementAt(i).date + "\n" + meals.ElementAt(i).day + "\n" + "((شام))";
-                    label.ElementAt(i).BackColor = Color.Blue;
+                    panels.ElementAt(i).BackColor = Color.Blue;
                     
                 }
 
                 else
                 {
                     label.ElementAt(i).Text = meals.ElementAt(i).date + "\n" + meals.ElementAt(i).day;
-                    label.ElementAt(i).BackColor = Color.Transparent;
+                    panels.ElementAt(i).BackColor = Color.Transparent;
                 }
 
                 PerSchedules = (from p in tempSchedules

@@ -161,6 +161,7 @@ namespace KiyoskWall
                         {
                             ReserveFoodQuickly frm = new ReserveFoodQuickly(q);
                             this.Hide();
+                            timer1.Enabled = false;
                             frm.ShowDialog();
                             this.Close();
                         }
