@@ -145,13 +145,13 @@ namespace KiyoskWall
             Tray eww;
             if (ew != null)
             {
-                 eww = Trays.Where(p => p.Id == ew.Tray_Id_Fk).Select(pp => pp).FirstOrDefault();
-                lbReserved.Text = "غذای رزرو شده:" + eww.Name+"\n"+"("+eww.Note+")";
+                eww = Trays.Where(p => p.Id == ew.Tray_Id_Fk).Select(pp => pp).FirstOrDefault();
+                lbReserved.Text = "غذای رزرو شده:" + eww.Name + "\n" + "(" + eww.Note + ")";
                 btnDeleteReserved.Visible = true;
 
-                
+
             }
-           
+
             Reserved_id = ew;
             tableLayoutPanel1.Visible = true;
            // MessageBox.Show(ew.Id.ToString());

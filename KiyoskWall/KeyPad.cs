@@ -22,7 +22,7 @@ namespace KiyoskWall
         {
             InitializeComponent();
             week = weekk;
-             x = 15;
+             x = 25;
         }
         StringBuilder sb = new StringBuilder();
         PoonehEntities1 db;
@@ -118,7 +118,7 @@ namespace KiyoskWall
                         sb.Clear();
                         lbNumber.ForeColor = Color.Red;
                         lbNumber.Text = "شخص مورد نظر ثبت نمی باشد";
-                        x = 25;
+                        x = 20;
                         lbTimer.Text = "";
                     }
 
@@ -138,7 +138,7 @@ namespace KiyoskWall
                                 sb.Clear();
                                 lbNumber.ForeColor = Color.Red;
                                 lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
-                                x = 15;
+                                x = 20;
                                 lbTimer.Text = "";
                             }
                         }
@@ -174,7 +174,7 @@ namespace KiyoskWall
                             sb.Clear();
                             lbNumber.ForeColor = Color.Red;
                             lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
-                            x = 15;
+                            x = 20;
                             lbTimer.Text = "";
 
                         }
@@ -195,7 +195,7 @@ namespace KiyoskWall
                             sb.Clear();
                             lbNumber.ForeColor = Color.Red;
                             lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
-                            x = 15;
+                            x = 20;
                             lbTimer.Text = "";
 
                         }
