@@ -18,6 +18,8 @@ namespace KiyoskWall
             _person = person;
             if (_person.WorkSheet_Id_FK == null)
                 _worksheet = 22;
+            else
+                _worksheet = _person.WorkSheet_Id_FK.Value;
          
            
 
