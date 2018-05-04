@@ -19,7 +19,7 @@ namespace KiyoskWall
         private string _date;
         private string _dayName;
         private int _meal;
-        private KiyoskWall.PoonehEntities1 db;
+        private KiyoskWall.PoonehEntities db;
         List<Schedule> Schedules;
         List<Schedule> AllSchedules;
         private List<Tray> AllTrays;
@@ -47,7 +47,7 @@ namespace KiyoskWall
             AllSchedules = need.Schedules;
             AllTrays = need.Trays;
             AllDays = need.AllDays;
-            db = new PoonehEntities1();
+            db = new PoonehEntities();
             tableLayoutPanel1.Visible = false;
             loop = false;
 
