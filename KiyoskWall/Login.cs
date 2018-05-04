@@ -16,7 +16,7 @@ namespace KiyoskWall
         public static List<Tray> TempTrays;
         string y;
         string yy;
-        PoonehEntities1 db;
+        PoonehEntities db;
 
         public Login()
         {
@@ -25,6 +25,7 @@ namespace KiyoskWall
             {
                
                 y = DateTime.Now.ToPersianDateString();
+                y = "1396/11/01";
                 LoadCash();
             }
             else
@@ -98,7 +99,8 @@ namespace KiyoskWall
                 try
                 {
                     y = DateTime.Now.ToPersianDateString();
-                    db = new PoonehEntities1();
+                    y = "1396/11/01";
+                    db = new PoonehEntities();
 
                     tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).Distinct().ToList();
                     var AllDays = tempSchedules.Select(p => new Date { date = p.SDate }).Distinct();

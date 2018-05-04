@@ -23,6 +23,12 @@
         <AssociationConnector Association="PoonehModel.FK_Schedule_Restaurant" ManuallyRouted="false" />
         <AssociationConnector Association="PoonehModel.FK_Schedule_Tray" ManuallyRouted="false" />
         <EntityTypeShape EntityType="PoonehModel.HoliDay" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PoonehModel.ExtraTime" Width="1.5" PointX="5.25" PointY="4.5" />
+        <EntityTypeShape EntityType="PoonehModel.Person_Restaurant" Width="1.5" PointX="8.25" PointY="12.25" />
+        <AssociationConnector Association="PoonehModel.FK_ExtraTime_Company" />
+        <AssociationConnector Association="PoonehModel.FK_ExtraTime_Person" />
+        <AssociationConnector Association="PoonehModel.FK_Person_Restaurant_Person" />
+        <AssociationConnector Association="PoonehModel.FK_Person_Restaurant_Restaurant" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

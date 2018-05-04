@@ -19,7 +19,7 @@ namespace KiyoskWall
         private string person_id;
         private int restaurant_id;
         private Person p1;
-        private KiyoskWall.PoonehEntities1 db;
+        private KiyoskWall.PoonehEntities db;
         private NeedToReserve needs;
         private List<Schedule> tempSchedules;
         private List<Tray> TempTrays;
@@ -46,7 +46,7 @@ namespace KiyoskWall
         {
            
           
-            db =new  PoonehEntities1();
+            db =new  PoonehEntities();
             dtnow = DateTime.Now.ToPersianDateString();
 
 

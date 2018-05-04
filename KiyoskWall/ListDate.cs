@@ -11,7 +11,7 @@ namespace KiyoskWall
         private int _worksheet;
         private int _resturentid;
         private Person _person;
-        PoonehEntities1 db;
+        PoonehEntities db;
         string dtnow;
         public ListDate(Person person)
         {
@@ -27,10 +27,10 @@ namespace KiyoskWall
 
         public List<Date> GetList()
         {
-             db = new PoonehEntities1();
+             db = new PoonehEntities();
             List<Date> q;
             dtnow = DateTime.Now.ToPersianDateString().AddDaysToShamsiDate(1);
-            //string dtnow = DateTime.Now.ToPersianDateString();
+             dtnow = "1396/11/01";
             _resturentid = db.Person_Restaurant.FirstOrDefault(p => p.Person_Id_Fk ==_person.Id ).Restaurant_Id_Fk.Value;
 
             q = (from p in db.Schedules
