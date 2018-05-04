@@ -19,6 +19,11 @@ namespace KiyoskWall
             x = 0;
         }
 
+        public Alarm(string input)
+        {
+            InitializeComponent();
+            label1.Text = input;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -91,15 +91,23 @@ namespace KiyoskWall
                          where p.SDate.Equals(date.date) & p.Restaurant_Id_Fk == _restaurant_id
                                                     & p.Meal_Id_Fk == date.meal
                          select p).ToList();
+            if(Schedules.Count() ==3)
+            {
+                int t = (int)Schedules.ElementAt(0).Tray_Id_Fk;
+                int tt = (int)Schedules.ElementAt(1).Tray_Id_Fk;
+                int ttt = (int)Schedules.ElementAt(2).Tray_Id_Fk;
+                Trays = (from qqq in AllTrays
+                         where qqq.Id == t || qqq.Id == tt || qqq.Id == ttt
+                         select qqq).ToList();
 
-            int t = (int)Schedules.ElementAt(0).Tray_Id_Fk;
-            int tt = (int)Schedules.ElementAt(1).Tray_Id_Fk;
-            int ttt = (int)Schedules.ElementAt(2).Tray_Id_Fk;
-            Trays = (from qqq in AllTrays
-                     where qqq.Id == t || qqq.Id == tt || qqq.Id == ttt
-                     select qqq).ToList();
-
-
+            }
+            else
+            {
+                Alarm frm = new Alarm("وعده غذایی تعریف نشده است");
+                frm.ShowDialog();
+                this.Close();
+            }
+            
         }
         public void ReserveAllDay(Date date)
         {
@@ -110,18 +118,29 @@ namespace KiyoskWall
             btnDeleteReserved.Visible = false;
             lbReserved.Text = "";
             btnDeleteReserved.Visible = false;
-            SetForm();
+            if (Schedules.Count() != 0)
+                SetForm();
+            else
+                this.Close();
+
 
         }
         private void SetForm()
         {
 
             if (_meal == 1)
-                meall = "ناهار";
-            else
+                meall = "وعده : ناهار";
+           else if(_meal==2)
             {
-                meall = "شام";
-
+                meall = "وعده : شام";
+            }
+            else if (_meal == 4)
+            {
+                meall = "وعده : سحر";
+            }
+            else if (_meal == 5)
+            {
+                meall = "وعده : افطار";
             }
 
 

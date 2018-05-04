@@ -260,6 +260,9 @@
       <DependentUpon>Model2.edmx</DependentUpon>
       <LastGenOutput>Model2.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\rozaneh.png" />
+    <None Include="Resources\ButtonSahar.png" />
+    <None Include="Resources\ButtonEftar.png" />
     <None Include="Resources\Delete.png" />
     <None Include="Resources\Delete.ico" />
     <None Include="Resources\Close_Box_Red.png" />

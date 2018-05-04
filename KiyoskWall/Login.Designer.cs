@@ -180,7 +180,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::KiyoskWall.Resource1.mahaneh;
+            this.pictureBox3.Image = global::KiyoskWall.Resource1.rozaneh;
             this.pictureBox3.Location = new System.Drawing.Point(394, 33);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.pictureBox3.Name = "pictureBox3";
@@ -212,7 +212,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(1039, 24);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Version 1.4";
+            this.label3.Text = "Version 1.6";
             // 
             // Login
             // 

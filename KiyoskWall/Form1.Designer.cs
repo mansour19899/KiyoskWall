@@ -368,6 +368,7 @@
             // pic18
             // 
             this.pic18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic18.Location = new System.Drawing.Point(427, 683);
             this.pic18.Name = "pic18";
             this.pic18.Size = new System.Drawing.Size(195, 162);
@@ -380,6 +381,7 @@
             // pic19
             // 
             this.pic19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic19.Location = new System.Drawing.Point(225, 684);
             this.pic19.Margin = new System.Windows.Forms.Padding(4);
             this.pic19.Name = "pic19";
@@ -393,6 +395,7 @@
             // pic20
             // 
             this.pic20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic20.Location = new System.Drawing.Point(22, 684);
             this.pic20.Margin = new System.Windows.Forms.Padding(4);
             this.pic20.Name = "pic20";
@@ -406,10 +409,12 @@
             // pic21
             // 
             this.pic21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic21.Location = new System.Drawing.Point(629, 854);
             this.pic21.Margin = new System.Windows.Forms.Padding(4);
             this.pic21.Name = "pic21";
             this.pic21.Size = new System.Drawing.Size(195, 162);
+            this.pic21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic21.TabIndex = 47;
             this.pic21.TabStop = false;
             this.pic21.Visible = false;
@@ -418,10 +423,12 @@
             // pic22
             // 
             this.pic22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic22.Location = new System.Drawing.Point(426, 854);
             this.pic22.Margin = new System.Windows.Forms.Padding(4);
             this.pic22.Name = "pic22";
             this.pic22.Size = new System.Drawing.Size(195, 162);
+            this.pic22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic22.TabIndex = 46;
             this.pic22.TabStop = false;
             this.pic22.Visible = false;
@@ -430,11 +437,13 @@
             // pic23
             // 
             this.pic23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic23.Location = new System.Drawing.Point(223, 854);
             this.pic23.Margin = new System.Windows.Forms.Padding(4);
             this.pic23.Name = "pic23";
             this.pic23.Padding = new System.Windows.Forms.Padding(4);
             this.pic23.Size = new System.Drawing.Size(195, 162);
+            this.pic23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic23.TabIndex = 48;
             this.pic23.TabStop = false;
             this.pic23.Visible = false;
@@ -443,9 +452,11 @@
             // pic24
             // 
             this.pic24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic24.Location = new System.Drawing.Point(21, 853);
             this.pic24.Name = "pic24";
             this.pic24.Size = new System.Drawing.Size(195, 162);
+            this.pic24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic24.TabIndex = 49;
             this.pic24.TabStop = false;
             this.pic24.Visible = false;
@@ -453,9 +464,11 @@
             // 
             // pic25
             // 
+            this.pic25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic25.Location = new System.Drawing.Point(630, 1023);
             this.pic25.Name = "pic25";
             this.pic25.Size = new System.Drawing.Size(195, 162);
+            this.pic25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic25.TabIndex = 50;
             this.pic25.TabStop = false;
             this.pic25.Visible = false;

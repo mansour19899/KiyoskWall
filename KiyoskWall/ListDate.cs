@@ -31,6 +31,7 @@ namespace KiyoskWall
             List<Date> q;
             dtnow = DateTime.Now.ToPersianDateString().AddDaysToShamsiDate(1);
              dtnow = "1396/11/01";
+
             _resturentid = db.Person_Restaurant.FirstOrDefault(p => p.Person_Id_Fk ==_person.Id ).Restaurant_Id_Fk.Value;
 
             q = (from p in db.Schedules
@@ -44,15 +45,36 @@ namespace KiyoskWall
 
             if (_worksheet == (int)Shift.Rozkar)
             {
+
                List<Date> qq = (from pp in db.HoliDays
                     where pp.HolidayDate.CompareTo(dtnow) == 1
                     select new Date { date = pp.HolidayDate,meal = 1}).Distinct().ToList();
-
-                for (int i = 0; i < qq.Count; i++)
+                if (!Login.RamezanDay)
                 {
-                    var ee = q.Where(p => p.date == qq.ElementAt(i).date).FirstOrDefault();
-                    q.Remove(ee);
+                    for (int i = 0; i < qq.Count; i++)
+                    {
+                        var ee = q.Where(p => p.date == qq.ElementAt(i).date).FirstOrDefault();
+                        q.Remove(ee);
+
+                    }
                 }
+                else
+                {
+                    for (int i = 0; i < qq.Count; i++)
+                    {
+                        var ee = q.Where(p => p.date == qq.ElementAt(i).date).FirstOrDefault();
+                        q.Remove(ee);
+                    }
+                    string comper;
+                    for (int ij = q.Count-1; ij > -1; ij--)
+                    {
+                        comper = q.ElementAt(ij).date;
+                        if (Login.tempSchedules.Where(p => p.SDate ==comper ).FirstOrDefault().Meal_Id_Fk == 4)
+                            q.RemoveAt(ij);
+                   
+                    }
+                }
+                   
 
                 foreach (var item in q)
                 {
@@ -103,11 +125,32 @@ namespace KiyoskWall
                                  where pp.HolidayDate.CompareTo(dtnow) == 1
                                  select new Date { date = pp.HolidayDate, meal = 1 }).Distinct().ToList();
 
-                for (int i = 0; i < qq.Count; i++)
+                if (!Login.RamezanDay)
                 {
-                    var ee = q.Where(p => p.date == qq.ElementAt(i).date).FirstOrDefault();
-                    q.Remove(ee);
+                    for (int i = 0; i < qq.Count; i++)
+                    {
+                        var ee = q.Where(p => p.date == qq.ElementAt(i).date).FirstOrDefault();
+                        q.Remove(ee);
+
+                    }
                 }
+                else
+                {
+                    for (int i = 0; i < qq.Count; i++)
+                    {
+                        var ee = q.Where(p => p.date == qq.ElementAt(i).date).FirstOrDefault();
+                        q.Remove(ee);
+                    }
+                    string comper;
+                    for (int ij = q.Count - 1; ij > -1; ij--)
+                    {
+                        comper = q.ElementAt(ij).date;
+                        if (Login.tempSchedules.Where(p => p.SDate == comper).FirstOrDefault().Meal_Id_Fk == 4)
+                            q.RemoveAt(ij);
+
+                    }
+                }
+
 
                 foreach (var item in q)
                 {
@@ -124,24 +167,60 @@ namespace KiyoskWall
         {
             int x = 0;
 
-            string datee = "1397/01/11".AddDaysToShamsiDate(skip);
+            string datee = "1396/10/11".AddDaysToShamsiDate(skip);
             List<Date> qqq=new List<Date>();
             for (int i = 0; i < d.Count; i++)
                
             {
                 x = d.ElementAt(i).date.DiffDaysShamsi(datee);
                 x = x %16;
-                if (x >=0 & x < 4)
+                if(!Login.RamezanDay)
                 {
-                    d.ElementAt(i).meal = 1;
-                    qqq.Add(d.ElementAt(i));
+                    if (x >= 0 & x < 4)
+                    {
+                        d.ElementAt(i).meal = 1;
+                        qqq.Add(d.ElementAt(i));
+                    }
+
+                    if (x >= 4 & x < 8)
+                    {
+                        d.ElementAt(i).meal = 2;
+                        qqq.Add(d.ElementAt(i));
+                    }
+                }
+                else
+                {
+                   if (Login.tempSchedules.Where(p=>p.SDate==d.ElementAt(i).date).FirstOrDefault().Meal_Id_Fk==4)
+                    {
+                        if (x >= 4 & x < 8)
+                        {
+                            d.ElementAt(i).meal = 5;
+                            qqq.Add(d.ElementAt(i));
+                        }
+
+                        if (x >= 8 & x < 12)
+                        {
+                            d.ElementAt(i).meal = 4;
+                            qqq.Add(d.ElementAt(i));
+                        }
+                    }
+                   else
+                    {
+                        if (x >= 0 & x < 4)
+                        {
+                            d.ElementAt(i).meal = 1;
+                            qqq.Add(d.ElementAt(i));
+                        }
+
+                        if (x >= 4 & x < 8)
+                        {
+                            d.ElementAt(i).meal = 2;
+                            qqq.Add(d.ElementAt(i));
+                        }
+                    }
+                 
                 }
 
-                if (x >=4 & x < 8)
-                {
-                    d.ElementAt(i).meal = 2;
-                    qqq.Add(d.ElementAt(i));
-                }
 
             }
 
@@ -156,24 +235,60 @@ namespace KiyoskWall
         {
             int x = 0;
 
-            string datee = "1397/01/31".AddDaysToShamsiDate(skip);
+            string datee = "1396/10/02".AddDaysToShamsiDate(skip);
             List<Date> qqq = new List<Date>();
             for (int i = 0; i < d.Count; i++)
 
             {
                 x = d.ElementAt(i).date.DiffDaysShamsi(datee);
                 x = x % 12;
-                if (x >= 0 & x < 4)
+                if (!Login.RamezanDay)
                 {
-                    d.ElementAt(i).meal = 1;
-                    qqq.Add(d.ElementAt(i));
+                    if (x >= 0 & x < 4)
+                    {
+                        d.ElementAt(i).meal = 1;
+                        qqq.Add(d.ElementAt(i));
+                    }
+
+                    if (x >= 4 & x < 8)
+                    {
+                        d.ElementAt(i).meal = 2;
+                        qqq.Add(d.ElementAt(i));
+                    }
+                
+                }
+                else
+                {
+                    if (Login.tempSchedules.Where(p => p.SDate == d.ElementAt(i).date).FirstOrDefault().Meal_Id_Fk == 4)
+                    {
+                        if (x >= 4 & x < 8)
+                        {
+                            d.ElementAt(i).meal = 5;
+                            qqq.Add(d.ElementAt(i));
+                           qqq.Add(new Date { date = d.ElementAt(i).date.AddDaysToShamsiDate(1),meal=4,day = d.ElementAt(i).date.AddDaysToShamsiDate(1).ToPersianday() });
+
+
+                        }
+
+
+                    }
+                    else
+                    {
+                        if (x >= 0 & x < 4)
+                        {
+                            d.ElementAt(i).meal = 1;
+                            qqq.Add(d.ElementAt(i));
+                        }
+
+                        if (x >= 4 & x < 8)
+                        {
+                            d.ElementAt(i).meal = 2;
+                            qqq.Add(d.ElementAt(i));
+                        }
+                    }
+
                 }
 
-                if (x >= 4 & x < 8)
-                {
-                    d.ElementAt(i).meal = 2;
-                    qqq.Add(d.ElementAt(i));
-                }
 
             }
 
@@ -203,6 +318,10 @@ namespace KiyoskWall
                             extralist.Add(new Date { date = item.date, meal = 1 });
                         if (items.Dinner.Value)
                             extralist.Add(new Date { date = item.date, meal = 2 });
+                        if (items.Eftar.Value)
+                            extralist.Add(new Date { date = item.date, meal = 5 });
+                        if (items.ExtraMeal.Value)
+                            extralist.Add(new Date { date = item.date, meal = 4 });
 
                     }
 

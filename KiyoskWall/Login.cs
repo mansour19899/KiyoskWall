@@ -17,10 +17,12 @@ namespace KiyoskWall
         string y;
         string yy;
         PoonehEntities db;
+       public static bool RamezanDay;
 
         public Login()
         {
             InitializeComponent();
+            RamezanDay = false;
             if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
                
@@ -108,6 +110,8 @@ namespace KiyoskWall
 
                     var ew = tempSchedules.Where(p => AllDays.Any(pe => pe.date == p.SDate)).Select(p => p.Tray_Id_Fk).Distinct().ToList();
                     TempTrays = db.Trays.Where(p => ew.Any(ll => ll == p.Id)).Select(s => s).ToList();
+                    RamezanDay = tempSchedules.Any(p => p.Meal_Id_Fk == 4);
+              
                 }
                 catch (Exception)
                 {

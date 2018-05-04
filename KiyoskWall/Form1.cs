@@ -64,9 +64,7 @@ namespace KiyoskWall
             lbName.Text = p1.Name + " " + p1.LastName;
 
             var y = Login.tempSchedules.Min(pp => pp.Id);
-            Reserved =( from p in db.PoonehReservations 
-                       where p.Person_Id_Fk.Value == p1.Id & p.Schedule_Id_Fk > y
-                        select p).ToList();
+;
 
 
 
@@ -126,11 +124,32 @@ namespace KiyoskWall
             Brush br;
             bmp = (Bitmap)rm.GetObject("ButtonBG");
             br = Brushes.Black;
-            if (meal != 1)
+            if (meal== 1)
+            {
+                bmp = (Bitmap)rm.GetObject("ButtonBG");
+                br = Brushes.Black;
+            }
+            else if(meal == 2)
             {
                 bmp = (Bitmap)rm.GetObject("ButtonBGd");
                 br = Brushes.White;
             }
+            else if (meal == 4)
+            {
+                bmp = (Bitmap)rm.GetObject("ButtonSahar");
+                br = Brushes.Black;
+            }
+            else if (meal ==5)
+            {
+                bmp = (Bitmap)rm.GetObject("ButtonEftar");
+                br = Brushes.Black;
+            }
+            else
+            {
+                bmp = (Bitmap)rm.GetObject("ButtonBG");
+                br = Brushes.Black;
+            }
+
 
             RectangleF rectf = new RectangleF(30, 10, 190, 150);
           

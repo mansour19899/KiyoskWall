@@ -103,6 +103,26 @@ namespace KiyoskWall {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButtonEftar {
+            get {
+                object obj = ResourceManager.GetObject("ButtonEftar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ButtonSahar {
+            get {
+                object obj = ResourceManager.GetObject("ButtonSahar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_Box_Red {
             get {
                 object obj = ResourceManager.GetObject("Close_Box_Red", resourceCulture);
@@ -166,6 +186,16 @@ namespace KiyoskWall {
         internal static System.Drawing.Bitmap PoonehLogo1 {
             get {
                 object obj = ResourceManager.GetObject("PoonehLogo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rozaneh {
+            get {
+                object obj = ResourceManager.GetObject("rozaneh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

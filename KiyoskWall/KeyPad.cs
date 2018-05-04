@@ -147,10 +147,21 @@ namespace KiyoskWall
 
                         else
                         {
-                            Form1 frm = new Form1(qq);
-                            timer1.Enabled = false;
-                            frm.ShowDialog();
-                            this.Close();
+                            if (db.Person_Restaurant.Any(p => p.Person_Id_Fk == qq.Id))
+                            {
+                                ReserveFoodQuickly frm = new ReserveFoodQuickly(qq);
+                                timer1.Enabled = false;
+                                frm.ShowDialog();
+                                this.Close();
+                            }
+                            else
+                            {
+                                sb.Clear();
+                                lbNumber.ForeColor = Color.Red;
+                                lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
+                                x = 20;
+                                lbTimer.Text = "";
+                            }
                         }
                         sb.Clear();
                         lbTimer.Text = ""; ;
