@@ -76,7 +76,7 @@ namespace KiyoskWall
                 AllTrays = Trays;
                 ReserveAllDay(AllDays.ElementAt(j));
             }
-            SetForm();
+          
 
 
 
@@ -156,7 +156,7 @@ namespace KiyoskWall
 
             }
 
-            //Reserved_id = ew;
+            Reserved_id = t;
             tableLayoutPanel1.Visible = true;
             // MessageBox.Show(ew.Id.ToString());
 
@@ -331,17 +331,19 @@ namespace KiyoskWall
         {
             if (Reserved_id != null)
             {
-                var t = db.PoonehReservations.Where(p => p.Id == Reserved_id.Id).SingleOrDefault();
-                var tt = Form1.Reserved.Where(p => p.Id == Reserved_id.Id).SingleOrDefault();
+                var td = db.PoonehReservations.Where(p => p.Id == Reserved_id.Id).SingleOrDefault();
+               
 
-                if (t != null)
+                if (td != null)
                 {
-                    db.PoonehReservations.Remove(t);
-                    Form1.Reserved.Remove(tt);
+                    db.PoonehReservations.Remove(td);
+                   
                     try
                     {
                         db.SaveChanges();
+
                         lbReserved.Text = "";
+                        t = null;
                         btnDeleteReserved.Visible = false;
                       
                     }
