@@ -17,7 +17,7 @@ namespace KiyoskWall
     public partial class ReserveFoodQuickly : Form
     {
         private Person p1;
-        private KiyoskWall.PoonehEntities db;
+        private KiyoskWall.PoonehEntities1 db;
         private List<Schedule> PerSchedules;
         private List<Schedule> Schedules;
         private List<Tray> PerTrays;
@@ -52,7 +52,7 @@ namespace KiyoskWall
         {
           
 
-            db = new PoonehEntities();
+            db = new PoonehEntities1();
 
             //p1 = db.People.Where(pp => pp.NationalCode == "0440005191").FirstOrDefault(); //rozkar
          

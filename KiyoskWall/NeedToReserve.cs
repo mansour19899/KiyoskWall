@@ -22,7 +22,7 @@ namespace KiyoskWall
 
         public NeedToReserve(Person person)
         {
-        PoonehEntities db=new PoonehEntities();
+        PoonehEntities1 db=new PoonehEntities1();
 
         Person = person;
             date = "";

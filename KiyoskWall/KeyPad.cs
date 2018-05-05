@@ -25,11 +25,11 @@ namespace KiyoskWall
              x = 25;
         }
         StringBuilder sb = new StringBuilder();
-        PoonehEntities db;
+        PoonehEntities1 db;
         bool week = false;
         private void KeyPad_Load(object sender, EventArgs e)
         {
-            db = new PoonehEntities();
+            db = new PoonehEntities1();
 
            
             
@@ -106,6 +106,7 @@ namespace KiyoskWall
 
         private void Button12_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
             string t = sb.ToString();
             if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
@@ -120,6 +121,7 @@ namespace KiyoskWall
                         lbNumber.Text = "شخص مورد نظر ثبت نمی باشد";
                         x = 20;
                         lbTimer.Text = "";
+                        this.Enabled = true;
                     }
 
                     else
@@ -140,6 +142,7 @@ namespace KiyoskWall
                                 lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
                                 x = 20;
                                 lbTimer.Text = "";
+                                this.Enabled = true;
                             }
                         }
 
@@ -161,6 +164,7 @@ namespace KiyoskWall
                                 lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
                                 x = 20;
                                 lbTimer.Text = "";
+                                this.Enabled = true;
                             }
                         }
                         sb.Clear();
@@ -187,6 +191,7 @@ namespace KiyoskWall
                             lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
                             x = 20;
                             lbTimer.Text = "";
+                            this.Enabled = true;
 
                         }
 
@@ -208,6 +213,7 @@ namespace KiyoskWall
                             lbNumber.Text = "شخص مورد نظر دارای مجوز نمی باشد";
                             x = 20;
                             lbTimer.Text = "";
+                            this.Enabled = true;
 
                         }
                     }
