@@ -157,7 +157,7 @@ namespace KiyoskWall
             MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(2).Image);
             pictureBox3.Image = Image.FromStream(mStreammm);
             label3.Text = Trays.ElementAt(2).Name + "\n" + "(" + Trays.ElementAt(2).Note + ")";
-
+            
 
             var x1 = Schedules.ElementAt(0).Id;
             var x2 = Schedules.ElementAt(1).Id;

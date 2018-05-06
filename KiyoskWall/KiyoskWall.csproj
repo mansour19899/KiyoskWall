@@ -122,6 +122,7 @@
     </Compile>
     <Compile Include="MyPersianDate.cs" />
     <Compile Include="NeedToReserve.cs" />
+    <Compile Include="PerMeal.cs" />
     <Compile Include="Person.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
