@@ -146,6 +146,12 @@
     <Compile Include="ReserveFoodQuickly.Designer.cs">
       <DependentUpon>ReserveFoodQuickly.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReserveQuicly2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReserveQuicly2.Designer.cs">
+      <DependentUpon>ReserveQuicly2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resource1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReserveFoodQuickly.resx">
       <DependentUpon>ReserveFoodQuickly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReserveQuicly2.resx">
+      <DependentUpon>ReserveQuicly2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
