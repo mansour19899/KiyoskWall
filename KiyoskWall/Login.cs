@@ -16,7 +16,7 @@ namespace KiyoskWall
         public static List<Tray> TempTrays;
         string y;
         string yy;
-        PoonehEntities1 db;
+        PoonehEntities db;
        public static bool RamezanDay;
 
         public Login()
@@ -100,7 +100,7 @@ namespace KiyoskWall
                 try
                 {
                     y = DateTime.Now.ToPersianDateString();
-                    db = new PoonehEntities1();
+                    db = new PoonehEntities();
 
                     tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).Distinct().ToList();
                     var AllDays = tempSchedules.Select(p => new Date { date = p.SDate }).Distinct();

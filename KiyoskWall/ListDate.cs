@@ -13,7 +13,7 @@ namespace KiyoskWall
         private int _worksheet;
         private int _resturentid;
         private Person _person;
-        PoonehEntities1 db;
+        PoonehEntities db;
         string dtnow;
         public List<Schedule> Schedules { get; set; }
         public List<Tray> Trays { get; set; }
@@ -40,7 +40,7 @@ namespace KiyoskWall
 
         public List<Date> GetList()
         {
-            db = new PoonehEntities1();
+            db = new PoonehEntities();
             List<Date> q;
             dtnow = DateTime.Now.ToPersianDateString();
 
@@ -365,10 +365,11 @@ namespace KiyoskWall
 
         }
 
-        public List<PerMeal> GetPerMeal()
+        public List<PerMeal> GetPerMeal(int lenght)
         {
             Schedules = new List<Schedule>();
-            List<Date> Dates = GetList();
+            List<Date> DatesAll = GetList();
+          var  Dates=DatesAll.Take(lenght);
             foreach (var item in Dates)
             {
                 PerMeal per = new PerMeal(item);

@@ -238,58 +238,68 @@ namespace KiyoskWall
 
         private void SetReserve(int food,int day)
         {
-            int j = 3;
-            j = j * day;
-            int jj = (day+1)*4-1;
-            var x1 = Schedules.ElementAt(j).Id;
-            var x2 = Schedules.ElementAt(j+1).Id;
-            var x3 = Schedules.ElementAt(j+2).Id;
-            t = null;
-            t = (from r in db.PoonehReservations
-                where r.Person_Id_Fk == p1.Id
-                where r.Schedule_Id_Fk == x1 || r.Schedule_Id_Fk == x2 || r.Schedule_Id_Fk == x3
-                select r).SingleOrDefault();
-
-
-
-            if (t != null)
+            try
             {
-                t.Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk;
-                t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
-                int tt = db.SaveChanges();
-                //MessageBox.Show("رزرو تغیر کرد");
-                MemoryStream mStreammmm = new MemoryStream(Trays.ElementAt(food).Image);
-                pic.ElementAt(jj).Image = Image.FromStream(mStreammmm);
+                int j = 3;
+                j = j * day;
+                int jj = (day + 1) * 4 - 1;
+                var x1 = Schedules.ElementAt(j).Id;
+                var x2 = Schedules.ElementAt(j + 1).Id;
+                var x3 = Schedules.ElementAt(j + 2).Id;
+                t = null;
+                t = (from r in db.PoonehReservations
+                     where r.Person_Id_Fk == p1.Id
+                     where r.Schedule_Id_Fk == x1 || r.Schedule_Id_Fk == x2 || r.Schedule_Id_Fk == x3
+                     select r).SingleOrDefault();
 
-            }
-            else
-            {
-                PoonehReservation reserv = new PoonehReservation()
+
+
+                if (t != null)
                 {
-                    Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk,
-                    Person_Id_Fk = p1.Id,
-                    Schedule_Id_Fk = Schedules.ElementAt(food).Id,
-                    Company_Id_Fk = p1.Company_Id_Fk,
-                    Unit_Id_Fk = p1.Unit_Id_Fk,
-                    Restaurant_Id_Fk = Schedules.ElementAt(food).Restaurant_Id_Fk,
-                    Meal_Id_Fk = Schedules.ElementAt(food).Meal_Id_Fk
+                    t.Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk;
+                    t.Schedule_Id_Fk = Schedules.ElementAt(food).Id;
+                    int tt = db.SaveChanges();
+                    //MessageBox.Show("رزرو تغیر کرد");
+                    MemoryStream mStreammmm = new MemoryStream(Trays.ElementAt(food).Image);
+                    pic.ElementAt(jj).Image = Image.FromStream(mStreammmm);
 
-                };
-                db.PoonehReservations.Add(reserv);
-                int x = db.SaveChanges();
-                //int x = 1;
-
-                if (x != 0)
-                {
-                    //MessageBox.Show("رزرو انجام شد");
-                    MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(food).Image);
-                    pic.ElementAt(jj).Image = Image.FromStream(mStreammm);
-                    del.ElementAt(day).Visible = true;
                 }
                 else
                 {
-                    MessageBox.Show("خطا در رزرو");
+                    PoonehReservation reserv = new PoonehReservation()
+                    {
+                        Tray_Id_Fk = Schedules.ElementAt(food).Tray_Id_Fk,
+                        Person_Id_Fk = p1.Id,
+                        Schedule_Id_Fk = Schedules.ElementAt(food).Id,
+                        Company_Id_Fk = p1.Company_Id_Fk,
+                        Unit_Id_Fk = p1.Unit_Id_Fk,
+                        Restaurant_Id_Fk = Schedules.ElementAt(food).Restaurant_Id_Fk,
+                        Meal_Id_Fk = Schedules.ElementAt(food).Meal_Id_Fk
+
+                    };
+                    db.PoonehReservations.Add(reserv);
+                    int x = db.SaveChanges();
+                    //int x = 1;
+
+                    if (x != 0)
+                    {
+                        //MessageBox.Show("رزرو انجام شد");
+                        MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(food).Image);
+                        pic.ElementAt(jj).Image = Image.FromStream(mStreammm);
+                        del.ElementAt(day).Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("خطا در رزرو");
+                    }
                 }
+
+            }
+            catch (Exception)
+            {
+                Alarm frm = new Alarm("رزرو انجام نشد ");
+                frm.ShowDialog();
+              
             }
 
            

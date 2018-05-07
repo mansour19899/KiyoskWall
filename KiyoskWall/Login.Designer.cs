@@ -58,7 +58,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::KiyoskWall.Resource1.PoonehLogo1;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(142, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 182);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,7 +80,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1045, 491);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1220, 964);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel2
@@ -95,7 +95,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1039, 190);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1214, 379);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // flowLayoutPanel2
@@ -104,16 +104,16 @@
             this.flowLayoutPanel2.Controls.Add(this.panel2);
             this.flowLayoutPanel2.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(108, 3);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(125, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(669, 184);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(783, 373);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::KiyoskWall.Resource1.fars;
-            this.pictureBox2.Location = new System.Drawing.Point(426, 33);
+            this.pictureBox2.Location = new System.Drawing.Point(540, 33);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(240, 182);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +124,7 @@
             // 
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(254, 33);
+            this.panel2.Location = new System.Drawing.Point(368, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(166, 182);
             this.panel2.TabIndex = 0;
@@ -159,12 +159,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 236);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 425);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(20, 40, 20, 20);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1005, 185);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1180, 422);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -172,16 +172,16 @@
             this.flowLayoutPanel1.Controls.Add(this.pictureBox3);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox4);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(104, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(121, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(697, 179);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(820, 416);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::KiyoskWall.Resource1.rozaneh;
-            this.pictureBox3.Location = new System.Drawing.Point(394, 33);
+            this.pictureBox3.Location = new System.Drawing.Point(517, 33);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(300, 210);
@@ -193,7 +193,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::KiyoskWall.Resource1.weekly;
-            this.pictureBox4.Location = new System.Drawing.Point(54, 33);
+            this.pictureBox4.Location = new System.Drawing.Point(177, 33);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(0, 3, 50, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(300, 210);
@@ -208,9 +208,9 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(3, 467);
+            this.label3.Location = new System.Drawing.Point(3, 940);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1039, 24);
+            this.label3.Size = new System.Drawing.Size(1214, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Version 1.6";
             // 
@@ -219,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
-            this.ClientSize = new System.Drawing.Size(1105, 551);
+            this.ClientSize = new System.Drawing.Size(1280, 1024);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";

@@ -17,19 +17,20 @@ namespace KiyoskWall
         private List<Label> lables;
         private List<PerMeal> Meal5;
         private PoonehReservation t;
-        private KiyoskWall.PoonehEntities1 db;
+        private KiyoskWall.PoonehEntities db;
         List<PictureBox> del;
+        private int time;
 
         public ReserveQuicly2(Person person)
         {
             InitializeComponent();
             panel1.Visible = false;
-            this.WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            db = new PoonehEntities1();
+            //this.WindowState = FormWindowState.Maximized;
+            //this.Location = new Point(0, 0);
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            db = new PoonehEntities();
             p = person;
-
+            time = 60;
             del = new List<PictureBox>();
             del.Add(del1);
             del.Add(del2);
@@ -42,23 +43,20 @@ namespace KiyoskWall
         private void ReserveQuicly2_Load(object sender, EventArgs e)
         {
             ListDate ty = new ListDate(p);
-            var yy = ty.GetPerMeal();
-            Meal5 = yy.Take(5).ToList();
+    
+            Meal5 = ty.GetPerMeal(5);
 
             SetPictureLabel();
             LoadMeal();
 
             ReservedDay();
-
-            
+            int xx = Meal5.ElementAt(0).schedule1.Restaurant_Id_Fk.Value;
+            string RestaurentName = db.Restaurants.Where(p => p.Id == xx).Select(p=>p.Name).FirstOrDefault();
+            lblName.Text = p.Name + " " + p.LastName+"                                                                                           "+"رستوران مجاز :    "+RestaurentName;
             panel1.Visible = true;
-
-
-
-           
+                   
             
-
-            int x = 0;
+          
         }
 
         private void SetPictureLabel()
@@ -149,7 +147,21 @@ namespace KiyoskWall
                     lables.ElementAt(j + 3).ForeColor = Color.Wheat;
 
                 }
-               
+                if (item.Meal == 4)
+                {
+                    lables.ElementAt(j + 3).BackColor = Color.Green;
+                    lables.ElementAt(j + 3).Text = item.Date + "\n" + item.Day + "\n" + "((سحر))";
+                    lables.ElementAt(j + 3).ForeColor = Color.Wheat;
+
+                }
+
+                if (item.Meal == 5)
+                {
+                    lables.ElementAt(j + 3).BackColor = Color.Orange;
+                    lables.ElementAt(j + 3).Text = item.Date + "\n" + item.Day + "\n" + "((افطار))";
+                    lables.ElementAt(j + 3).ForeColor = Color.Wheat;
+
+                }
 
                 j = j + 4;
 
@@ -202,6 +214,7 @@ namespace KiyoskWall
 
         private void SetReserve(int food, int day)
         {
+           
             var item = Meal5.ElementAt(day);
             if (item.reservation == null)
             {
@@ -500,6 +513,19 @@ namespace KiyoskWall
         {
             DeleteReserved(4);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            time = time - 1;
+            btnTimer.Text = "زمان باقیمانده :" + time.ToString();
+            if (time == 0)
+                this.Close();
         }
     }
 }

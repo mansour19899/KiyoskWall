@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTimer = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
             this.del5 = new System.Windows.Forms.PictureBox();
             this.del4 = new System.Windows.Forms.PictureBox();
             this.lbl20 = new System.Windows.Forms.Label();
@@ -74,6 +78,7 @@
             this.pic3 = new System.Windows.Forms.PictureBox();
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.del5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.del4)).BeginInit();
@@ -105,6 +110,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnTimer);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.del5);
             this.panel1.Controls.Add(this.del4);
             this.panel1.Controls.Add(this.lbl20);
@@ -150,15 +158,54 @@
             this.panel1.Controls.Add(this.pic3);
             this.panel1.Controls.Add(this.pic2);
             this.panel1.Controls.Add(this.pic1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1240, 722);
+            this.panel1.Size = new System.Drawing.Size(1264, 985);
             this.panel1.TabIndex = 45;
+            // 
+            // btnTimer
+            // 
+            this.btnTimer.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnTimer.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.btnTimer.Font = new System.Drawing.Font("B Nazanin", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnTimer.Location = new System.Drawing.Point(949, 898);
+            this.btnTimer.Margin = new System.Windows.Forms.Padding(40, 5, 3, 3);
+            this.btnTimer.Name = "btnTimer";
+            this.btnTimer.Size = new System.Drawing.Size(233, 52);
+            this.btnTimer.TabIndex = 88;
+            this.btnTimer.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.button1.Font = new System.Drawing.Font("B Nazanin", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button1.Location = new System.Drawing.Point(100, 898);
+            this.button1.Margin = new System.Windows.Forms.Padding(40, 5, 3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 52);
+            this.button1.TabIndex = 87;
+            this.button1.Text = "بستن";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AllowDrop = true;
+            this.lblName.BackColor = System.Drawing.Color.MidnightBlue;
+            this.lblName.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblName.Location = new System.Drawing.Point(0, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(1264, 61);
+            this.lblName.TabIndex = 86;
+            this.lblName.Text = "label1";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // del5
             // 
             this.del5.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.del5.Location = new System.Drawing.Point(178, 615);
+            this.del5.Location = new System.Drawing.Point(201, 817);
             this.del5.Name = "del5";
             this.del5.Size = new System.Drawing.Size(49, 43);
             this.del5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -170,7 +217,7 @@
             // del4
             // 
             this.del4.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.del4.Location = new System.Drawing.Point(178, 507);
+            this.del4.Location = new System.Drawing.Point(201, 667);
             this.del4.Name = "del4";
             this.del4.Size = new System.Drawing.Size(49, 43);
             this.del4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,9 +232,9 @@
             this.lbl20.BackColor = System.Drawing.Color.Transparent;
             this.lbl20.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl20.Location = new System.Drawing.Point(1049, 562);
+            this.lbl20.Location = new System.Drawing.Point(1053, 750);
             this.lbl20.Name = "lbl20";
-            this.lbl20.Size = new System.Drawing.Size(149, 105);
+            this.lbl20.Size = new System.Drawing.Size(150, 110);
             this.lbl20.TabIndex = 83;
             this.lbl20.Text = "label1";
             this.lbl20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,9 +245,9 @@
             this.lbl19.BackColor = System.Drawing.Color.Transparent;
             this.lbl19.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl19.Location = new System.Drawing.Point(369, 581);
+            this.lbl19.Location = new System.Drawing.Point(450, 750);
             this.lbl19.Name = "lbl19";
-            this.lbl19.Size = new System.Drawing.Size(149, 73);
+            this.lbl19.Size = new System.Drawing.Size(150, 110);
             this.lbl19.TabIndex = 82;
             this.lbl19.Text = "label1";
             this.lbl19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,9 +259,9 @@
             this.lbl18.BackColor = System.Drawing.Color.Transparent;
             this.lbl18.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl18.Location = new System.Drawing.Point(619, 581);
+            this.lbl18.Location = new System.Drawing.Point(650, 750);
             this.lbl18.Name = "lbl18";
-            this.lbl18.Size = new System.Drawing.Size(149, 73);
+            this.lbl18.Size = new System.Drawing.Size(150, 110);
             this.lbl18.TabIndex = 81;
             this.lbl18.Text = "label1";
             this.lbl18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -226,9 +273,9 @@
             this.lbl17.BackColor = System.Drawing.Color.Transparent;
             this.lbl17.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl17.Location = new System.Drawing.Point(853, 582);
+            this.lbl17.Location = new System.Drawing.Point(850, 750);
             this.lbl17.Name = "lbl17";
-            this.lbl17.Size = new System.Drawing.Size(149, 73);
+            this.lbl17.Size = new System.Drawing.Size(150, 110);
             this.lbl17.TabIndex = 80;
             this.lbl17.Text = "label1";
             this.lbl17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,9 +287,9 @@
             this.lbl16.BackColor = System.Drawing.Color.Transparent;
             this.lbl16.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl16.Location = new System.Drawing.Point(1049, 457);
+            this.lbl16.Location = new System.Drawing.Point(1053, 600);
             this.lbl16.Name = "lbl16";
-            this.lbl16.Size = new System.Drawing.Size(149, 105);
+            this.lbl16.Size = new System.Drawing.Size(150, 110);
             this.lbl16.TabIndex = 79;
             this.lbl16.Text = "label1";
             this.lbl16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -253,9 +300,9 @@
             this.lbl15.BackColor = System.Drawing.Color.Transparent;
             this.lbl15.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl15.Location = new System.Drawing.Point(370, 473);
+            this.lbl15.Location = new System.Drawing.Point(450, 600);
             this.lbl15.Name = "lbl15";
-            this.lbl15.Size = new System.Drawing.Size(149, 73);
+            this.lbl15.Size = new System.Drawing.Size(150, 110);
             this.lbl15.TabIndex = 78;
             this.lbl15.Text = "label1";
             this.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,9 +314,9 @@
             this.lbl14.BackColor = System.Drawing.Color.Transparent;
             this.lbl14.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl14.Location = new System.Drawing.Point(619, 473);
+            this.lbl14.Location = new System.Drawing.Point(650, 600);
             this.lbl14.Name = "lbl14";
-            this.lbl14.Size = new System.Drawing.Size(149, 73);
+            this.lbl14.Size = new System.Drawing.Size(150, 110);
             this.lbl14.TabIndex = 77;
             this.lbl14.Text = "label1";
             this.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -281,9 +328,9 @@
             this.lbl13.BackColor = System.Drawing.Color.Transparent;
             this.lbl13.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl13.Location = new System.Drawing.Point(853, 473);
+            this.lbl13.Location = new System.Drawing.Point(850, 600);
             this.lbl13.Name = "lbl13";
-            this.lbl13.Size = new System.Drawing.Size(149, 73);
+            this.lbl13.Size = new System.Drawing.Size(150, 110);
             this.lbl13.TabIndex = 76;
             this.lbl13.Text = "label1";
             this.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -293,9 +340,9 @@
             // 
             this.pic20.BackColor = System.Drawing.Color.Transparent;
             this.pic20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic20.Location = new System.Drawing.Point(62, 576);
+            this.pic20.Location = new System.Drawing.Point(100, 750);
             this.pic20.Name = "pic20";
-            this.pic20.Size = new System.Drawing.Size(165, 82);
+            this.pic20.Size = new System.Drawing.Size(150, 110);
             this.pic20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic20.TabIndex = 75;
             this.pic20.TabStop = false;
@@ -305,9 +352,9 @@
             // 
             this.pic19.BackColor = System.Drawing.Color.Transparent;
             this.pic19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic19.Location = new System.Drawing.Point(362, 576);
+            this.pic19.Location = new System.Drawing.Point(450, 750);
             this.pic19.Name = "pic19";
-            this.pic19.Size = new System.Drawing.Size(165, 82);
+            this.pic19.Size = new System.Drawing.Size(150, 110);
             this.pic19.TabIndex = 74;
             this.pic19.TabStop = false;
             // 
@@ -315,9 +362,9 @@
             // 
             this.pic18.BackColor = System.Drawing.Color.Transparent;
             this.pic18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic18.Location = new System.Drawing.Point(612, 576);
+            this.pic18.Location = new System.Drawing.Point(650, 750);
             this.pic18.Name = "pic18";
-            this.pic18.Size = new System.Drawing.Size(165, 82);
+            this.pic18.Size = new System.Drawing.Size(150, 110);
             this.pic18.TabIndex = 73;
             this.pic18.TabStop = false;
             // 
@@ -325,9 +372,9 @@
             // 
             this.pic17.BackColor = System.Drawing.Color.Transparent;
             this.pic17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic17.Location = new System.Drawing.Point(845, 576);
+            this.pic17.Location = new System.Drawing.Point(850, 750);
             this.pic17.Name = "pic17";
-            this.pic17.Size = new System.Drawing.Size(165, 82);
+            this.pic17.Size = new System.Drawing.Size(150, 110);
             this.pic17.TabIndex = 72;
             this.pic17.TabStop = false;
             // 
@@ -335,9 +382,9 @@
             // 
             this.pic16.BackColor = System.Drawing.Color.Transparent;
             this.pic16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic16.Location = new System.Drawing.Point(62, 468);
+            this.pic16.Location = new System.Drawing.Point(100, 600);
             this.pic16.Name = "pic16";
-            this.pic16.Size = new System.Drawing.Size(165, 82);
+            this.pic16.Size = new System.Drawing.Size(150, 110);
             this.pic16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic16.TabIndex = 71;
             this.pic16.TabStop = false;
@@ -347,9 +394,9 @@
             // 
             this.pic15.BackColor = System.Drawing.Color.Transparent;
             this.pic15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic15.Location = new System.Drawing.Point(362, 468);
+            this.pic15.Location = new System.Drawing.Point(450, 600);
             this.pic15.Name = "pic15";
-            this.pic15.Size = new System.Drawing.Size(165, 82);
+            this.pic15.Size = new System.Drawing.Size(150, 110);
             this.pic15.TabIndex = 70;
             this.pic15.TabStop = false;
             // 
@@ -357,9 +404,9 @@
             // 
             this.pic14.BackColor = System.Drawing.Color.Transparent;
             this.pic14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic14.Location = new System.Drawing.Point(612, 468);
+            this.pic14.Location = new System.Drawing.Point(650, 600);
             this.pic14.Name = "pic14";
-            this.pic14.Size = new System.Drawing.Size(165, 82);
+            this.pic14.Size = new System.Drawing.Size(150, 110);
             this.pic14.TabIndex = 69;
             this.pic14.TabStop = false;
             // 
@@ -367,16 +414,16 @@
             // 
             this.pic13.BackColor = System.Drawing.Color.Transparent;
             this.pic13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic13.Location = new System.Drawing.Point(845, 468);
+            this.pic13.Location = new System.Drawing.Point(850, 600);
             this.pic13.Name = "pic13";
-            this.pic13.Size = new System.Drawing.Size(165, 82);
+            this.pic13.Size = new System.Drawing.Size(150, 110);
             this.pic13.TabIndex = 68;
             this.pic13.TabStop = false;
             // 
             // del3
             // 
             this.del3.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.del3.Location = new System.Drawing.Point(178, 344);
+            this.del3.Location = new System.Drawing.Point(201, 517);
             this.del3.Name = "del3";
             this.del3.Size = new System.Drawing.Size(49, 43);
             this.del3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -388,7 +435,7 @@
             // del2
             // 
             this.del2.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.del2.Location = new System.Drawing.Point(178, 190);
+            this.del2.Location = new System.Drawing.Point(201, 367);
             this.del2.Name = "del2";
             this.del2.Size = new System.Drawing.Size(49, 43);
             this.del2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -403,9 +450,9 @@
             this.lbl12.BackColor = System.Drawing.Color.Transparent;
             this.lbl12.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl12.Location = new System.Drawing.Point(1049, 293);
+            this.lbl12.Location = new System.Drawing.Point(1053, 450);
             this.lbl12.Name = "lbl12";
-            this.lbl12.Size = new System.Drawing.Size(149, 105);
+            this.lbl12.Size = new System.Drawing.Size(150, 110);
             this.lbl12.TabIndex = 65;
             this.lbl12.Text = "label1";
             this.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -416,9 +463,9 @@
             this.lbl11.BackColor = System.Drawing.Color.Transparent;
             this.lbl11.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl11.Location = new System.Drawing.Point(369, 309);
+            this.lbl11.Location = new System.Drawing.Point(450, 450);
             this.lbl11.Name = "lbl11";
-            this.lbl11.Size = new System.Drawing.Size(149, 73);
+            this.lbl11.Size = new System.Drawing.Size(150, 110);
             this.lbl11.TabIndex = 64;
             this.lbl11.Text = "label1";
             this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -430,9 +477,9 @@
             this.lbl10.BackColor = System.Drawing.Color.Transparent;
             this.lbl10.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl10.Location = new System.Drawing.Point(618, 311);
+            this.lbl10.Location = new System.Drawing.Point(650, 450);
             this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(149, 73);
+            this.lbl10.Size = new System.Drawing.Size(150, 110);
             this.lbl10.TabIndex = 63;
             this.lbl10.Text = "label1";
             this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -444,9 +491,9 @@
             this.lbl9.BackColor = System.Drawing.Color.Transparent;
             this.lbl9.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl9.Location = new System.Drawing.Point(853, 309);
+            this.lbl9.Location = new System.Drawing.Point(850, 450);
             this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(149, 73);
+            this.lbl9.Size = new System.Drawing.Size(150, 110);
             this.lbl9.TabIndex = 62;
             this.lbl9.Text = "label1";
             this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -458,9 +505,9 @@
             this.lbl8.BackColor = System.Drawing.Color.Transparent;
             this.lbl8.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl8.Location = new System.Drawing.Point(1049, 140);
+            this.lbl8.Location = new System.Drawing.Point(1053, 300);
             this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(149, 105);
+            this.lbl8.Size = new System.Drawing.Size(150, 110);
             this.lbl8.TabIndex = 61;
             this.lbl8.Text = "label1";
             this.lbl8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -471,9 +518,9 @@
             this.lbl7.BackColor = System.Drawing.Color.Transparent;
             this.lbl7.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl7.Location = new System.Drawing.Point(369, 156);
+            this.lbl7.Location = new System.Drawing.Point(450, 300);
             this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(149, 73);
+            this.lbl7.Size = new System.Drawing.Size(150, 110);
             this.lbl7.TabIndex = 60;
             this.lbl7.Text = "label1";
             this.lbl7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -485,9 +532,9 @@
             this.lbl6.BackColor = System.Drawing.Color.Transparent;
             this.lbl6.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl6.Location = new System.Drawing.Point(617, 156);
+            this.lbl6.Location = new System.Drawing.Point(650, 300);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(149, 73);
+            this.lbl6.Size = new System.Drawing.Size(150, 110);
             this.lbl6.TabIndex = 59;
             this.lbl6.Text = "label1";
             this.lbl6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -499,9 +546,9 @@
             this.lbl5.BackColor = System.Drawing.Color.Transparent;
             this.lbl5.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl5.Location = new System.Drawing.Point(853, 156);
+            this.lbl5.Location = new System.Drawing.Point(850, 300);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(149, 73);
+            this.lbl5.Size = new System.Drawing.Size(150, 110);
             this.lbl5.TabIndex = 58;
             this.lbl5.Text = "label1";
             this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -511,9 +558,9 @@
             // 
             this.pic12.BackColor = System.Drawing.Color.Transparent;
             this.pic12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic12.Location = new System.Drawing.Point(62, 305);
+            this.pic12.Location = new System.Drawing.Point(100, 450);
             this.pic12.Name = "pic12";
-            this.pic12.Size = new System.Drawing.Size(165, 82);
+            this.pic12.Size = new System.Drawing.Size(150, 110);
             this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic12.TabIndex = 57;
             this.pic12.TabStop = false;
@@ -523,9 +570,9 @@
             // 
             this.pic11.BackColor = System.Drawing.Color.Transparent;
             this.pic11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic11.Location = new System.Drawing.Point(362, 305);
+            this.pic11.Location = new System.Drawing.Point(450, 450);
             this.pic11.Name = "pic11";
-            this.pic11.Size = new System.Drawing.Size(165, 82);
+            this.pic11.Size = new System.Drawing.Size(150, 110);
             this.pic11.TabIndex = 56;
             this.pic11.TabStop = false;
             // 
@@ -533,9 +580,9 @@
             // 
             this.pic10.BackColor = System.Drawing.Color.Transparent;
             this.pic10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic10.Location = new System.Drawing.Point(612, 305);
+            this.pic10.Location = new System.Drawing.Point(650, 450);
             this.pic10.Name = "pic10";
-            this.pic10.Size = new System.Drawing.Size(165, 82);
+            this.pic10.Size = new System.Drawing.Size(150, 110);
             this.pic10.TabIndex = 55;
             this.pic10.TabStop = false;
             // 
@@ -543,9 +590,9 @@
             // 
             this.pic9.BackColor = System.Drawing.Color.Transparent;
             this.pic9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic9.Location = new System.Drawing.Point(845, 305);
+            this.pic9.Location = new System.Drawing.Point(850, 450);
             this.pic9.Name = "pic9";
-            this.pic9.Size = new System.Drawing.Size(165, 82);
+            this.pic9.Size = new System.Drawing.Size(150, 110);
             this.pic9.TabIndex = 54;
             this.pic9.TabStop = false;
             // 
@@ -553,9 +600,9 @@
             // 
             this.pic8.BackColor = System.Drawing.Color.Transparent;
             this.pic8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic8.Location = new System.Drawing.Point(62, 151);
+            this.pic8.Location = new System.Drawing.Point(100, 300);
             this.pic8.Name = "pic8";
-            this.pic8.Size = new System.Drawing.Size(165, 82);
+            this.pic8.Size = new System.Drawing.Size(150, 110);
             this.pic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic8.TabIndex = 53;
             this.pic8.TabStop = false;
@@ -565,9 +612,9 @@
             // 
             this.pic7.BackColor = System.Drawing.Color.Transparent;
             this.pic7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic7.Location = new System.Drawing.Point(362, 151);
+            this.pic7.Location = new System.Drawing.Point(450, 300);
             this.pic7.Name = "pic7";
-            this.pic7.Size = new System.Drawing.Size(165, 82);
+            this.pic7.Size = new System.Drawing.Size(150, 110);
             this.pic7.TabIndex = 52;
             this.pic7.TabStop = false;
             // 
@@ -575,9 +622,9 @@
             // 
             this.pic6.BackColor = System.Drawing.Color.Transparent;
             this.pic6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic6.Location = new System.Drawing.Point(612, 151);
+            this.pic6.Location = new System.Drawing.Point(650, 300);
             this.pic6.Name = "pic6";
-            this.pic6.Size = new System.Drawing.Size(165, 82);
+            this.pic6.Size = new System.Drawing.Size(150, 110);
             this.pic6.TabIndex = 51;
             this.pic6.TabStop = false;
             // 
@@ -585,16 +632,16 @@
             // 
             this.pic5.BackColor = System.Drawing.Color.Transparent;
             this.pic5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic5.Location = new System.Drawing.Point(845, 151);
+            this.pic5.Location = new System.Drawing.Point(850, 300);
             this.pic5.Name = "pic5";
-            this.pic5.Size = new System.Drawing.Size(165, 82);
+            this.pic5.Size = new System.Drawing.Size(150, 110);
             this.pic5.TabIndex = 50;
             this.pic5.TabStop = false;
             // 
             // del1
             // 
             this.del1.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.del1.Location = new System.Drawing.Point(178, 56);
+            this.del1.Location = new System.Drawing.Point(201, 217);
             this.del1.Name = "del1";
             this.del1.Size = new System.Drawing.Size(49, 43);
             this.del1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -609,9 +656,9 @@
             this.lbl4.BackColor = System.Drawing.Color.Transparent;
             this.lbl4.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl4.Location = new System.Drawing.Point(1066, 26);
+            this.lbl4.Location = new System.Drawing.Point(1053, 150);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(149, 105);
+            this.lbl4.Size = new System.Drawing.Size(150, 110);
             this.lbl4.TabIndex = 48;
             this.lbl4.Text = "label1";
             this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -622,9 +669,9 @@
             this.lbl3.BackColor = System.Drawing.Color.Transparent;
             this.lbl3.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl3.Location = new System.Drawing.Point(397, 26);
+            this.lbl3.Location = new System.Drawing.Point(450, 150);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(149, 73);
+            this.lbl3.Size = new System.Drawing.Size(150, 110);
             this.lbl3.TabIndex = 47;
             this.lbl3.Text = "label1";
             this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -636,9 +683,9 @@
             this.lbl2.BackColor = System.Drawing.Color.Transparent;
             this.lbl2.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl2.Location = new System.Drawing.Point(645, 26);
+            this.lbl2.Location = new System.Drawing.Point(650, 150);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(149, 73);
+            this.lbl2.Size = new System.Drawing.Size(150, 110);
             this.lbl2.TabIndex = 46;
             this.lbl2.Text = "label1";
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -650,9 +697,9 @@
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
             this.lbl1.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl1.Location = new System.Drawing.Point(870, 26);
+            this.lbl1.Location = new System.Drawing.Point(850, 150);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(149, 73);
+            this.lbl1.Size = new System.Drawing.Size(150, 110);
             this.lbl1.TabIndex = 45;
             this.lbl1.Text = "label1";
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -662,9 +709,9 @@
             // 
             this.pic4.BackColor = System.Drawing.Color.Transparent;
             this.pic4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic4.Location = new System.Drawing.Point(62, 21);
+            this.pic4.Location = new System.Drawing.Point(100, 150);
             this.pic4.Name = "pic4";
-            this.pic4.Size = new System.Drawing.Size(165, 82);
+            this.pic4.Size = new System.Drawing.Size(150, 110);
             this.pic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic4.TabIndex = 44;
             this.pic4.TabStop = false;
@@ -674,9 +721,9 @@
             // 
             this.pic3.BackColor = System.Drawing.Color.Transparent;
             this.pic3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic3.Location = new System.Drawing.Point(390, 21);
+            this.pic3.Location = new System.Drawing.Point(450, 150);
             this.pic3.Name = "pic3";
-            this.pic3.Size = new System.Drawing.Size(165, 82);
+            this.pic3.Size = new System.Drawing.Size(150, 110);
             this.pic3.TabIndex = 43;
             this.pic3.TabStop = false;
             // 
@@ -684,9 +731,9 @@
             // 
             this.pic2.BackColor = System.Drawing.Color.Transparent;
             this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic2.Location = new System.Drawing.Point(640, 21);
+            this.pic2.Location = new System.Drawing.Point(650, 150);
             this.pic2.Name = "pic2";
-            this.pic2.Size = new System.Drawing.Size(165, 82);
+            this.pic2.Size = new System.Drawing.Size(150, 110);
             this.pic2.TabIndex = 42;
             this.pic2.TabStop = false;
             // 
@@ -694,19 +741,25 @@
             // 
             this.pic1.BackColor = System.Drawing.Color.Transparent;
             this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic1.Location = new System.Drawing.Point(862, 21);
+            this.pic1.Location = new System.Drawing.Point(850, 150);
             this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(165, 82);
+            this.pic1.Size = new System.Drawing.Size(150, 110);
             this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic1.TabIndex = 41;
             this.pic1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ReserveQuicly2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
-            this.ClientSize = new System.Drawing.Size(1264, 746);
+            this.ClientSize = new System.Drawing.Size(1264, 985);
             this.Controls.Add(this.panel1);
             this.Name = "ReserveQuicly2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -791,5 +844,9 @@
         private System.Windows.Forms.PictureBox pic3;
         private System.Windows.Forms.PictureBox pic2;
         private System.Windows.Forms.PictureBox pic1;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }
