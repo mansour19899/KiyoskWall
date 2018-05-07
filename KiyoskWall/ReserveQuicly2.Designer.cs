@@ -761,6 +761,7 @@
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
             this.ClientSize = new System.Drawing.Size(1264, 985);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReserveQuicly2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReserveQuicly2";

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KiyoskWall
 {
-    class PerMeal
+   public class PerMeal
     {
         
         public string Date { get; set; }
@@ -39,6 +39,10 @@ namespace KiyoskWall
             Schedules = new List<Schedule> ();
             Trays = new List<Tray> ();
             Images = new List<Image> ();
+        }
+        public PerMeal()
+        {
+
         }
 
     }

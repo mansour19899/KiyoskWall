@@ -63,6 +63,12 @@
     <Compile Include="Company.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DailyReserve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyReserve.Designer.cs">
+      <DependentUpon>DailyReserve.cs</DependentUpon>
+    </Compile>
     <Compile Include="Date.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="ExtraTime.cs">
@@ -146,6 +152,12 @@
     <Compile Include="ReserveFoodQuickly.Designer.cs">
       <DependentUpon>ReserveFoodQuickly.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReservePerMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservePerMeal.Designer.cs">
+      <DependentUpon>ReservePerMeal.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReserveQuicly2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,9 @@
     <EmbeddedResource Include="Alarm.resx">
       <DependentUpon>Alarm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DailyReserve.resx">
+      <DependentUpon>DailyReserve.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReserveFoodQuickly.resx">
       <DependentUpon>ReserveFoodQuickly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReservePerMeal.resx">
+      <DependentUpon>ReservePerMeal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReserveQuicly2.resx">
       <DependentUpon>ReserveQuicly2.cs</DependentUpon>

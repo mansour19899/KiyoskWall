@@ -152,7 +152,7 @@ namespace KiyoskWall
                         {
                             if (db.Person_Restaurant.Any(p => p.Person_Id_Fk == qq.Id))
                             {
-                                Form1 frm = new Form1(qq);
+                                DailyReserve frm = new DailyReserve(qq);
                                 timer1.Enabled = false;
                                 frm.ShowDialog();
                                 this.Close();
@@ -200,7 +200,7 @@ namespace KiyoskWall
                     {
                         if (db.Person_Restaurant.Any(p => p.Person_Id_Fk == q.Id))
                         {
-                            Form1 frm = new Form1(q);
+                            DailyReserve frm = new DailyReserve(q);
                             timer1.Enabled = false;
                             this.Hide();
                             frm.ShowDialog();
