@@ -17,7 +17,7 @@ namespace KiyoskWall
         int Day;
         Person Person;
         private PoonehReservation t;
-        private KiyoskWall.PoonehEntities db;
+        private KiyoskWall.PoonehEntities1 db;
         bool Loop;
         public ReservePerMeal(List<PerMeal> meal,int day, Person Person1)
         {
@@ -29,7 +29,7 @@ namespace KiyoskWall
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
-            db = new PoonehEntities();
+            db = new PoonehEntities1();
             db.Configuration.LazyLoadingEnabled = true;
             t = new PoonehReservation();
             panel1.Visible = false;

@@ -17,7 +17,7 @@ namespace KiyoskWall
         System.Resources.ResourceManager rm = new ResourceManager(typeof(Resource1));
         private Person p1;
         private string dtnow;
-        private KiyoskWall.PoonehEntities db;
+        private KiyoskWall.PoonehEntities1 db;
         private List<PerMeal> AllMeals;
         List<PictureBox> p;
 
@@ -43,7 +43,7 @@ namespace KiyoskWall
         private void DailyReserve_Load(object sender, EventArgs e)
         {
        
-            db = new PoonehEntities();
+            db = new PoonehEntities1();
             db.Configuration.LazyLoadingEnabled = true;
             
 

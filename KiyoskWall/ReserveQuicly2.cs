@@ -17,7 +17,7 @@ namespace KiyoskWall
         private List<Label> lables;
         private List<PerMeal> Meal5;
         private PoonehReservation t;
-        private KiyoskWall.PoonehEntities db;
+        private KiyoskWall.PoonehEntities1 db;
         List<PictureBox> del;
         private int time;
 
@@ -28,7 +28,7 @@ namespace KiyoskWall
             this.WindowState = FormWindowState.Maximized;
             this.Location = new Point(0, 0);
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            db = new PoonehEntities();
+            db = new PoonehEntities1();
             db.Configuration.LazyLoadingEnabled = true;
             p = person;
             time = 60;

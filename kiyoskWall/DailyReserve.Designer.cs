@@ -142,10 +142,10 @@
             this.lblInformation.BackColor = System.Drawing.Color.Navy;
             this.lblInformation.Font = new System.Drawing.Font("B Yekan", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblInformation.ForeColor = System.Drawing.Color.White;
-            this.lblInformation.Location = new System.Drawing.Point(-14, 0);
+            this.lblInformation.Location = new System.Drawing.Point(-84, 0);
             this.lblInformation.Name = "lblInformation";
             this.lblInformation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblInformation.Size = new System.Drawing.Size(1289, 74);
+            this.lblInformation.Size = new System.Drawing.Size(1444, 74);
             this.lblInformation.TabIndex = 72;
             this.lblInformation.Text = "label1";
             this.lblInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

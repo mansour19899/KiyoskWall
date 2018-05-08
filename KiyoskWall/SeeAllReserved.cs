@@ -13,7 +13,7 @@ namespace KiyoskWall
     public partial class SeeAllReserved : Form
     {
         Person p;
-        PoonehEntities db;
+        PoonehEntities1 db;
         public List<Label> Labels;
         public List<PerMeal> Meals;
      public   int timer;
@@ -33,7 +33,7 @@ namespace KiyoskWall
         private void SeeAllReserved_Load(object sender, EventArgs e)
         {
             int id = p.Id;
-            db = new PoonehEntities();
+            db = new PoonehEntities1();
             db.Configuration.LazyLoadingEnabled = true;
 
             string dtnow = DateTime.Now.ToPersianDateString();
