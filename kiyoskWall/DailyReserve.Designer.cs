@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblInformation = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.pic20 = new System.Windows.Forms.PictureBox();
@@ -55,7 +56,7 @@
             this.pic12 = new System.Windows.Forms.PictureBox();
             this.pic13 = new System.Windows.Forms.PictureBox();
             this.pic14 = new System.Windows.Forms.PictureBox();
-            this.lblInformation = new System.Windows.Forms.Label();
+            this.btnNextDay = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic20)).BeginInit();
@@ -87,6 +88,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnNextDay);
             this.panel1.Controls.Add(this.lblInformation);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pic1);
@@ -119,6 +121,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 749);
             this.panel1.TabIndex = 0;
+            // 
+            // lblInformation
+            // 
+            this.lblInformation.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblInformation.Location = new System.Drawing.Point(27, 9);
+            this.lblInformation.Name = "lblInformation";
+            this.lblInformation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblInformation.Size = new System.Drawing.Size(1225, 48);
+            this.lblInformation.TabIndex = 72;
+            this.lblInformation.Text = "label1";
+            this.lblInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -425,16 +438,18 @@
             this.pic14.TabStop = false;
             this.pic14.Click += new System.EventHandler(this.pic14_Click);
             // 
-            // lblInformation
+            // btnNextDay
             // 
-            this.lblInformation.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblInformation.Location = new System.Drawing.Point(27, 9);
-            this.lblInformation.Name = "lblInformation";
-            this.lblInformation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblInformation.Size = new System.Drawing.Size(1225, 48);
-            this.lblInformation.TabIndex = 72;
-            this.lblInformation.Text = "label1";
-            this.lblInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNextDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNextDay.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.btnNextDay.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnNextDay.Location = new System.Drawing.Point(3, 71);
+            this.btnNextDay.Name = "btnNextDay";
+            this.btnNextDay.Size = new System.Drawing.Size(161, 87);
+            this.btnNextDay.TabIndex = 73;
+            this.btnNextDay.Text = "مشاهده رزرو";
+            this.btnNextDay.UseVisualStyleBackColor = true;
+            this.btnNextDay.Click += new System.EventHandler(this.btnNextDay_Click);
             // 
             // DailyReserve
             // 
@@ -506,5 +521,6 @@
         private System.Windows.Forms.PictureBox pic14;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblInformation;
+        private System.Windows.Forms.Button btnNextDay;
     }
 }

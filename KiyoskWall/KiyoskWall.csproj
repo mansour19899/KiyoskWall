@@ -175,6 +175,12 @@
     <Compile Include="Schedule.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="SeeAllReserved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeeAllReserved.Designer.cs">
+      <DependentUpon>SeeAllReserved.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeeAllReserved.resx">
+      <DependentUpon>SeeAllReserved.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>

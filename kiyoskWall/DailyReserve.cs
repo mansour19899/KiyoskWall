@@ -321,5 +321,12 @@ namespace KiyoskWall
         {
             RunReserve(24);
         }
+
+        private void btnNextDay_Click(object sender, EventArgs e)
+        {
+            SeeAllReserved frm = new SeeAllReserved();
+            frm.ShowDialog();
+
+        }
     }
 }
