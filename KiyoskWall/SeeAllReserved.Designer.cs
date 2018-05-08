@@ -30,17 +30,17 @@
         {
             this.lblToday = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
+            this.lbl7 = new System.Windows.Forms.Label();
+            this.lbl30 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.lbl8 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
-            this.lbl3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbl10 = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbl9 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -48,17 +48,18 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lbl12 = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lbl11 = new System.Windows.Forms.Label();
+            this.lbl5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblToday
             // 
-            this.lblToday.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblToday.Image = global::KiyoskWall.Resource1.lunch;
+            this.lblToday.BackColor = System.Drawing.Color.Transparent;
+            this.lblToday.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblToday.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblToday.Location = new System.Drawing.Point(546, 34);
             this.lblToday.Name = "lblToday";
             this.lblToday.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -70,7 +71,8 @@
             // lbl1
             // 
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbl1.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl1.Location = new System.Drawing.Point(918, 153);
             this.lbl1.Name = "lbl1";
             this.lbl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -79,72 +81,75 @@
             this.lbl1.Text = "1397/01/15  ----- باقلی پلو با گوشت";
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lbl7
+            // 
+            this.lbl7.BackColor = System.Drawing.Color.Transparent;
+            this.lbl7.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl7.Location = new System.Drawing.Point(546, 153);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl7.Size = new System.Drawing.Size(311, 63);
+            this.lbl7.TabIndex = 2;
+            this.lbl7.Text = "1397/01/15  ----- باقلی پلو با گوشت";
+            this.lbl7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl30
+            // 
+            this.lbl30.BackColor = System.Drawing.Color.Transparent;
+            this.lbl30.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl30.Location = new System.Drawing.Point(142, 153);
+            this.lbl30.Name = "lbl30";
+            this.lbl30.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl30.Size = new System.Drawing.Size(311, 63);
+            this.lbl30.TabIndex = 3;
+            this.lbl30.Text = "باقلی پلو با گوشت 1396/01/02";
+            this.lbl30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label50
+            // 
+            this.label50.BackColor = System.Drawing.Color.Transparent;
+            this.label50.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label50.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label50.Location = new System.Drawing.Point(142, 263);
+            this.label50.Name = "label50";
+            this.label50.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label50.Size = new System.Drawing.Size(311, 63);
+            this.label50.TabIndex = 6;
+            this.label50.Text = "باقلی پلو با گوشت 1396/01/02";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl8
+            // 
+            this.lbl8.BackColor = System.Drawing.Color.Transparent;
+            this.lbl8.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl8.Location = new System.Drawing.Point(546, 263);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl8.Size = new System.Drawing.Size(311, 63);
+            this.lbl8.TabIndex = 5;
+            this.lbl8.Text = "1397/01/15  -- باقلی پلو با گوشت";
+            this.lbl8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lbl2
             // 
-            this.lbl2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.lbl2.Font = new System.Drawing.Font("B Mitra", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbl2.Location = new System.Drawing.Point(546, 153);
+            this.lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl2.Location = new System.Drawing.Point(918, 263);
             this.lbl2.Name = "lbl2";
             this.lbl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl2.Size = new System.Drawing.Size(311, 63);
-            this.lbl2.TabIndex = 2;
+            this.lbl2.TabIndex = 4;
             this.lbl2.Text = "1397/01/15  ----- باقلی پلو با گوشت";
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbl3
-            // 
-            this.lbl3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.lbl3.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbl3.Location = new System.Drawing.Point(142, 153);
-            this.lbl3.Name = "lbl3";
-            this.lbl3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl3.Size = new System.Drawing.Size(311, 63);
-            this.lbl3.TabIndex = 3;
-            this.lbl3.Text = "باقلی پلو با گوشت 1396/01/02";
-            this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Navy;
-            this.label5.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(142, 263);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(311, 63);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "باقلی پلو با گوشت 1396/01/02";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(546, 263);
-            this.label6.Name = "label6";
-            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(311, 63);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "1397/01/15  -- باقلی پلو با گوشت";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label7.Location = new System.Drawing.Point(918, 263);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(311, 63);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "1397/01/15  ----- باقلی پلو با گوشت";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(142, 464);
             this.label8.Name = "label8";
@@ -154,34 +159,37 @@
             this.label8.Text = "باقلی پلو با گوشت 1396/01/02";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label9
+            // lbl10
             // 
-            this.label9.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label9.Image = global::KiyoskWall.Resource1.lunch;
-            this.label9.Location = new System.Drawing.Point(546, 464);
-            this.label9.Name = "label9";
-            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(311, 63);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "باقلی پلو با گوشت 1396/01/02";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl10.BackColor = System.Drawing.Color.Transparent;
+            this.lbl10.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl10.Location = new System.Drawing.Point(546, 464);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl10.Size = new System.Drawing.Size(311, 63);
+            this.lbl10.TabIndex = 11;
+            this.lbl10.Text = "باقلی پلو با گوشت 1396/01/02";
+            this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label10
+            // lbl4
             // 
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label10.Location = new System.Drawing.Point(918, 464);
-            this.label10.Name = "label10";
-            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label10.Size = new System.Drawing.Size(311, 63);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "باقلی پلو با گوشت 1396/01/02";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl4.Location = new System.Drawing.Point(918, 464);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl4.Size = new System.Drawing.Size(311, 63);
+            this.lbl4.TabIndex = 10;
+            this.lbl4.Text = "باقلی پلو با گوشت 1396/01/02";
+            this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label11
             // 
-            this.label11.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label11.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(142, 354);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -190,29 +198,31 @@
             this.label11.Text = "باقلی پلو با گوشت 1396/01/02";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label12
+            // lbl9
             // 
-            this.label12.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label12.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label12.Location = new System.Drawing.Point(546, 354);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label12.Size = new System.Drawing.Size(311, 63);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "1397/01/15  ----- باقلی پلو با گوشت";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl9.BackColor = System.Drawing.Color.Transparent;
+            this.lbl9.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl9.Location = new System.Drawing.Point(546, 354);
+            this.lbl9.Name = "lbl9";
+            this.lbl9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl9.Size = new System.Drawing.Size(311, 63);
+            this.lbl9.TabIndex = 8;
+            this.lbl9.Text = "1397/01/15  ----- باقلی پلو با گوشت";
+            this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label13
+            // lbl3
             // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label13.Location = new System.Drawing.Point(918, 354);
-            this.label13.Name = "label13";
-            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label13.Size = new System.Drawing.Size(311, 63);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "1397/01/15  ----- باقلی پلو با گوشت";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl3.Location = new System.Drawing.Point(918, 354);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl3.Size = new System.Drawing.Size(311, 63);
+            this.lbl3.TabIndex = 7;
+            this.lbl3.Text = "1397/01/15  ----- باقلی پلو با گوشت";
+            this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label14
             // 
@@ -298,29 +308,31 @@
             this.label20.Text = "باقلی پلو با گوشت 1396/01/02";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label21
+            // lbl12
             // 
-            this.label21.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label21.Image = global::KiyoskWall.Resource1.lunch;
-            this.label21.Location = new System.Drawing.Point(546, 674);
-            this.label21.Name = "label21";
-            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label21.Size = new System.Drawing.Size(311, 63);
-            this.label21.TabIndex = 17;
-            this.label21.Text = "باقلی پلو با گوشت 1396/01/02";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl12.BackColor = System.Drawing.Color.Transparent;
+            this.lbl12.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl12.Location = new System.Drawing.Point(546, 674);
+            this.lbl12.Name = "lbl12";
+            this.lbl12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl12.Size = new System.Drawing.Size(311, 63);
+            this.lbl12.TabIndex = 17;
+            this.lbl12.Text = "باقلی پلو با گوشت 1396/01/02";
+            this.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label22
+            // lbl6
             // 
-            this.label22.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label22.Image = global::KiyoskWall.Resource1.lunch;
-            this.label22.Location = new System.Drawing.Point(918, 674);
-            this.label22.Name = "label22";
-            this.label22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label22.Size = new System.Drawing.Size(311, 63);
-            this.label22.TabIndex = 16;
-            this.label22.Text = "باقلی پلو با گوشت 1396/01/02";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl6.BackColor = System.Drawing.Color.Transparent;
+            this.lbl6.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl6.Location = new System.Drawing.Point(918, 674);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl6.Size = new System.Drawing.Size(311, 63);
+            this.lbl6.TabIndex = 16;
+            this.lbl6.Text = "باقلی پلو با گوشت 1396/01/02";
+            this.lbl6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label23
             // 
@@ -334,35 +346,37 @@
             this.label23.Text = "باقلی پلو با گوشت 1396/01/02";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label24
+            // lbl11
             // 
-            this.label24.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label24.Image = global::KiyoskWall.Resource1.lunch;
-            this.label24.Location = new System.Drawing.Point(546, 564);
-            this.label24.Name = "label24";
-            this.label24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label24.Size = new System.Drawing.Size(311, 63);
-            this.label24.TabIndex = 14;
-            this.label24.Text = "باقلی پلو با گوشت 1396/01/02";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl11.BackColor = System.Drawing.Color.Transparent;
+            this.lbl11.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl11.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl11.Location = new System.Drawing.Point(546, 564);
+            this.lbl11.Name = "lbl11";
+            this.lbl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl11.Size = new System.Drawing.Size(311, 63);
+            this.lbl11.TabIndex = 14;
+            this.lbl11.Text = "باقلی پلو با گوشت 1396/01/02";
+            this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label25
+            // lbl5
             // 
-            this.label25.Font = new System.Drawing.Font("B Nazanin", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label25.Image = global::KiyoskWall.Resource1.lunch;
-            this.label25.Location = new System.Drawing.Point(918, 564);
-            this.label25.Name = "label25";
-            this.label25.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label25.Size = new System.Drawing.Size(311, 63);
-            this.label25.TabIndex = 13;
-            this.label25.Text = "باقلی پلو با گوشت 1396/01/02";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl5.BackColor = System.Drawing.Color.Transparent;
+            this.lbl5.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lbl5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl5.Location = new System.Drawing.Point(918, 564);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbl5.Size = new System.Drawing.Size(311, 63);
+            this.lbl5.TabIndex = 13;
+            this.lbl5.Text = "باقلی پلو با گوشت 1396/01/02";
+            this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // SeeAllReserved
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::KiyoskWall.Resource1.blue;
+            this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
@@ -371,27 +385,28 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label22);
+            this.Controls.Add(this.lbl12);
+            this.Controls.Add(this.lbl6);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label25);
+            this.Controls.Add(this.lbl11);
+            this.Controls.Add(this.lbl5);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lbl10);
+            this.Controls.Add(this.lbl4);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbl9);
             this.Controls.Add(this.lbl3);
+            this.Controls.Add(this.label50);
+            this.Controls.Add(this.lbl8);
             this.Controls.Add(this.lbl2);
+            this.Controls.Add(this.lbl30);
+            this.Controls.Add(this.lbl7);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.lblToday);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeeAllReserved";
             this.Text = "SeeAllReserved";
+            this.Load += new System.EventHandler(this.SeeAllReserved_Load);
             this.ResumeLayout(false);
 
         }
@@ -400,17 +415,17 @@
 
         private System.Windows.Forms.Label lblToday;
         private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label lbl7;
+        private System.Windows.Forms.Label lbl30;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label lbl8;
         private System.Windows.Forms.Label lbl2;
-        private System.Windows.Forms.Label lbl3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl10;
+        private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbl9;
+        private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
@@ -418,10 +433,10 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lbl12;
+        private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lbl11;
+        private System.Windows.Forms.Label lbl5;
     }
 }
