@@ -131,7 +131,7 @@ namespace KiyoskWall
                         {
                             if (db.Person_Restaurant.Any(p => p.Person_Id_Fk == qq.Id))
                             {
-                                ReserveFoodQuickly frm = new ReserveFoodQuickly(qq);
+                                ReserveQuicly2 frm = new ReserveQuicly2(qq);
                                 timer1.Enabled = false;
                                 frm.ShowDialog();
                                 this.Close();

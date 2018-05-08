@@ -82,7 +82,7 @@ namespace KiyoskWall
                     for (int ij = q.Count - 1; ij > -1; ij--)
                     {
                         comper = q.ElementAt(ij).date;
-                        if (Login.tempSchedules.Where(p => p.SDate == comper).FirstOrDefault().Meal_Id_Fk == 4)
+                        if (Login.tempSchedules.Where(p => p.SDate == comper).Any(pp => pp.Meal_Id_Fk == 4&pp.Restaurant_Id_Fk==_resturentid))
                             q.RemoveAt(ij);
 
                     }
@@ -158,7 +158,7 @@ namespace KiyoskWall
                     for (int ij = q.Count - 1; ij > -1; ij--)
                     {
                         comper = q.ElementAt(ij).date;
-                        if (Login.tempSchedules.Where(p => p.SDate == comper).FirstOrDefault().Meal_Id_Fk == 4)
+                        if (Login.tempSchedules.Where(p => p.SDate == comper).Any(pp => pp.Meal_Id_Fk == 4 & pp.Restaurant_Id_Fk == _resturentid))
                             q.RemoveAt(ij);
 
                     }
@@ -203,8 +203,9 @@ namespace KiyoskWall
                 }
                 else
                 {
-                    if (Login.tempSchedules.Where(p => p.SDate == d.ElementAt(i).date).FirstOrDefault().Meal_Id_Fk == 4)
-                    {
+            
+                        if (Login.tempSchedules.Where(p => p.SDate == d.ElementAt(i).date).Any(pp=>pp.Meal_Id_Fk==4 & pp.Restaurant_Id_Fk == _resturentid))
+                        {
                         if (x >= 4 & x < 8)
                         {
                             d.ElementAt(i).meal = 5;
@@ -272,7 +273,7 @@ namespace KiyoskWall
                 }
                 else
                 {
-                    if (Login.tempSchedules.Where(p => p.SDate == d.ElementAt(i).date).FirstOrDefault().Meal_Id_Fk == 4)
+                    if (Login.tempSchedules.Where(p => p.SDate == d.ElementAt(i).date).Any(pp => pp.Meal_Id_Fk == 4 & pp.Restaurant_Id_Fk == _resturentid))
                     {
                         if (x >= 4 & x < 8)
                         {
@@ -358,7 +359,18 @@ namespace KiyoskWall
                 }
                 else
                 {
+                    if(!Login.RamezanDay)
                     FilterList.Add(item);
+                    else
+                    {
+                        if (Login.tempSchedules.Where(p => p.SDate ==item.date).Any(pp => (pp.Meal_Id_Fk == 4 || pp.Meal_Id_Fk == 5) & pp.Restaurant_Id_Fk == _resturentid))
+                            if(item.meal==1||item.meal==2)
+                            {
+
+                            }
+                        else
+                            FilterList.Add(item);
+                    }
                 }
             }
 

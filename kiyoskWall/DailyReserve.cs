@@ -20,7 +20,7 @@ namespace KiyoskWall
         private KiyoskWall.PoonehEntities db;
         private List<PerMeal> AllMeals;
         List<PictureBox> p;
-        List<Label> lables;
+
 
         public DailyReserve(Person per)
         {
@@ -42,7 +42,7 @@ namespace KiyoskWall
 
         private void DailyReserve_Load(object sender, EventArgs e)
         {
-            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+       
             db = new PoonehEntities();
             db.Configuration.LazyLoadingEnabled = true;
             
@@ -53,13 +53,27 @@ namespace KiyoskWall
 
             AllMeals = ty.GetPerMeal(25);
 
+            if(AllMeals.Count()==0)
+            {
+                Alarm frm = new Alarm("وعده غذایی تعریف نشده است");
+                frm.ShowDialog();
+            }
 
             SetPicturelabel();
             LoadDate();
-            var resturent_id = AllMeals.ElementAt(0).schedule1.Restaurant_Id_Fk;
-            var ResturentName = db.Restaurants.Where(p => p.Id == resturent_id).FirstOrDefault();
-            
-            lblInformation.Text = p1.Name + " " + p1.LastName + "                                                      " +"شیفت:   "+ GiveMeShiftName() + "                                               " + " رستوران مجاز:   "+ResturentName.Name;
+            try
+            {
+                var resturent_id = AllMeals.ElementAt(0).schedule1.Restaurant_Id_Fk;
+                var ResturentName = db.Restaurants.Where(p => p.Id == resturent_id).FirstOrDefault();
+
+                lblInformation.Text = p1.Name + " " + p1.LastName + "                                   " + "شیفت:   " + GiveMeShiftName() + "                          " + " رستوران مجاز:   " + ResturentName.Name;
+            }
+            catch (Exception)
+            {
+
+                this.Close();
+            }
+
 
             panel1.Visible = true;
         }
@@ -324,9 +338,14 @@ namespace KiyoskWall
 
         private void btnNextDay_Click(object sender, EventArgs e)
         {
-            SeeAllReserved frm = new SeeAllReserved();
+            SeeAllReserved frm = new SeeAllReserved(p1,AllMeals);
             frm.ShowDialog();
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

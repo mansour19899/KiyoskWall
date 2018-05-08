@@ -25,9 +25,9 @@ namespace KiyoskWall
         {
             InitializeComponent();
             panel1.Visible = false;
-            //this.WindowState = FormWindowState.Maximized;
-            //this.Location = new Point(0, 0);
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
+            this.Location = new Point(0, 0);
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             db = new PoonehEntities();
             db.Configuration.LazyLoadingEnabled = true;
             p = person;
@@ -46,14 +46,31 @@ namespace KiyoskWall
             ListDate ty = new ListDate(p);
     
             Meal5 = ty.GetPerMeal(5);
+            if(Meal5.Count()==0)
+            {
+                Alarm frm = new Alarm("وعده غذایی تعریف نشده است");
+                frm.ShowDialog();
+              
+            }
 
-            SetPictureLabel();
+
+                SetPictureLabel();
             LoadMeal();
 
             ReservedDay();
-            int xx = Meal5.ElementAt(0).schedule1.Restaurant_Id_Fk.Value;
-            string RestaurentName = db.Restaurants.Where(p => p.Id == xx).Select(p=>p.Name).FirstOrDefault();
-            lblName.Text = p.Name + " " + p.LastName+"                                                                                           "+"رستوران مجاز :    "+RestaurentName;
+            try
+            {
+                int xx = Meal5.ElementAt(0).schedule1.Restaurant_Id_Fk.Value;
+                string RestaurentName = db.Restaurants.Where(p => p.Id == xx).Select(p => p.Name).FirstOrDefault();
+                lblName.Text = p.Name + " " + p.LastName + "                                                                                           " + "رستوران مجاز :    " + RestaurentName;
+            }
+            catch (Exception)
+            {
+
+                this.Close();
+            }
+       
+
             panel1.Visible = true;
                    
             
@@ -152,7 +169,7 @@ namespace KiyoskWall
                 {
                     lables.ElementAt(j + 3).BackColor = Color.Green;
                     lables.ElementAt(j + 3).Text = item.Date + "\n" + item.Day + "\n" + "((سحر))";
-                    lables.ElementAt(j + 3).ForeColor = Color.Wheat;
+                    lables.ElementAt(j + 3).ForeColor = Color.Black;
 
                 }
 
@@ -160,7 +177,7 @@ namespace KiyoskWall
                 {
                     lables.ElementAt(j + 3).BackColor = Color.Orange;
                     lables.ElementAt(j + 3).Text = item.Date + "\n" + item.Day + "\n" + "((افطار))";
-                    lables.ElementAt(j + 3).ForeColor = Color.Wheat;
+                    lables.ElementAt(j + 3).ForeColor = Color.Black;
 
                 }
 

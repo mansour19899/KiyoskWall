@@ -58,6 +58,8 @@ namespace KiyoskWall
 
         private void LoadMealDay()
         {
+     
+
             btnDeleteReserved.Visible = false;
 
             pic1.Image = Meals.ElementAt(Day).pictuer1;
@@ -128,7 +130,10 @@ namespace KiyoskWall
                 if (Loop)
                 {
                     Day = Day + 1;
-                    LoadMealDay();
+                    if (Day < Meals.Count())
+                        LoadMealDay();
+                    else
+                        this.Close();
 
                 }
                 else
@@ -202,6 +207,28 @@ namespace KiyoskWall
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            db.PoonehReservations.Remove(t);
+
+            try
+            {
+                db.SaveChanges();
+
+                lblReserved.Text = "";
+                t = null;
+                btnDeleteReserved.Visible = false;
+
+            }
+            catch (Exception)
+            {
+
+                Alarm frm = new Alarm();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void lblReserved_Click(object sender, EventArgs e)
         {
             db.PoonehReservations.Remove(t);
 

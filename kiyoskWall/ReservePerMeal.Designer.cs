@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeleteReserved = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnQuickReserved = new System.Windows.Forms.Button();
             this.lblReserved = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
             this.btnNextDay = new System.Windows.Forms.Button();
@@ -39,14 +42,11 @@
             this.pic3 = new System.Windows.Forms.PictureBox();
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
-            this.btnQuickReserved = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDeleteReserved = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteReserved)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteReserved)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,28 +69,68 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel1.Size = new System.Drawing.Size(1264, 788);
+            this.panel1.Size = new System.Drawing.Size(1280, 1024);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDeleteReserved
+            // 
+            this.btnDeleteReserved.Image = global::KiyoskWall.Resource1.Close_Box_Red;
+            this.btnDeleteReserved.Location = new System.Drawing.Point(1157, 837);
+            this.btnDeleteReserved.Name = "btnDeleteReserved";
+            this.btnDeleteReserved.Size = new System.Drawing.Size(62, 57);
+            this.btnDeleteReserved.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDeleteReserved.TabIndex = 19;
+            this.btnDeleteReserved.TabStop = false;
+            this.btnDeleteReserved.Visible = false;
+            this.btnDeleteReserved.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.button1.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button1.Location = new System.Drawing.Point(77, 826);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 83);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "بستن";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnQuickReserved
+            // 
+            this.btnQuickReserved.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.btnQuickReserved.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnQuickReserved.FlatAppearance.BorderSize = 0;
+            this.btnQuickReserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuickReserved.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnQuickReserved.Location = new System.Drawing.Point(440, 826);
+            this.btnQuickReserved.Name = "btnQuickReserved";
+            this.btnQuickReserved.Size = new System.Drawing.Size(346, 83);
+            this.btnQuickReserved.TabIndex = 17;
+            this.btnQuickReserved.Text = "رزرو سریع";
+            this.btnQuickReserved.UseVisualStyleBackColor = true;
+            this.btnQuickReserved.Click += new System.EventHandler(this.btnQuickReserved_Click);
             // 
             // lblReserved
             // 
             this.lblReserved.AllowDrop = true;
             this.lblReserved.BackColor = System.Drawing.Color.Transparent;
             this.lblReserved.Font = new System.Drawing.Font("B Mitra", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblReserved.Location = new System.Drawing.Point(820, 595);
+            this.lblReserved.Location = new System.Drawing.Point(850, 799);
             this.lblReserved.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReserved.Name = "lblReserved";
             this.lblReserved.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblReserved.Size = new System.Drawing.Size(302, 115);
+            this.lblReserved.Size = new System.Drawing.Size(302, 134);
             this.lblReserved.TabIndex = 16;
             this.lblReserved.Text = "label1";
             this.lblReserved.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblReserved.Click += new System.EventHandler(this.lblReserved_Click);
             // 
             // lbDate
             // 
             this.lbDate.BackColor = System.Drawing.Color.Transparent;
             this.lbDate.Font = new System.Drawing.Font("B Mitra", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbDate.Location = new System.Drawing.Point(373, 28);
+            this.lbDate.Location = new System.Drawing.Point(317, 28);
             this.lbDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDate.Name = "lbDate";
             this.lbDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -104,7 +144,7 @@
             this.btnNextDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNextDay.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.btnNextDay.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnNextDay.Location = new System.Drawing.Point(113, 28);
+            this.btnNextDay.Location = new System.Drawing.Point(55, 63);
             this.btnNextDay.Name = "btnNextDay";
             this.btnNextDay.Size = new System.Drawing.Size(131, 87);
             this.btnNextDay.TabIndex = 14;
@@ -117,7 +157,7 @@
             this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrevious.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.btnPrevious.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnPrevious.Location = new System.Drawing.Point(1078, 35);
+            this.btnPrevious.Location = new System.Drawing.Point(1058, 63);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(134, 80);
             this.btnPrevious.TabIndex = 13;
@@ -130,7 +170,7 @@
             this.lbl3.AllowDrop = true;
             this.lbl3.BackColor = System.Drawing.Color.Transparent;
             this.lbl3.Font = new System.Drawing.Font("B Mitra", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbl3.Location = new System.Drawing.Point(66, 191);
+            this.lbl3.Location = new System.Drawing.Point(76, 235);
             this.lbl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl3.Name = "lbl3";
             this.lbl3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -144,7 +184,7 @@
             this.lbl2.AllowDrop = true;
             this.lbl2.BackColor = System.Drawing.Color.Transparent;
             this.lbl2.Font = new System.Drawing.Font("B Mitra", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbl2.Location = new System.Drawing.Point(474, 191);
+            this.lbl2.Location = new System.Drawing.Point(484, 235);
             this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl2.Name = "lbl2";
             this.lbl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -158,7 +198,7 @@
             this.lbl1.AllowDrop = true;
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
             this.lbl1.Font = new System.Drawing.Font("B Mitra", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbl1.Location = new System.Drawing.Point(899, 191);
+            this.lbl1.Location = new System.Drawing.Point(909, 235);
             this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl1.Name = "lbl1";
             this.lbl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -170,7 +210,7 @@
             // pic3
             // 
             this.pic3.BackColor = System.Drawing.Color.Transparent;
-            this.pic3.Location = new System.Drawing.Point(66, 331);
+            this.pic3.Location = new System.Drawing.Point(76, 375);
             this.pic3.Margin = new System.Windows.Forms.Padding(25);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(302, 204);
@@ -182,7 +222,7 @@
             // pic2
             // 
             this.pic2.BackColor = System.Drawing.Color.Transparent;
-            this.pic2.Location = new System.Drawing.Point(474, 331);
+            this.pic2.Location = new System.Drawing.Point(484, 375);
             this.pic2.Margin = new System.Windows.Forms.Padding(25);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(302, 204);
@@ -194,7 +234,7 @@
             // pic1
             // 
             this.pic1.BackColor = System.Drawing.Color.Transparent;
-            this.pic1.Location = new System.Drawing.Point(899, 331);
+            this.pic1.Location = new System.Drawing.Point(909, 375);
             this.pic1.Margin = new System.Windows.Forms.Padding(25);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(302, 204);
@@ -203,51 +243,12 @@
             this.pic1.TabStop = false;
             this.pic1.Click += new System.EventHandler(this.pic1_Click);
             // 
-            // btnQuickReserved
-            // 
-            this.btnQuickReserved.BackgroundImage = global::KiyoskWall.Resource1.lunch;
-            this.btnQuickReserved.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.btnQuickReserved.FlatAppearance.BorderSize = 0;
-            this.btnQuickReserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickReserved.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnQuickReserved.Location = new System.Drawing.Point(430, 612);
-            this.btnQuickReserved.Name = "btnQuickReserved";
-            this.btnQuickReserved.Size = new System.Drawing.Size(346, 83);
-            this.btnQuickReserved.TabIndex = 17;
-            this.btnQuickReserved.Text = "رزرو سریع";
-            this.btnQuickReserved.UseVisualStyleBackColor = true;
-            this.btnQuickReserved.Click += new System.EventHandler(this.btnQuickReserved_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
-            this.button1.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Location = new System.Drawing.Point(66, 612);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 83);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "بستن";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnDeleteReserved
-            // 
-            this.btnDeleteReserved.Image = global::KiyoskWall.Resource1.Close_Box_Red;
-            this.btnDeleteReserved.Location = new System.Drawing.Point(1127, 625);
-            this.btnDeleteReserved.Name = "btnDeleteReserved";
-            this.btnDeleteReserved.Size = new System.Drawing.Size(54, 52);
-            this.btnDeleteReserved.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnDeleteReserved.TabIndex = 19;
-            this.btnDeleteReserved.TabStop = false;
-            this.btnDeleteReserved.Visible = false;
-            this.btnDeleteReserved.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // ReservePerMeal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
-            this.ClientSize = new System.Drawing.Size(1264, 788);
+            this.ClientSize = new System.Drawing.Size(1280, 1024);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReservePerMeal";
@@ -255,10 +256,10 @@
             this.Text = "ReservePerMeal";
             this.Load += new System.EventHandler(this.ReservePerMeal_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteReserved)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDeleteReserved)).EndInit();
             this.ResumeLayout(false);
 
         }

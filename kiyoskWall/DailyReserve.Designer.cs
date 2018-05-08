@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNextDay = new System.Windows.Forms.Button();
             this.lblInformation = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pic1 = new System.Windows.Forms.PictureBox();
@@ -56,7 +58,7 @@
             this.pic12 = new System.Windows.Forms.PictureBox();
             this.pic13 = new System.Windows.Forms.PictureBox();
             this.pic14 = new System.Windows.Forms.PictureBox();
-            this.btnNextDay = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic20)).BeginInit();
@@ -119,16 +121,31 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 749);
+            this.panel1.Size = new System.Drawing.Size(1250, 1000);
             this.panel1.TabIndex = 0;
+            // 
+            // btnNextDay
+            // 
+            this.btnNextDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNextDay.BackgroundImage = global::KiyoskWall.Resource1.lunch;
+            this.btnNextDay.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnNextDay.Location = new System.Drawing.Point(938, 859);
+            this.btnNextDay.Name = "btnNextDay";
+            this.btnNextDay.Size = new System.Drawing.Size(195, 87);
+            this.btnNextDay.TabIndex = 73;
+            this.btnNextDay.Text = "مشاهده رزرو";
+            this.btnNextDay.UseVisualStyleBackColor = true;
+            this.btnNextDay.Click += new System.EventHandler(this.btnNextDay_Click);
             // 
             // lblInformation
             // 
-            this.lblInformation.Font = new System.Drawing.Font("B Yekan", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblInformation.Location = new System.Drawing.Point(27, 9);
+            this.lblInformation.BackColor = System.Drawing.Color.Navy;
+            this.lblInformation.Font = new System.Drawing.Font("B Yekan", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblInformation.ForeColor = System.Drawing.Color.White;
+            this.lblInformation.Location = new System.Drawing.Point(-14, 0);
             this.lblInformation.Name = "lblInformation";
             this.lblInformation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblInformation.Size = new System.Drawing.Size(1225, 48);
+            this.lblInformation.Size = new System.Drawing.Size(1289, 74);
             this.lblInformation.TabIndex = 72;
             this.lblInformation.Text = "label1";
             this.lblInformation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,10 +153,10 @@
             // button1
             // 
             this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
-            this.button1.Font = new System.Drawing.Font("B Nazanin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Location = new System.Drawing.Point(55, 886);
+            this.button1.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(129, 863);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 60);
+            this.button1.Size = new System.Drawing.Size(195, 87);
             this.button1.TabIndex = 71;
             this.button1.Text = "بستن";
             this.button1.UseVisualStyleBackColor = true;
@@ -149,7 +166,7 @@
             // 
             this.pic1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic1.Location = new System.Drawing.Point(952, 115);
+            this.pic1.Location = new System.Drawing.Point(938, 115);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(195, 140);
             this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +177,7 @@
             // pic20
             // 
             this.pic20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic20.Location = new System.Drawing.Point(143, 558);
+            this.pic20.Location = new System.Drawing.Point(129, 558);
             this.pic20.Name = "pic20";
             this.pic20.Size = new System.Drawing.Size(195, 140);
             this.pic20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,7 +188,7 @@
             // pic25
             // 
             this.pic25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic25.Location = new System.Drawing.Point(143, 705);
+            this.pic25.Location = new System.Drawing.Point(129, 705);
             this.pic25.Margin = new System.Windows.Forms.Padding(4);
             this.pic25.Name = "pic25";
             this.pic25.Size = new System.Drawing.Size(195, 140);
@@ -183,7 +200,7 @@
             // pic16
             // 
             this.pic16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic16.Location = new System.Drawing.Point(952, 560);
+            this.pic16.Location = new System.Drawing.Point(938, 560);
             this.pic16.Margin = new System.Windows.Forms.Padding(4);
             this.pic16.Name = "pic16";
             this.pic16.Size = new System.Drawing.Size(195, 140);
@@ -195,7 +212,7 @@
             // pic17
             // 
             this.pic17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic17.Location = new System.Drawing.Point(749, 560);
+            this.pic17.Location = new System.Drawing.Point(735, 560);
             this.pic17.Margin = new System.Windows.Forms.Padding(4);
             this.pic17.Name = "pic17";
             this.pic17.Size = new System.Drawing.Size(195, 140);
@@ -207,7 +224,7 @@
             // pic18
             // 
             this.pic18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic18.Location = new System.Drawing.Point(547, 559);
+            this.pic18.Location = new System.Drawing.Point(533, 559);
             this.pic18.Name = "pic18";
             this.pic18.Size = new System.Drawing.Size(195, 140);
             this.pic18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -218,7 +235,7 @@
             // pic19
             // 
             this.pic19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic19.Location = new System.Drawing.Point(346, 559);
+            this.pic19.Location = new System.Drawing.Point(332, 559);
             this.pic19.Name = "pic19";
             this.pic19.Size = new System.Drawing.Size(195, 140);
             this.pic19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +246,7 @@
             // pic21
             // 
             this.pic21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic21.Location = new System.Drawing.Point(952, 705);
+            this.pic21.Location = new System.Drawing.Point(938, 705);
             this.pic21.Name = "pic21";
             this.pic21.Size = new System.Drawing.Size(195, 140);
             this.pic21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -240,7 +257,7 @@
             // pic22
             // 
             this.pic22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic22.Location = new System.Drawing.Point(750, 706);
+            this.pic22.Location = new System.Drawing.Point(736, 706);
             this.pic22.Margin = new System.Windows.Forms.Padding(4);
             this.pic22.Name = "pic22";
             this.pic22.Size = new System.Drawing.Size(195, 140);
@@ -252,7 +269,7 @@
             // pic23
             // 
             this.pic23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic23.Location = new System.Drawing.Point(548, 705);
+            this.pic23.Location = new System.Drawing.Point(534, 705);
             this.pic23.Name = "pic23";
             this.pic23.Size = new System.Drawing.Size(195, 140);
             this.pic23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,7 +280,7 @@
             // pic24
             // 
             this.pic24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic24.Location = new System.Drawing.Point(346, 706);
+            this.pic24.Location = new System.Drawing.Point(332, 706);
             this.pic24.Margin = new System.Windows.Forms.Padding(4);
             this.pic24.Name = "pic24";
             this.pic24.Size = new System.Drawing.Size(195, 140);
@@ -276,7 +293,7 @@
             // 
             this.pic5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic5.Location = new System.Drawing.Point(143, 115);
+            this.pic5.Location = new System.Drawing.Point(129, 115);
             this.pic5.Margin = new System.Windows.Forms.Padding(4);
             this.pic5.Name = "pic5";
             this.pic5.Size = new System.Drawing.Size(195, 140);
@@ -288,7 +305,7 @@
             // pic10
             // 
             this.pic10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic10.Location = new System.Drawing.Point(143, 262);
+            this.pic10.Location = new System.Drawing.Point(129, 262);
             this.pic10.Name = "pic10";
             this.pic10.Size = new System.Drawing.Size(195, 140);
             this.pic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -299,7 +316,7 @@
             // pic15
             // 
             this.pic15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic15.Location = new System.Drawing.Point(143, 411);
+            this.pic15.Location = new System.Drawing.Point(129, 411);
             this.pic15.Margin = new System.Windows.Forms.Padding(4);
             this.pic15.Name = "pic15";
             this.pic15.Size = new System.Drawing.Size(195, 140);
@@ -312,7 +329,7 @@
             // 
             this.pic2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic2.Location = new System.Drawing.Point(751, 115);
+            this.pic2.Location = new System.Drawing.Point(737, 115);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(195, 140);
             this.pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -324,7 +341,7 @@
             // 
             this.pic3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic3.Location = new System.Drawing.Point(549, 116);
+            this.pic3.Location = new System.Drawing.Point(535, 116);
             this.pic3.Margin = new System.Windows.Forms.Padding(4);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(195, 140);
@@ -337,7 +354,7 @@
             // 
             this.pic4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic4.Location = new System.Drawing.Point(346, 116);
+            this.pic4.Location = new System.Drawing.Point(332, 116);
             this.pic4.Margin = new System.Windows.Forms.Padding(4);
             this.pic4.Name = "pic4";
             this.pic4.Size = new System.Drawing.Size(195, 140);
@@ -349,7 +366,7 @@
             // pic6
             // 
             this.pic6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic6.Location = new System.Drawing.Point(952, 264);
+            this.pic6.Location = new System.Drawing.Point(938, 264);
             this.pic6.Margin = new System.Windows.Forms.Padding(4);
             this.pic6.Name = "pic6";
             this.pic6.Size = new System.Drawing.Size(195, 140);
@@ -361,7 +378,7 @@
             // pic7
             // 
             this.pic7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic7.Location = new System.Drawing.Point(749, 264);
+            this.pic7.Location = new System.Drawing.Point(735, 264);
             this.pic7.Margin = new System.Windows.Forms.Padding(4);
             this.pic7.Name = "pic7";
             this.pic7.Size = new System.Drawing.Size(195, 140);
@@ -373,7 +390,7 @@
             // pic8
             // 
             this.pic8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic8.Location = new System.Drawing.Point(547, 263);
+            this.pic8.Location = new System.Drawing.Point(533, 263);
             this.pic8.Name = "pic8";
             this.pic8.Size = new System.Drawing.Size(195, 140);
             this.pic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -384,7 +401,7 @@
             // pic9
             // 
             this.pic9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic9.Location = new System.Drawing.Point(346, 263);
+            this.pic9.Location = new System.Drawing.Point(332, 263);
             this.pic9.Name = "pic9";
             this.pic9.Size = new System.Drawing.Size(195, 140);
             this.pic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -395,7 +412,7 @@
             // pic11
             // 
             this.pic11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic11.Location = new System.Drawing.Point(952, 411);
+            this.pic11.Location = new System.Drawing.Point(938, 411);
             this.pic11.Name = "pic11";
             this.pic11.Size = new System.Drawing.Size(195, 140);
             this.pic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -406,7 +423,7 @@
             // pic12
             // 
             this.pic12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic12.Location = new System.Drawing.Point(750, 412);
+            this.pic12.Location = new System.Drawing.Point(736, 412);
             this.pic12.Margin = new System.Windows.Forms.Padding(4);
             this.pic12.Name = "pic12";
             this.pic12.Size = new System.Drawing.Size(195, 140);
@@ -418,7 +435,7 @@
             // pic13
             // 
             this.pic13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic13.Location = new System.Drawing.Point(548, 411);
+            this.pic13.Location = new System.Drawing.Point(534, 411);
             this.pic13.Name = "pic13";
             this.pic13.Size = new System.Drawing.Size(195, 140);
             this.pic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -429,7 +446,7 @@
             // pic14
             // 
             this.pic14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic14.Location = new System.Drawing.Point(346, 412);
+            this.pic14.Location = new System.Drawing.Point(332, 412);
             this.pic14.Margin = new System.Windows.Forms.Padding(4);
             this.pic14.Name = "pic14";
             this.pic14.Size = new System.Drawing.Size(195, 140);
@@ -438,26 +455,20 @@
             this.pic14.TabStop = false;
             this.pic14.Click += new System.EventHandler(this.pic14_Click);
             // 
-            // btnNextDay
+            // timer1
             // 
-            this.btnNextDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNextDay.BackgroundImage = global::KiyoskWall.Resource1.lunch;
-            this.btnNextDay.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnNextDay.Location = new System.Drawing.Point(3, 71);
-            this.btnNextDay.Name = "btnNextDay";
-            this.btnNextDay.Size = new System.Drawing.Size(161, 87);
-            this.btnNextDay.TabIndex = 73;
-            this.btnNextDay.Text = "مشاهده رزرو";
-            this.btnNextDay.UseVisualStyleBackColor = true;
-            this.btnNextDay.Click += new System.EventHandler(this.btnNextDay_Click);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 600000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // DailyReserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
-            this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.ClientSize = new System.Drawing.Size(1250, 1000);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DailyReserve";
             this.Text = "DailyReserve";
             this.Load += new System.EventHandler(this.DailyReserve_Load);
@@ -522,5 +533,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblInformation;
         private System.Windows.Forms.Button btnNextDay;
+        private System.Windows.Forms.Timer timer1;
     }
 }

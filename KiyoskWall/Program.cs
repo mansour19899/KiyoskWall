@@ -16,7 +16,7 @@ namespace KiyoskWall
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SeeAllReserved());
+            Application.Run(new Login());
         }
     }
 }

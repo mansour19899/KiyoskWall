@@ -161,7 +161,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 788);
+            this.panel1.Size = new System.Drawing.Size(1250, 1000);
             this.panel1.TabIndex = 45;
             // 
             // btnTimer
@@ -169,7 +169,7 @@
             this.btnTimer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnTimer.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.btnTimer.Font = new System.Drawing.Font("B Nazanin", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnTimer.Location = new System.Drawing.Point(949, 800);
+            this.btnTimer.Location = new System.Drawing.Point(952, 898);
             this.btnTimer.Margin = new System.Windows.Forms.Padding(40, 5, 3, 3);
             this.btnTimer.Name = "btnTimer";
             this.btnTimer.Size = new System.Drawing.Size(233, 52);
@@ -195,9 +195,10 @@
             this.lblName.BackColor = System.Drawing.Color.MidnightBlue;
             this.lblName.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblName.Location = new System.Drawing.Point(0, 0);
+            this.lblName.Location = new System.Drawing.Point(-49, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(1264, 61);
+            this.lblName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblName.Size = new System.Drawing.Size(1414, 73);
             this.lblName.TabIndex = 86;
             this.lblName.Text = "label1";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -236,7 +237,6 @@
             this.lbl20.Name = "lbl20";
             this.lbl20.Size = new System.Drawing.Size(150, 110);
             this.lbl20.TabIndex = 83;
-            this.lbl20.Text = "label1";
             this.lbl20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl19
@@ -249,7 +249,6 @@
             this.lbl19.Name = "lbl19";
             this.lbl19.Size = new System.Drawing.Size(150, 110);
             this.lbl19.TabIndex = 82;
-            this.lbl19.Text = "label1";
             this.lbl19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl19.Click += new System.EventHandler(this.lbl19_Click_1);
             // 
@@ -263,7 +262,6 @@
             this.lbl18.Name = "lbl18";
             this.lbl18.Size = new System.Drawing.Size(150, 110);
             this.lbl18.TabIndex = 81;
-            this.lbl18.Text = "label1";
             this.lbl18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl18.Click += new System.EventHandler(this.lbl18_Click_1);
             // 
@@ -277,7 +275,6 @@
             this.lbl17.Name = "lbl17";
             this.lbl17.Size = new System.Drawing.Size(150, 110);
             this.lbl17.TabIndex = 80;
-            this.lbl17.Text = "label1";
             this.lbl17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl17.Click += new System.EventHandler(this.lbl17_Click_1);
             // 
@@ -291,7 +288,6 @@
             this.lbl16.Name = "lbl16";
             this.lbl16.Size = new System.Drawing.Size(150, 110);
             this.lbl16.TabIndex = 79;
-            this.lbl16.Text = "label1";
             this.lbl16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl15
@@ -304,7 +300,6 @@
             this.lbl15.Name = "lbl15";
             this.lbl15.Size = new System.Drawing.Size(150, 110);
             this.lbl15.TabIndex = 78;
-            this.lbl15.Text = "label1";
             this.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl15.Click += new System.EventHandler(this.lbl15_Click_1);
             // 
@@ -318,7 +313,6 @@
             this.lbl14.Name = "lbl14";
             this.lbl14.Size = new System.Drawing.Size(150, 110);
             this.lbl14.TabIndex = 77;
-            this.lbl14.Text = "label1";
             this.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl14.Click += new System.EventHandler(this.lbl14_Click_1);
             // 
@@ -332,7 +326,6 @@
             this.lbl13.Name = "lbl13";
             this.lbl13.Size = new System.Drawing.Size(150, 110);
             this.lbl13.TabIndex = 76;
-            this.lbl13.Text = "label1";
             this.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl13.Click += new System.EventHandler(this.lbl13_Click_1);
             // 
@@ -454,7 +447,6 @@
             this.lbl12.Name = "lbl12";
             this.lbl12.Size = new System.Drawing.Size(150, 110);
             this.lbl12.TabIndex = 65;
-            this.lbl12.Text = "label1";
             this.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl11
@@ -467,7 +459,6 @@
             this.lbl11.Name = "lbl11";
             this.lbl11.Size = new System.Drawing.Size(150, 110);
             this.lbl11.TabIndex = 64;
-            this.lbl11.Text = "label1";
             this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl11.Click += new System.EventHandler(this.lbl11_Click_1);
             // 
@@ -481,7 +472,6 @@
             this.lbl10.Name = "lbl10";
             this.lbl10.Size = new System.Drawing.Size(150, 110);
             this.lbl10.TabIndex = 63;
-            this.lbl10.Text = "label1";
             this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl10.Click += new System.EventHandler(this.lbl10_Click_1);
             // 
@@ -495,7 +485,6 @@
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(150, 110);
             this.lbl9.TabIndex = 62;
-            this.lbl9.Text = "label1";
             this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl9.Click += new System.EventHandler(this.lbl9_Click_1);
             // 
@@ -509,7 +498,6 @@
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(150, 110);
             this.lbl8.TabIndex = 61;
-            this.lbl8.Text = "label1";
             this.lbl8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl7
@@ -522,7 +510,6 @@
             this.lbl7.Name = "lbl7";
             this.lbl7.Size = new System.Drawing.Size(150, 110);
             this.lbl7.TabIndex = 60;
-            this.lbl7.Text = "label1";
             this.lbl7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl7.Click += new System.EventHandler(this.lbl7_Click_1);
             // 
@@ -536,7 +523,6 @@
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(150, 110);
             this.lbl6.TabIndex = 59;
-            this.lbl6.Text = "label1";
             this.lbl6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl6.Click += new System.EventHandler(this.lbl6_Click_1);
             // 
@@ -550,7 +536,6 @@
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(150, 110);
             this.lbl5.TabIndex = 58;
-            this.lbl5.Text = "label1";
             this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl5.Click += new System.EventHandler(this.lbl5_Click_1);
             // 
@@ -660,7 +645,6 @@
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(150, 110);
             this.lbl4.TabIndex = 48;
-            this.lbl4.Text = "label1";
             this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl3
@@ -673,7 +657,6 @@
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(150, 110);
             this.lbl3.TabIndex = 47;
-            this.lbl3.Text = "label1";
             this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl3.Click += new System.EventHandler(this.lbl3_Click_1);
             // 
@@ -687,7 +670,6 @@
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(150, 110);
             this.lbl2.TabIndex = 46;
-            this.lbl2.Text = "label1";
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl2.Click += new System.EventHandler(this.lbl2_Click_1);
             // 
@@ -701,7 +683,6 @@
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(150, 110);
             this.lbl1.TabIndex = 45;
-            this.lbl1.Text = "label1";
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl1.Click += new System.EventHandler(this.lbl1_Click_1);
             // 
@@ -759,9 +740,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
-            this.ClientSize = new System.Drawing.Size(1264, 788);
+            this.ClientSize = new System.Drawing.Size(1250, 1000);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "ReserveQuicly2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReserveQuicly2";
