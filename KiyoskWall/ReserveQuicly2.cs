@@ -29,6 +29,7 @@ namespace KiyoskWall
             //this.Location = new Point(0, 0);
             //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             db = new PoonehEntities();
+            db.Configuration.LazyLoadingEnabled = true;
             p = person;
             time = 60;
             del = new List<PictureBox>();

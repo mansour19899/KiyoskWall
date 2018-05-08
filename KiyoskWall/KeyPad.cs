@@ -30,9 +30,10 @@ namespace KiyoskWall
         private void KeyPad_Load(object sender, EventArgs e)
         {
             db = new PoonehEntities();
+            db.Configuration.LazyLoadingEnabled = true;
 
-           
-            
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)

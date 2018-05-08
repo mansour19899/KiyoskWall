@@ -101,6 +101,7 @@ namespace KiyoskWall
                 {
                     y = DateTime.Now.ToPersianDateString();
                     db = new PoonehEntities();
+                    db.Configuration.LazyLoadingEnabled = true;
 
                     tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).Distinct().ToList();
                     var AllDays = tempSchedules.Select(p => new Date { date = p.SDate }).Distinct();

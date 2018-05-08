@@ -39,6 +39,7 @@ namespace KiyoskWall
             Schedules = new List<Schedule> ();
             Trays = new List<Tray> ();
             Images = new List<Image> ();
+
         }
         public PerMeal()
         {

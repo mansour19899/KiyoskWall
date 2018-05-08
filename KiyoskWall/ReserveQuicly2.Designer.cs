@@ -161,7 +161,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 985);
+            this.panel1.Size = new System.Drawing.Size(1264, 788);
             this.panel1.TabIndex = 45;
             // 
             // btnTimer
@@ -169,7 +169,7 @@
             this.btnTimer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnTimer.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.btnTimer.Font = new System.Drawing.Font("B Nazanin", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnTimer.Location = new System.Drawing.Point(949, 898);
+            this.btnTimer.Location = new System.Drawing.Point(949, 800);
             this.btnTimer.Margin = new System.Windows.Forms.Padding(40, 5, 3, 3);
             this.btnTimer.Name = "btnTimer";
             this.btnTimer.Size = new System.Drawing.Size(233, 52);
@@ -759,7 +759,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
-            this.ClientSize = new System.Drawing.Size(1264, 985);
+            this.ClientSize = new System.Drawing.Size(1264, 788);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ReserveQuicly2";

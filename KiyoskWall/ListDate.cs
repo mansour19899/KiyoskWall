@@ -41,6 +41,7 @@ namespace KiyoskWall
         public List<Date> GetList()
         {
             db = new PoonehEntities();
+            db.Configuration.LazyLoadingEnabled = true;
             List<Date> q;
             dtnow = DateTime.Now.ToPersianDateString();
 

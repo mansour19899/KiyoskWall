@@ -30,9 +30,10 @@ namespace KiyoskWall
             if (p1.WorkSheet_Id_FK == null)
                 p1.WorkSheet_Id_FK = 22;
 
-            //this.WindowState = FormWindowState.Maximized;
-            //this.Location = new Point(0, 0);
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
+            this.Location = new Point(0, 0);
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+
             panel1.Visible = false;
 
         }
@@ -41,7 +42,11 @@ namespace KiyoskWall
 
         private void DailyReserve_Load(object sender, EventArgs e)
         {
+            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
             db = new PoonehEntities();
+            db.Configuration.LazyLoadingEnabled = true;
+            
+
             dtnow = DateTime.Now.ToPersianDateString();
 
             ListDate ty = new ListDate(p1);
@@ -51,6 +56,10 @@ namespace KiyoskWall
 
             SetPicturelabel();
             LoadDate();
+            var resturent_id = AllMeals.ElementAt(0).schedule1.Restaurant_Id_Fk;
+            var ResturentName = db.Restaurants.Where(p => p.Id == resturent_id).FirstOrDefault();
+
+            lblInformation.Text = p1.Name + " " + p1.LastName + "                                                      " +"شیفت:   "+ GiveMeShiftName() + "                                               " + " رستوران مجاز:   "+ResturentName.Name;
 
             panel1.Visible = true;
         }
@@ -161,19 +170,19 @@ namespace KiyoskWall
             if (x == Shift.Rozkar)
                 return "روزکار ";
             else if (x == Shift.A8)
-                return "A  شیفت ";
+                return "A";
             else if (x == Shift.B8)
-                return "B  شیفت ";
+                return "B";
             else if (x == Shift.C8)
-                return " C  شیفت ";
+                return "C";
             else if (x == Shift.D8)
-                return "D  شیفت ";
+                return "D";
             else if (x == Shift.A12)
-                return "A(12)  شیفت ";
+                return "A(12)";
             else if (x == Shift.B12)
-                return "B(12)  شیفت ";
+                return "B(12)";
             else if (x == Shift.C12)
-                return "C(12)  شیفت ";
+                return "C(12)";
             else
                 return "";
         }
@@ -182,11 +191,135 @@ namespace KiyoskWall
         {
             this.Close();
         }
+        private void RunReserve(int day)
+        {
+            ReservePerMeal frm = new ReservePerMeal(AllMeals, day,p1);
+            frm.ShowDialog();
+        }
 
         private void pic1_Click(object sender, EventArgs e)
         {
-            ReservePerMeal frm = new ReservePerMeal(AllMeals, 0);
-            frm.ShowDialog();
+            RunReserve(0);
+        }
+
+        private void pic2_Click(object sender, EventArgs e)
+        {
+            RunReserve(1);
+        }
+
+        private void pic3_Click(object sender, EventArgs e)
+        {
+            RunReserve(2);
+        }
+
+        private void pic4_Click(object sender, EventArgs e)
+        {
+            RunReserve(3);
+        }
+
+        private void pic5_Click(object sender, EventArgs e)
+        {
+            RunReserve(4);
+        }
+
+        private void pic6_Click(object sender, EventArgs e)
+        {
+            RunReserve(5);
+        }
+
+        private void pic7_Click(object sender, EventArgs e)
+        {
+            RunReserve(6);
+        }
+
+        private void pic8_Click(object sender, EventArgs e)
+        {
+            RunReserve(7);
+        }
+
+        private void pic9_Click(object sender, EventArgs e)
+        {
+            RunReserve(8);
+        }
+
+        private void pic10_Click(object sender, EventArgs e)
+        {
+            RunReserve(9);
+        }
+
+        private void pic11_Click(object sender, EventArgs e)
+        {
+            RunReserve(10);
+        }
+
+        private void pic12_Click(object sender, EventArgs e)
+        {
+            RunReserve(11);
+        }
+
+        private void pic13_Click(object sender, EventArgs e)
+        {
+            RunReserve(12);
+        }
+
+        private void pic14_Click(object sender, EventArgs e)
+        {
+            RunReserve(13);
+        }
+
+        private void pic15_Click(object sender, EventArgs e)
+        {
+            RunReserve(14);
+        }
+
+        private void pic16_Click(object sender, EventArgs e)
+        {
+            RunReserve(15);
+        }
+
+        private void pic17_Click(object sender, EventArgs e)
+        {
+            RunReserve(16);
+        }
+
+        private void pic18_Click(object sender, EventArgs e)
+        {
+            RunReserve(17);
+        }
+
+        private void pic19_Click(object sender, EventArgs e)
+        {
+            RunReserve(18);
+        }
+
+        private void pic20_Click(object sender, EventArgs e)
+        {
+            RunReserve(19);
+        }
+
+        private void pic21_Click(object sender, EventArgs e)
+        {
+            RunReserve(20);
+        }
+
+        private void pic22_Click(object sender, EventArgs e)
+        {
+            RunReserve(21);
+        }
+
+        private void pic23_Click(object sender, EventArgs e)
+        {
+            RunReserve(22);
+        }
+
+        private void pic24_Click(object sender, EventArgs e)
+        {
+            RunReserve(23);
+        }
+
+        private void pic25_Click(object sender, EventArgs e)
+        {
+            RunReserve(24);
         }
     }
 }
