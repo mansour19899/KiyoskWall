@@ -58,7 +58,7 @@ namespace KiyoskWall
             LoadDate();
             var resturent_id = AllMeals.ElementAt(0).schedule1.Restaurant_Id_Fk;
             var ResturentName = db.Restaurants.Where(p => p.Id == resturent_id).FirstOrDefault();
-
+            
             lblInformation.Text = p1.Name + " " + p1.LastName + "                                                      " +"شیفت:   "+ GiveMeShiftName() + "                                               " + " رستوران مجاز:   "+ResturentName.Name;
 
             panel1.Visible = true;

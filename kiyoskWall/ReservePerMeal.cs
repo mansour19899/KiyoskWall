@@ -64,9 +64,9 @@ namespace KiyoskWall
             pic2.Image = Meals.ElementAt(Day).pictuer2;
             pic3.Image = Meals.ElementAt(Day).pictuer3;
 
-            lbl1.Text = Meals.ElementAt(Day).Tray1.Name+"\n"+ Meals.ElementAt(Day).Tray1.Note;
-            lbl2.Text = Meals.ElementAt(Day).Tray2.Name + "\n" + Meals.ElementAt(Day).Tray2.Note;
-            lbl3.Text = Meals.ElementAt(Day).Tray3.Name + "\n" + Meals.ElementAt(Day).Tray3.Note;
+            lbl1.Text = Meals.ElementAt(Day).Tray1.Name+"\n"+"("+ Meals.ElementAt(Day).Tray1.Note+")";
+            lbl2.Text = Meals.ElementAt(Day).Tray2.Name + "\n" +"("+ Meals.ElementAt(Day).Tray2.Note+")";
+            lbl3.Text = Meals.ElementAt(Day).Tray3.Name + "\n" + "("+Meals.ElementAt(Day).Tray3.Note+")";
 
             lbDate.Text = Meals.ElementAt(Day).Day + " -----"+ Meals.ElementAt(Day).Date+"\n" + GiveMealName(Meals.ElementAt(Day).Meal);
 
