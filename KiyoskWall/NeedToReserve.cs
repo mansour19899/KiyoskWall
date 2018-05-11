@@ -22,9 +22,9 @@ namespace KiyoskWall
 
         public NeedToReserve(Person person)
         {
-        PoonehEntities1 db=new PoonehEntities1();
+        PoonehEntities db=new PoonehEntities();  // Change DataBase 
 
-        Person = person;
+            Person = person;
             date = "";
             ListDate ty = new ListDate(person);
             AllDays = ty.GetList();

@@ -59,6 +59,7 @@
             this.pic13 = new System.Windows.Forms.PictureBox();
             this.pic14 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic20)).BeginInit();
@@ -129,11 +130,11 @@
             this.btnNextDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNextDay.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.btnNextDay.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnNextDay.Location = new System.Drawing.Point(938, 859);
+            this.btnNextDay.Location = new System.Drawing.Point(941, 863);
             this.btnNextDay.Name = "btnNextDay";
             this.btnNextDay.Size = new System.Drawing.Size(195, 87);
             this.btnNextDay.TabIndex = 73;
-            this.btnNextDay.Text = "مشاهده رزرو";
+            this.btnNextDay.Text = "لیست رزروها";
             this.btnNextDay.UseVisualStyleBackColor = true;
             this.btnNextDay.Click += new System.EventHandler(this.btnNextDay_Click);
             // 
@@ -154,7 +155,7 @@
             // 
             this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.button1.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(129, 863);
+            this.button1.Location = new System.Drawing.Point(126, 863);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 87);
             this.button1.TabIndex = 71;
@@ -461,6 +462,12 @@
             this.timer1.Interval = 600000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 2000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // DailyReserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,6 +477,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DailyReserve";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DailyReserve";
             this.Load += new System.EventHandler(this.DailyReserve_Load);
             this.panel1.ResumeLayout(false);
@@ -534,5 +542,6 @@
         private System.Windows.Forms.Label lblInformation;
         private System.Windows.Forms.Button btnNextDay;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

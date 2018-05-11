@@ -60,13 +60,13 @@
             // 
             // lblToday
             // 
-            this.lblToday.BackColor = System.Drawing.Color.Transparent;
+            this.lblToday.BackColor = System.Drawing.Color.Navy;
             this.lblToday.Font = new System.Drawing.Font("B Koodak", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblToday.ForeColor = System.Drawing.Color.Black;
-            this.lblToday.Location = new System.Drawing.Point(232, 26);
+            this.lblToday.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblToday.Location = new System.Drawing.Point(-46, 0);
             this.lblToday.Name = "lblToday";
             this.lblToday.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblToday.Size = new System.Drawing.Size(1036, 63);
+            this.lblToday.Size = new System.Drawing.Size(1371, 94);
             this.lblToday.TabIndex = 0;
             this.lblToday.Text = "امروز غذایی رزرو نشده است";
             this.lblToday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -79,7 +79,7 @@
             this.lbl1.Location = new System.Drawing.Point(813, 110);
             this.lbl1.Name = "lbl1";
             this.lbl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl1.Size = new System.Drawing.Size(366, 108);
+            this.lbl1.Size = new System.Drawing.Size(424, 108);
             this.lbl1.TabIndex = 1;
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -91,7 +91,7 @@
             this.lbl9.Location = new System.Drawing.Point(451, 110);
             this.lbl9.Name = "lbl9";
             this.lbl9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl9.Size = new System.Drawing.Size(366, 108);
+            this.lbl9.Size = new System.Drawing.Size(424, 108);
             this.lbl9.TabIndex = 26;
             this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -103,7 +103,7 @@
             this.lbl17.Location = new System.Drawing.Point(88, 110);
             this.lbl17.Name = "lbl17";
             this.lbl17.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl17.Size = new System.Drawing.Size(366, 108);
+            this.lbl17.Size = new System.Drawing.Size(424, 108);
             this.lbl17.TabIndex = 27;
             this.lbl17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -115,7 +115,7 @@
             this.lbl18.Location = new System.Drawing.Point(88, 218);
             this.lbl18.Name = "lbl18";
             this.lbl18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl18.Size = new System.Drawing.Size(366, 108);
+            this.lbl18.Size = new System.Drawing.Size(424, 108);
             this.lbl18.TabIndex = 30;
             this.lbl18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -127,7 +127,7 @@
             this.lbl10.Location = new System.Drawing.Point(451, 218);
             this.lbl10.Name = "lbl10";
             this.lbl10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl10.Size = new System.Drawing.Size(366, 108);
+            this.lbl10.Size = new System.Drawing.Size(424, 108);
             this.lbl10.TabIndex = 29;
             this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -139,7 +139,7 @@
             this.lbl2.Location = new System.Drawing.Point(813, 218);
             this.lbl2.Name = "lbl2";
             this.lbl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl2.Size = new System.Drawing.Size(366, 108);
+            this.lbl2.Size = new System.Drawing.Size(424, 108);
             this.lbl2.TabIndex = 28;
             this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -151,7 +151,7 @@
             this.lbl20.Location = new System.Drawing.Point(88, 434);
             this.lbl20.Name = "lbl20";
             this.lbl20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl20.Size = new System.Drawing.Size(366, 108);
+            this.lbl20.Size = new System.Drawing.Size(424, 108);
             this.lbl20.TabIndex = 36;
             this.lbl20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -163,7 +163,7 @@
             this.lbl12.Location = new System.Drawing.Point(451, 434);
             this.lbl12.Name = "lbl12";
             this.lbl12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl12.Size = new System.Drawing.Size(366, 108);
+            this.lbl12.Size = new System.Drawing.Size(424, 108);
             this.lbl12.TabIndex = 35;
             this.lbl12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -175,7 +175,7 @@
             this.lbl4.Location = new System.Drawing.Point(813, 434);
             this.lbl4.Name = "lbl4";
             this.lbl4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl4.Size = new System.Drawing.Size(366, 108);
+            this.lbl4.Size = new System.Drawing.Size(424, 108);
             this.lbl4.TabIndex = 34;
             this.lbl4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -187,7 +187,7 @@
             this.lbl19.Location = new System.Drawing.Point(88, 326);
             this.lbl19.Name = "lbl19";
             this.lbl19.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl19.Size = new System.Drawing.Size(366, 108);
+            this.lbl19.Size = new System.Drawing.Size(424, 108);
             this.lbl19.TabIndex = 33;
             this.lbl19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -199,7 +199,7 @@
             this.lbl11.Location = new System.Drawing.Point(451, 326);
             this.lbl11.Name = "lbl11";
             this.lbl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl11.Size = new System.Drawing.Size(366, 108);
+            this.lbl11.Size = new System.Drawing.Size(424, 108);
             this.lbl11.TabIndex = 32;
             this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -211,7 +211,7 @@
             this.lbl3.Location = new System.Drawing.Point(813, 326);
             this.lbl3.Name = "lbl3";
             this.lbl3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl3.Size = new System.Drawing.Size(366, 108);
+            this.lbl3.Size = new System.Drawing.Size(424, 108);
             this.lbl3.TabIndex = 31;
             this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -223,7 +223,7 @@
             this.lbl24.Location = new System.Drawing.Point(88, 866);
             this.lbl24.Name = "lbl24";
             this.lbl24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl24.Size = new System.Drawing.Size(366, 108);
+            this.lbl24.Size = new System.Drawing.Size(424, 108);
             this.lbl24.TabIndex = 48;
             this.lbl24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -235,7 +235,7 @@
             this.lbl16.Location = new System.Drawing.Point(451, 866);
             this.lbl16.Name = "lbl16";
             this.lbl16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl16.Size = new System.Drawing.Size(366, 108);
+            this.lbl16.Size = new System.Drawing.Size(424, 108);
             this.lbl16.TabIndex = 47;
             this.lbl16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -247,7 +247,7 @@
             this.lbl8.Location = new System.Drawing.Point(813, 866);
             this.lbl8.Name = "lbl8";
             this.lbl8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl8.Size = new System.Drawing.Size(366, 108);
+            this.lbl8.Size = new System.Drawing.Size(424, 108);
             this.lbl8.TabIndex = 46;
             this.lbl8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -259,7 +259,7 @@
             this.lbl23.Location = new System.Drawing.Point(88, 758);
             this.lbl23.Name = "lbl23";
             this.lbl23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl23.Size = new System.Drawing.Size(366, 108);
+            this.lbl23.Size = new System.Drawing.Size(424, 108);
             this.lbl23.TabIndex = 45;
             this.lbl23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -271,7 +271,7 @@
             this.lbl15.Location = new System.Drawing.Point(451, 758);
             this.lbl15.Name = "lbl15";
             this.lbl15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl15.Size = new System.Drawing.Size(366, 108);
+            this.lbl15.Size = new System.Drawing.Size(424, 108);
             this.lbl15.TabIndex = 44;
             this.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -283,7 +283,7 @@
             this.lbl7.Location = new System.Drawing.Point(813, 758);
             this.lbl7.Name = "lbl7";
             this.lbl7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl7.Size = new System.Drawing.Size(366, 108);
+            this.lbl7.Size = new System.Drawing.Size(424, 108);
             this.lbl7.TabIndex = 43;
             this.lbl7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -295,7 +295,7 @@
             this.lbl22.Location = new System.Drawing.Point(88, 650);
             this.lbl22.Name = "lbl22";
             this.lbl22.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl22.Size = new System.Drawing.Size(366, 108);
+            this.lbl22.Size = new System.Drawing.Size(424, 108);
             this.lbl22.TabIndex = 42;
             this.lbl22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -307,7 +307,7 @@
             this.lbl14.Location = new System.Drawing.Point(451, 650);
             this.lbl14.Name = "lbl14";
             this.lbl14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl14.Size = new System.Drawing.Size(366, 108);
+            this.lbl14.Size = new System.Drawing.Size(424, 108);
             this.lbl14.TabIndex = 41;
             this.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -319,7 +319,7 @@
             this.lbl6.Location = new System.Drawing.Point(813, 650);
             this.lbl6.Name = "lbl6";
             this.lbl6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl6.Size = new System.Drawing.Size(366, 108);
+            this.lbl6.Size = new System.Drawing.Size(424, 108);
             this.lbl6.TabIndex = 40;
             this.lbl6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -331,7 +331,7 @@
             this.lbl21.Location = new System.Drawing.Point(88, 542);
             this.lbl21.Name = "lbl21";
             this.lbl21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl21.Size = new System.Drawing.Size(366, 108);
+            this.lbl21.Size = new System.Drawing.Size(424, 108);
             this.lbl21.TabIndex = 39;
             this.lbl21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -343,7 +343,7 @@
             this.lbl13.Location = new System.Drawing.Point(451, 542);
             this.lbl13.Name = "lbl13";
             this.lbl13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl13.Size = new System.Drawing.Size(366, 108);
+            this.lbl13.Size = new System.Drawing.Size(424, 108);
             this.lbl13.TabIndex = 38;
             this.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -355,17 +355,17 @@
             this.lbl5.Location = new System.Drawing.Point(813, 542);
             this.lbl5.Name = "lbl5";
             this.lbl5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl5.Size = new System.Drawing.Size(366, 108);
+            this.lbl5.Size = new System.Drawing.Size(424, 108);
             this.lbl5.TabIndex = 37;
             this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
             this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
-            this.button1.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.Location = new System.Drawing.Point(66, 17);
+            this.button1.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(49, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 83);
+            this.button1.Size = new System.Drawing.Size(218, 95);
             this.button1.TabIndex = 49;
             this.button1.Text = "بستن";
             this.button1.UseVisualStyleBackColor = true;
@@ -412,6 +412,7 @@
             this.Controls.Add(this.lblToday);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeeAllReserved";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeeAllReserved";
             this.Load += new System.EventHandler(this.SeeAllReserved_Load);
             this.ResumeLayout(false);

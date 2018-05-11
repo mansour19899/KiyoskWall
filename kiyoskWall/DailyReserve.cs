@@ -17,10 +17,10 @@ namespace KiyoskWall
         System.Resources.ResourceManager rm = new ResourceManager(typeof(Resource1));
         private Person p1;
         private string dtnow;
-        private KiyoskWall.PoonehEntities1 db;
+        private KiyoskWall.PoonehEntities db;  // Change DataBase 
         private List<PerMeal> AllMeals;
         List<PictureBox> p;
-
+        bool AllowClick;
 
         public DailyReserve(Person per)
         {
@@ -30,10 +30,10 @@ namespace KiyoskWall
             if (p1.WorkSheet_Id_FK == null)
                 p1.WorkSheet_Id_FK = 22;
 
-            this.WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-
+            //this.WindowState = FormWindowState.Maximized;
+            //this.Location = new Point(0, 0);
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            AllowClick = true;
             panel1.Visible = false;
 
         }
@@ -43,7 +43,7 @@ namespace KiyoskWall
         private void DailyReserve_Load(object sender, EventArgs e)
         {
        
-            db = new PoonehEntities1();
+            db = new PoonehEntities();
             db.Configuration.LazyLoadingEnabled = true;
             
 
@@ -58,7 +58,7 @@ namespace KiyoskWall
                 Alarm frm = new Alarm("وعده غذایی تعریف نشده است");
                 frm.ShowDialog();
             }
-
+            
             SetPicturelabel();
             LoadDate();
             try
@@ -207,8 +207,14 @@ namespace KiyoskWall
         }
         private void RunReserve(int day)
         {
-            ReservePerMeal frm = new ReservePerMeal(AllMeals, day,p1);
-            frm.ShowDialog();
+            if(AllowClick)
+            {
+                AllowClick = false;
+                ReservePerMeal frm = new ReservePerMeal(AllMeals, day, p1);
+                frm.ShowDialog();
+                AllowClick = true;
+            }
+
         }
 
         private void pic1_Click(object sender, EventArgs e)
@@ -338,14 +344,26 @@ namespace KiyoskWall
 
         private void btnNextDay_Click(object sender, EventArgs e)
         {
-            SeeAllReserved frm = new SeeAllReserved(p1,AllMeals);
-            frm.ShowDialog();
+            if(AllowClick)
+            {
+                AllowClick = false;
+                btnNextDay.Enabled = false;
+                SeeAllReserved frm = new SeeAllReserved(p1, AllMeals);
+                frm.ShowDialog();
+                btnNextDay.Enabled = true;
+            }
 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if(!AllowClick)
+            AllowClick = true;
         }
     }
 }

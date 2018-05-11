@@ -43,10 +43,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbNumber = new System.Windows.Forms.Label();
             this.lbTimer = new System.Windows.Forms.Label();
+            this.lbNumber = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -114,7 +114,7 @@
             // button11
             // 
             this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button11.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button11.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button11.Location = new System.Drawing.Point(198, 327);
             this.button11.Margin = new System.Windows.Forms.Padding(0);
             this.button11.Name = "button11";
@@ -141,7 +141,7 @@
             // button9
             // 
             this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button9.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button9.Location = new System.Drawing.Point(397, 218);
             this.button9.Margin = new System.Windows.Forms.Padding(0);
             this.button9.Name = "button9";
@@ -154,7 +154,7 @@
             // button8
             // 
             this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button8.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button8.Location = new System.Drawing.Point(198, 218);
             this.button8.Margin = new System.Windows.Forms.Padding(0);
             this.button8.Name = "button8";
@@ -167,7 +167,7 @@
             // button7
             // 
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button7.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button7.Location = new System.Drawing.Point(0, 218);
             this.button7.Margin = new System.Windows.Forms.Padding(0);
             this.button7.Name = "button7";
@@ -180,7 +180,7 @@
             // button6
             // 
             this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button6.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button6.Location = new System.Drawing.Point(397, 109);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
@@ -193,7 +193,7 @@
             // button5
             // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button5.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button5.Location = new System.Drawing.Point(198, 109);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
@@ -206,7 +206,7 @@
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button4.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button4.Location = new System.Drawing.Point(0, 109);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
@@ -219,7 +219,7 @@
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button3.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button3.Location = new System.Drawing.Point(198, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
@@ -232,7 +232,7 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button2.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
@@ -245,7 +245,7 @@
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button1.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.Location = new System.Drawing.Point(397, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
@@ -254,12 +254,6 @@
             this.button1.Text = "3";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // tableLayoutPanel3
             // 
@@ -276,19 +270,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(597, 105);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // lbNumber
-            // 
-            this.lbNumber.AutoSize = true;
-            this.lbNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbNumber.Font = new System.Drawing.Font("B Mitra", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lbNumber.Location = new System.Drawing.Point(0, 0);
-            this.lbNumber.Margin = new System.Windows.Forms.Padding(0);
-            this.lbNumber.Name = "lbNumber";
-            this.lbNumber.Size = new System.Drawing.Size(597, 73);
-            this.lbNumber.TabIndex = 1;
-            this.lbNumber.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lbNumber.Click += new System.EventHandler(this.lbNumber_Click_1);
-            // 
             // lbTimer
             // 
             this.lbTimer.AutoSize = true;
@@ -300,6 +281,25 @@
             this.lbTimer.Size = new System.Drawing.Size(597, 32);
             this.lbTimer.TabIndex = 2;
             this.lbTimer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbNumber
+            // 
+            this.lbNumber.AutoSize = true;
+            this.lbNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbNumber.Font = new System.Drawing.Font("B Titr", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lbNumber.Location = new System.Drawing.Point(0, 0);
+            this.lbNumber.Margin = new System.Windows.Forms.Padding(0);
+            this.lbNumber.Name = "lbNumber";
+            this.lbNumber.Size = new System.Drawing.Size(597, 73);
+            this.lbNumber.TabIndex = 1;
+            this.lbNumber.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lbNumber.Click += new System.EventHandler(this.lbNumber_Click_1);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // KeyPad
             // 

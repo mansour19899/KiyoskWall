@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDeleteReserved = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,6 +43,8 @@
             this.pic3 = new System.Windows.Forms.PictureBox();
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteReserved)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
@@ -52,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnDeleteReserved);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnQuickReserved);
@@ -87,7 +91,7 @@
             // button1
             // 
             this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
-            this.button1.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.button1.Font = new System.Drawing.Font("B Titr", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.Location = new System.Drawing.Point(77, 826);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 83);
@@ -102,7 +106,7 @@
             this.btnQuickReserved.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.btnQuickReserved.FlatAppearance.BorderSize = 0;
             this.btnQuickReserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickReserved.Font = new System.Drawing.Font("B Mitra", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnQuickReserved.Font = new System.Drawing.Font("B Titr", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnQuickReserved.Location = new System.Drawing.Point(440, 826);
             this.btnQuickReserved.Name = "btnQuickReserved";
             this.btnQuickReserved.Size = new System.Drawing.Size(346, 83);
@@ -116,14 +120,13 @@
             this.lblReserved.AllowDrop = true;
             this.lblReserved.BackColor = System.Drawing.Color.Transparent;
             this.lblReserved.Font = new System.Drawing.Font("B Mitra", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblReserved.Location = new System.Drawing.Point(850, 799);
+            this.lblReserved.Location = new System.Drawing.Point(850, 837);
             this.lblReserved.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReserved.Name = "lblReserved";
             this.lblReserved.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblReserved.Size = new System.Drawing.Size(302, 134);
             this.lblReserved.TabIndex = 16;
             this.lblReserved.Text = "label1";
-            this.lblReserved.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblReserved.Click += new System.EventHandler(this.lblReserved_Click);
             // 
             // lbDate
@@ -243,6 +246,26 @@
             this.pic1.TabStop = false;
             this.pic1.Click += new System.EventHandler(this.pic1_Click);
             // 
+            // label1
+            // 
+            this.label1.AllowDrop = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("B Mitra", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(1021, 782);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(197, 52);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "غذای رزرو شده:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ReservePerMeal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,5 +303,7 @@
         private System.Windows.Forms.Button btnQuickReserved;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox btnDeleteReserved;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

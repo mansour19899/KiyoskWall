@@ -17,19 +17,23 @@ namespace KiyoskWall
         int Day;
         Person Person;
         private PoonehReservation t;
-        private KiyoskWall.PoonehEntities1 db;
+        private KiyoskWall.PoonehEntities db;// Change DataBase 
         bool Loop;
+        int Time;
+        bool AllowClick;
         public ReservePerMeal(List<PerMeal> meal,int day, Person Person1)
         {
             InitializeComponent();
             Meals = meal;
             Day = day;
             Person = Person1;
-            this.WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            Time = 0;
+            AllowClick = true;
+            //this.WindowState = FormWindowState.Maximized;
+            //this.Location = new Point(0, 0);
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
-            db = new PoonehEntities1();
+            db = new PoonehEntities();
             db.Configuration.LazyLoadingEnabled = true;
             t = new PoonehReservation();
             panel1.Visible = false;
@@ -70,7 +74,7 @@ namespace KiyoskWall
             lbl2.Text = Meals.ElementAt(Day).Tray2.Name + "\n" +"("+ Meals.ElementAt(Day).Tray2.Note+")";
             lbl3.Text = Meals.ElementAt(Day).Tray3.Name + "\n" + "("+Meals.ElementAt(Day).Tray3.Note+")";
 
-            lbDate.Text = Meals.ElementAt(Day).Day + " -----"+ Meals.ElementAt(Day).Date+"\n" + GiveMealName(Meals.ElementAt(Day).Meal);
+            lbDate.Text = Meals.ElementAt(Day).Day + "     "+ Meals.ElementAt(Day).Date+"\n" + GiveMealName(Meals.ElementAt(Day).Meal);
 
             t = null;
             int f = Meals.ElementAt(Day).schedule1.Id;
@@ -85,97 +89,117 @@ namespace KiyoskWall
             {
                 var reservefood = Meals.ElementAt(Day).Trays.Where(p => p.Id == t.Tray_Id_Fk).FirstOrDefault();
                 lblReserved.Text = reservefood.Name + "  +  " + reservefood.Note;
+                label1.Text = "غذای رزرو شده:";
                 btnDeleteReserved.Visible = true;
             }
             else
+            {
                 lblReserved.Text = "";
+                label1.Text = "";
+            }
 
+            AllowClick = true;
             panel1.Visible = true;
         }
 
         private void btnNextDay_Click(object sender, EventArgs e)
         {
-            Day = Day + 1;
-            if (Day > Meals.Count()-1)
-                this.Close();
-            else
+         
+            if(AllowClick)
             {
-                panel1.Visible = false;
-                LoadMealDay();
+                AllowClick = false;
+                Day = Day + 1;
+                if (Day > Meals.Count() - 1)
+                    this.Close();
+                else
+                {
+                    panel1.Visible = false;
+                    LoadMealDay();
+                }
             }
             
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            Day = Day - 1;
-            if (Day < 0)
-                this.Close();
-            else
+          if(AllowClick)
             {
-                panel1.Visible = false;
-                LoadMealDay();
+                AllowClick = false;
+                Day = Day - 1;
+                if (Day < 0)
+                    this.Close();
+                else
+                {
+                    panel1.Visible = false;
+                    LoadMealDay();
+                }
             }
 
         }
 
         private void SetFoodForReserve(int food)
         {
-
-            if (t != null)
+            if(AllowClick)
             {
-                t.Tray_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Tray_Id_Fk;
-                t.Schedule_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Id;
-                db.SaveChanges();
-                if (Loop)
+                AllowClick = false;
+                if (t != null)
                 {
-                    Day = Day + 1;
-                    if (Day < Meals.Count())
-                        LoadMealDay();
-                    else
-                        this.Close();
-
-                }
-                else
-                    this.Close();
-
-            }
-            else
-            {
-                PoonehReservation reserv = new PoonehReservation()
-                {
-                    Tray_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Tray_Id_Fk,
-                    Person_Id_Fk = Person.Id,
-                    Schedule_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Id,
-                    Company_Id_Fk = Person.Company_Id_Fk,
-                    Unit_Id_Fk = Person.Unit_Id_Fk,
-                    Restaurant_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Restaurant_Id_Fk,
-                    Meal_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Meal_Id_Fk
-
-                };
-                db.PoonehReservations.Add(reserv);
-
-                int x = 0;
-                try
-                {
-                    x = db.SaveChanges();
+                    t.Tray_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Tray_Id_Fk;
+                    t.Schedule_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Id;
+                    db.SaveChanges();
                     if (Loop)
                     {
                         Day = Day + 1;
-                        LoadMealDay();
+                        if (Day < Meals.Count())
+                            LoadMealDay();
+                        else
+                            this.Close();
 
                     }
                     else
                         this.Close();
 
-
                 }
-                catch (Exception)
+                else
                 {
-                    Alarm frm = new Alarm();
-                    frm.ShowDialog();
-                    this.Close();
+                    PoonehReservation reserv = new PoonehReservation()
+                    {
+                        Tray_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Tray_Id_Fk,
+                        Person_Id_Fk = Person.Id,
+                        Schedule_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Id,
+                        Company_Id_Fk = Person.Company_Id_Fk,
+                        Unit_Id_Fk = Person.Unit_Id_Fk,
+                        Restaurant_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Restaurant_Id_Fk,
+                        Meal_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Meal_Id_Fk
 
+                    };
+                    db.PoonehReservations.Add(reserv);
+
+
+                    try
+                    {
+                        db.SaveChanges();
+                        if (Loop)
+                        {
+                            Day = Day + 1;
+                            if (Day < Meals.Count())
+                                LoadMealDay();
+                            else
+                                this.Close();
+
+                        }
+                        else
+                            this.Close();
+
+
+                    }
+                    catch (Exception)
+                    {
+                        Alarm frm = new Alarm();
+                        frm.ShowDialog();
+                        this.Close();
+
+                    }
                 }
             }
         }
@@ -215,6 +239,7 @@ namespace KiyoskWall
                 db.SaveChanges();
 
                 lblReserved.Text = "";
+                label1.Text = "";
                 t = null;
                 btnDeleteReserved.Visible = false;
 
@@ -237,6 +262,7 @@ namespace KiyoskWall
                 db.SaveChanges();
 
                 lblReserved.Text = "";
+                label1.Text = "";
                 t = null;
                 btnDeleteReserved.Visible = false;
 
@@ -248,6 +274,14 @@ namespace KiyoskWall
                 frm.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Time = Time + 1;
+            if (Time == 30)
+                this.Close();
+            
         }
     }
 }

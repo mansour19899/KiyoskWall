@@ -19,7 +19,7 @@ namespace KiyoskWall
         private string person_id;
         private int restaurant_id;
         private Person p1;
-        private KiyoskWall.PoonehEntities1 db;
+        private KiyoskWall.PoonehEntities db;// Change DataBase 
         private NeedToReserve needs;
         private List<Schedule> tempSchedules;
         private List<Tray> TempTrays;
@@ -32,9 +32,9 @@ namespace KiyoskWall
             if (p1.WorkSheet_Id_FK == null)
                 p1.WorkSheet_Id_FK = 22;
 
-            this.WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            //this.WindowState = FormWindowState.Maximized;
+            //this.Location = new Point(0, 0);
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             tableLayoutPanel1.Visible = false;
 
             
@@ -46,7 +46,7 @@ namespace KiyoskWall
         {
            
           
-            db =new  PoonehEntities1();
+            db =new  PoonehEntities();
             dtnow = DateTime.Now.ToPersianDateString();
 
 

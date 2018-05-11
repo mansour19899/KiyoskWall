@@ -25,11 +25,11 @@ namespace KiyoskWall
              x = 25;
         }
         StringBuilder sb = new StringBuilder();
-        PoonehEntities1 db;
+        PoonehEntities db;  // Change DataBase 
         bool week = false;
         private void KeyPad_Load(object sender, EventArgs e)
         {
-            db = new PoonehEntities1();
+            db = new PoonehEntities();
             db.Configuration.LazyLoadingEnabled = true;
 
 

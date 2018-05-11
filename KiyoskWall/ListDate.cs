@@ -13,7 +13,7 @@ namespace KiyoskWall
         private int _worksheet;
         private int _resturentid;
         private Person _person;
-        PoonehEntities1 db;
+        PoonehEntities db; // Change DataBase 
         string dtnow;
         public List<Schedule> Schedules { get; set; }
         public List<Tray> Trays { get; set; }
@@ -40,10 +40,11 @@ namespace KiyoskWall
 
         public List<Date> GetList()
         {
-            db = new PoonehEntities1();
+            db = new PoonehEntities();
             db.Configuration.LazyLoadingEnabled = true;
             List<Date> q;
             dtnow = DateTime.Now.ToPersianDateString();
+         
 
             _resturentid = db.Person_Restaurant.FirstOrDefault(p => p.Person_Id_Fk == _person.Id).Restaurant_Id_Fk.Value;
 
