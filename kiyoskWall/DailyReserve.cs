@@ -120,7 +120,7 @@ namespace KiyoskWall
             {
 
                 p.ElementAt(i).Image = SetDate(item.Date,item.Day, item.Meal);
-
+                p.ElementAt(i).Enabled = true;
                 i = i + 1;
             }
 

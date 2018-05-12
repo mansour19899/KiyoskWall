@@ -42,7 +42,6 @@
             this.lbl19 = new System.Windows.Forms.Label();
             this.lbl11 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
-            this.lbl24 = new System.Windows.Forms.Label();
             this.lbl16 = new System.Windows.Forms.Label();
             this.lbl8 = new System.Windows.Forms.Label();
             this.lbl23 = new System.Windows.Forms.Label();
@@ -215,18 +214,6 @@
             this.lbl3.TabIndex = 31;
             this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbl24
-            // 
-            this.lbl24.BackColor = System.Drawing.Color.Transparent;
-            this.lbl24.Font = new System.Drawing.Font("B Koodak", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lbl24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl24.Location = new System.Drawing.Point(88, 866);
-            this.lbl24.Name = "lbl24";
-            this.lbl24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl24.Size = new System.Drawing.Size(424, 108);
-            this.lbl24.TabIndex = 48;
-            this.lbl24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lbl16
             // 
             this.lbl16.BackColor = System.Drawing.Color.Transparent;
@@ -363,7 +350,7 @@
             // 
             this.button1.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.button1.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(49, 0);
+            this.button1.Location = new System.Drawing.Point(71, 901);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(218, 95);
             this.button1.TabIndex = 49;
@@ -385,7 +372,6 @@
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
             this.ClientSize = new System.Drawing.Size(1280, 1024);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lbl24);
             this.Controls.Add(this.lbl16);
             this.Controls.Add(this.lbl8);
             this.Controls.Add(this.lbl23);
@@ -434,7 +420,6 @@
         private System.Windows.Forms.Label lbl19;
         private System.Windows.Forms.Label lbl11;
         private System.Windows.Forms.Label lbl3;
-        private System.Windows.Forms.Label lbl24;
         private System.Windows.Forms.Label lbl16;
         private System.Windows.Forms.Label lbl8;
         private System.Windows.Forms.Label lbl23;

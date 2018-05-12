@@ -167,6 +167,7 @@
             // 
             this.pic1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic1.Enabled = false;
             this.pic1.Location = new System.Drawing.Point(938, 115);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(195, 140);
@@ -178,6 +179,7 @@
             // pic20
             // 
             this.pic20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic20.Enabled = false;
             this.pic20.Location = new System.Drawing.Point(129, 558);
             this.pic20.Name = "pic20";
             this.pic20.Size = new System.Drawing.Size(195, 140);
@@ -189,6 +191,7 @@
             // pic25
             // 
             this.pic25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic25.Enabled = false;
             this.pic25.Location = new System.Drawing.Point(129, 705);
             this.pic25.Margin = new System.Windows.Forms.Padding(4);
             this.pic25.Name = "pic25";
@@ -201,6 +204,7 @@
             // pic16
             // 
             this.pic16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic16.Enabled = false;
             this.pic16.Location = new System.Drawing.Point(938, 560);
             this.pic16.Margin = new System.Windows.Forms.Padding(4);
             this.pic16.Name = "pic16";
@@ -213,6 +217,7 @@
             // pic17
             // 
             this.pic17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic17.Enabled = false;
             this.pic17.Location = new System.Drawing.Point(735, 560);
             this.pic17.Margin = new System.Windows.Forms.Padding(4);
             this.pic17.Name = "pic17";
@@ -225,6 +230,7 @@
             // pic18
             // 
             this.pic18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic18.Enabled = false;
             this.pic18.Location = new System.Drawing.Point(533, 559);
             this.pic18.Name = "pic18";
             this.pic18.Size = new System.Drawing.Size(195, 140);
@@ -236,6 +242,7 @@
             // pic19
             // 
             this.pic19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic19.Enabled = false;
             this.pic19.Location = new System.Drawing.Point(332, 559);
             this.pic19.Name = "pic19";
             this.pic19.Size = new System.Drawing.Size(195, 140);
@@ -247,6 +254,7 @@
             // pic21
             // 
             this.pic21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic21.Enabled = false;
             this.pic21.Location = new System.Drawing.Point(938, 705);
             this.pic21.Name = "pic21";
             this.pic21.Size = new System.Drawing.Size(195, 140);
@@ -258,6 +266,7 @@
             // pic22
             // 
             this.pic22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic22.Enabled = false;
             this.pic22.Location = new System.Drawing.Point(736, 706);
             this.pic22.Margin = new System.Windows.Forms.Padding(4);
             this.pic22.Name = "pic22";
@@ -270,6 +279,7 @@
             // pic23
             // 
             this.pic23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic23.Enabled = false;
             this.pic23.Location = new System.Drawing.Point(534, 705);
             this.pic23.Name = "pic23";
             this.pic23.Size = new System.Drawing.Size(195, 140);
@@ -281,6 +291,7 @@
             // pic24
             // 
             this.pic24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic24.Enabled = false;
             this.pic24.Location = new System.Drawing.Point(332, 706);
             this.pic24.Margin = new System.Windows.Forms.Padding(4);
             this.pic24.Name = "pic24";
@@ -294,6 +305,7 @@
             // 
             this.pic5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic5.Enabled = false;
             this.pic5.Location = new System.Drawing.Point(129, 115);
             this.pic5.Margin = new System.Windows.Forms.Padding(4);
             this.pic5.Name = "pic5";
@@ -306,6 +318,7 @@
             // pic10
             // 
             this.pic10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic10.Enabled = false;
             this.pic10.Location = new System.Drawing.Point(129, 262);
             this.pic10.Name = "pic10";
             this.pic10.Size = new System.Drawing.Size(195, 140);
@@ -317,6 +330,7 @@
             // pic15
             // 
             this.pic15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic15.Enabled = false;
             this.pic15.Location = new System.Drawing.Point(129, 411);
             this.pic15.Margin = new System.Windows.Forms.Padding(4);
             this.pic15.Name = "pic15";
@@ -330,6 +344,7 @@
             // 
             this.pic2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic2.Enabled = false;
             this.pic2.Location = new System.Drawing.Point(737, 115);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(195, 140);
@@ -342,6 +357,7 @@
             // 
             this.pic3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic3.Enabled = false;
             this.pic3.Location = new System.Drawing.Point(535, 116);
             this.pic3.Margin = new System.Windows.Forms.Padding(4);
             this.pic3.Name = "pic3";
@@ -355,6 +371,7 @@
             // 
             this.pic4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic4.Enabled = false;
             this.pic4.Location = new System.Drawing.Point(332, 116);
             this.pic4.Margin = new System.Windows.Forms.Padding(4);
             this.pic4.Name = "pic4";
@@ -367,6 +384,7 @@
             // pic6
             // 
             this.pic6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic6.Enabled = false;
             this.pic6.Location = new System.Drawing.Point(938, 264);
             this.pic6.Margin = new System.Windows.Forms.Padding(4);
             this.pic6.Name = "pic6";
@@ -379,6 +397,7 @@
             // pic7
             // 
             this.pic7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic7.Enabled = false;
             this.pic7.Location = new System.Drawing.Point(735, 264);
             this.pic7.Margin = new System.Windows.Forms.Padding(4);
             this.pic7.Name = "pic7";
@@ -391,6 +410,7 @@
             // pic8
             // 
             this.pic8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic8.Enabled = false;
             this.pic8.Location = new System.Drawing.Point(533, 263);
             this.pic8.Name = "pic8";
             this.pic8.Size = new System.Drawing.Size(195, 140);
@@ -402,6 +422,7 @@
             // pic9
             // 
             this.pic9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic9.Enabled = false;
             this.pic9.Location = new System.Drawing.Point(332, 263);
             this.pic9.Name = "pic9";
             this.pic9.Size = new System.Drawing.Size(195, 140);
@@ -413,6 +434,7 @@
             // pic11
             // 
             this.pic11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic11.Enabled = false;
             this.pic11.Location = new System.Drawing.Point(938, 411);
             this.pic11.Name = "pic11";
             this.pic11.Size = new System.Drawing.Size(195, 140);
@@ -424,6 +446,7 @@
             // pic12
             // 
             this.pic12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic12.Enabled = false;
             this.pic12.Location = new System.Drawing.Point(736, 412);
             this.pic12.Margin = new System.Windows.Forms.Padding(4);
             this.pic12.Name = "pic12";
@@ -436,6 +459,7 @@
             // pic13
             // 
             this.pic13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic13.Enabled = false;
             this.pic13.Location = new System.Drawing.Point(534, 411);
             this.pic13.Name = "pic13";
             this.pic13.Size = new System.Drawing.Size(195, 140);
@@ -447,6 +471,7 @@
             // pic14
             // 
             this.pic14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic14.Enabled = false;
             this.pic14.Location = new System.Drawing.Point(332, 412);
             this.pic14.Margin = new System.Windows.Forms.Padding(4);
             this.pic14.Name = "pic14";

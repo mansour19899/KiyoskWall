@@ -205,6 +205,7 @@
             // 
             // del5
             // 
+            this.del5.Enabled = false;
             this.del5.Image = global::KiyoskWall.Resource1.Close_Box_Red;
             this.del5.Location = new System.Drawing.Point(201, 817);
             this.del5.Name = "del5";
@@ -217,6 +218,7 @@
             // 
             // del4
             // 
+            this.del4.Enabled = false;
             this.del4.Image = global::KiyoskWall.Resource1.Close_Box_Red;
             this.del4.Location = new System.Drawing.Point(201, 667);
             this.del4.Name = "del4";
@@ -243,39 +245,43 @@
             // 
             this.lbl19.AllowDrop = true;
             this.lbl19.BackColor = System.Drawing.Color.Transparent;
+            this.lbl19.Enabled = false;
             this.lbl19.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl19.Location = new System.Drawing.Point(450, 750);
             this.lbl19.Name = "lbl19";
             this.lbl19.Size = new System.Drawing.Size(150, 110);
             this.lbl19.TabIndex = 82;
-            this.lbl19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl19.Click += new System.EventHandler(this.lbl19_Click_1);
             // 
             // lbl18
             // 
             this.lbl18.AllowDrop = true;
             this.lbl18.BackColor = System.Drawing.Color.Transparent;
+            this.lbl18.Enabled = false;
             this.lbl18.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl18.Location = new System.Drawing.Point(650, 750);
             this.lbl18.Name = "lbl18";
             this.lbl18.Size = new System.Drawing.Size(150, 110);
             this.lbl18.TabIndex = 81;
-            this.lbl18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl18.Click += new System.EventHandler(this.lbl18_Click_1);
             // 
             // lbl17
             // 
             this.lbl17.AllowDrop = true;
             this.lbl17.BackColor = System.Drawing.Color.Transparent;
+            this.lbl17.Enabled = false;
             this.lbl17.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl17.Location = new System.Drawing.Point(850, 750);
             this.lbl17.Name = "lbl17";
+            this.lbl17.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl17.Size = new System.Drawing.Size(150, 110);
             this.lbl17.TabIndex = 80;
-            this.lbl17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl17.Click += new System.EventHandler(this.lbl17_Click_1);
             // 
             // lbl16
@@ -294,45 +300,49 @@
             // 
             this.lbl15.AllowDrop = true;
             this.lbl15.BackColor = System.Drawing.Color.Transparent;
+            this.lbl15.Enabled = false;
             this.lbl15.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl15.Location = new System.Drawing.Point(450, 600);
             this.lbl15.Name = "lbl15";
             this.lbl15.Size = new System.Drawing.Size(150, 110);
             this.lbl15.TabIndex = 78;
-            this.lbl15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl15.Click += new System.EventHandler(this.lbl15_Click_1);
             // 
             // lbl14
             // 
             this.lbl14.AllowDrop = true;
             this.lbl14.BackColor = System.Drawing.Color.Transparent;
+            this.lbl14.Enabled = false;
             this.lbl14.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl14.Location = new System.Drawing.Point(650, 600);
             this.lbl14.Name = "lbl14";
             this.lbl14.Size = new System.Drawing.Size(150, 110);
             this.lbl14.TabIndex = 77;
-            this.lbl14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl14.Click += new System.EventHandler(this.lbl14_Click_1);
             // 
             // lbl13
             // 
             this.lbl13.AllowDrop = true;
             this.lbl13.BackColor = System.Drawing.Color.Transparent;
+            this.lbl13.Enabled = false;
             this.lbl13.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl13.Location = new System.Drawing.Point(850, 600);
             this.lbl13.Name = "lbl13";
             this.lbl13.Size = new System.Drawing.Size(150, 110);
             this.lbl13.TabIndex = 76;
-            this.lbl13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl13.Click += new System.EventHandler(this.lbl13_Click_1);
             // 
             // pic20
             // 
             this.pic20.BackColor = System.Drawing.Color.Transparent;
             this.pic20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic20.Enabled = false;
             this.pic20.Location = new System.Drawing.Point(100, 750);
             this.pic20.Name = "pic20";
             this.pic20.Size = new System.Drawing.Size(150, 110);
@@ -375,6 +385,7 @@
             // 
             this.pic16.BackColor = System.Drawing.Color.Transparent;
             this.pic16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic16.Enabled = false;
             this.pic16.Location = new System.Drawing.Point(100, 600);
             this.pic16.Name = "pic16";
             this.pic16.Size = new System.Drawing.Size(150, 110);
@@ -415,6 +426,7 @@
             // 
             // del3
             // 
+            this.del3.Enabled = false;
             this.del3.Image = global::KiyoskWall.Resource1.Close_Box_Red;
             this.del3.Location = new System.Drawing.Point(201, 517);
             this.del3.Name = "del3";
@@ -427,6 +439,7 @@
             // 
             // del2
             // 
+            this.del2.Enabled = false;
             this.del2.Image = global::KiyoskWall.Resource1.Close_Box_Red;
             this.del2.Location = new System.Drawing.Point(201, 367);
             this.del2.Name = "del2";
@@ -453,39 +466,42 @@
             // 
             this.lbl11.AllowDrop = true;
             this.lbl11.BackColor = System.Drawing.Color.Transparent;
+            this.lbl11.Enabled = false;
             this.lbl11.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl11.Location = new System.Drawing.Point(450, 450);
             this.lbl11.Name = "lbl11";
             this.lbl11.Size = new System.Drawing.Size(150, 110);
             this.lbl11.TabIndex = 64;
-            this.lbl11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl11.Click += new System.EventHandler(this.lbl11_Click_1);
             // 
             // lbl10
             // 
             this.lbl10.AllowDrop = true;
             this.lbl10.BackColor = System.Drawing.Color.Transparent;
+            this.lbl10.Enabled = false;
             this.lbl10.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl10.Location = new System.Drawing.Point(650, 450);
             this.lbl10.Name = "lbl10";
             this.lbl10.Size = new System.Drawing.Size(150, 110);
             this.lbl10.TabIndex = 63;
-            this.lbl10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl10.Click += new System.EventHandler(this.lbl10_Click_1);
             // 
             // lbl9
             // 
             this.lbl9.AllowDrop = true;
             this.lbl9.BackColor = System.Drawing.Color.Transparent;
+            this.lbl9.Enabled = false;
             this.lbl9.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl9.Location = new System.Drawing.Point(850, 450);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(150, 110);
             this.lbl9.TabIndex = 62;
-            this.lbl9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl9.Click += new System.EventHandler(this.lbl9_Click_1);
             // 
             // lbl8
@@ -504,45 +520,49 @@
             // 
             this.lbl7.AllowDrop = true;
             this.lbl7.BackColor = System.Drawing.Color.Transparent;
+            this.lbl7.Enabled = false;
             this.lbl7.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl7.Location = new System.Drawing.Point(450, 300);
             this.lbl7.Name = "lbl7";
             this.lbl7.Size = new System.Drawing.Size(150, 110);
             this.lbl7.TabIndex = 60;
-            this.lbl7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl7.Click += new System.EventHandler(this.lbl7_Click_1);
             // 
             // lbl6
             // 
             this.lbl6.AllowDrop = true;
             this.lbl6.BackColor = System.Drawing.Color.Transparent;
+            this.lbl6.Enabled = false;
             this.lbl6.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl6.Location = new System.Drawing.Point(650, 300);
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(150, 110);
             this.lbl6.TabIndex = 59;
-            this.lbl6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl6.Click += new System.EventHandler(this.lbl6_Click_1);
             // 
             // lbl5
             // 
             this.lbl5.AllowDrop = true;
             this.lbl5.BackColor = System.Drawing.Color.Transparent;
+            this.lbl5.Enabled = false;
             this.lbl5.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl5.Location = new System.Drawing.Point(850, 300);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(150, 110);
             this.lbl5.TabIndex = 58;
-            this.lbl5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl5.Click += new System.EventHandler(this.lbl5_Click_1);
             // 
             // pic12
             // 
             this.pic12.BackColor = System.Drawing.Color.Transparent;
             this.pic12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic12.Enabled = false;
             this.pic12.Location = new System.Drawing.Point(100, 450);
             this.pic12.Name = "pic12";
             this.pic12.Size = new System.Drawing.Size(150, 110);
@@ -585,6 +605,7 @@
             // 
             this.pic8.BackColor = System.Drawing.Color.Transparent;
             this.pic8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic8.Enabled = false;
             this.pic8.Location = new System.Drawing.Point(100, 300);
             this.pic8.Name = "pic8";
             this.pic8.Size = new System.Drawing.Size(150, 110);
@@ -625,6 +646,7 @@
             // 
             // del1
             // 
+            this.del1.Enabled = false;
             this.del1.Image = global::KiyoskWall.Resource1.Close_Box_Red;
             this.del1.Location = new System.Drawing.Point(201, 217);
             this.del1.Name = "del1";
@@ -651,45 +673,49 @@
             // 
             this.lbl3.AllowDrop = true;
             this.lbl3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3.Enabled = false;
             this.lbl3.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl3.Location = new System.Drawing.Point(450, 150);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(150, 110);
             this.lbl3.TabIndex = 47;
-            this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl3.Click += new System.EventHandler(this.lbl3_Click_1);
             // 
             // lbl2
             // 
             this.lbl2.AllowDrop = true;
             this.lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2.Enabled = false;
             this.lbl2.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl2.Location = new System.Drawing.Point(650, 150);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(150, 110);
             this.lbl2.TabIndex = 46;
-            this.lbl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl2.Click += new System.EventHandler(this.lbl2_Click_1);
             // 
             // lbl1
             // 
             this.lbl1.AllowDrop = true;
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1.Enabled = false;
             this.lbl1.Font = new System.Drawing.Font("B Titr", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lbl1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl1.Location = new System.Drawing.Point(850, 150);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(150, 110);
             this.lbl1.TabIndex = 45;
-            this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbl1.Click += new System.EventHandler(this.lbl1_Click_1);
             // 
             // pic4
             // 
             this.pic4.BackColor = System.Drawing.Color.Transparent;
             this.pic4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic4.Enabled = false;
             this.pic4.Location = new System.Drawing.Point(100, 150);
             this.pic4.Name = "pic4";
             this.pic4.Size = new System.Drawing.Size(150, 110);

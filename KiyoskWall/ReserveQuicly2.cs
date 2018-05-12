@@ -138,6 +138,10 @@ namespace KiyoskWall
                 picturs.ElementAt(j + 1).BackgroundImage = item.pictuer2;
                 picturs.ElementAt(j + 2).BackgroundImage = item.pictuer3;
 
+                lables.ElementAt(j).Enabled = true;
+                lables.ElementAt(j + 1).Enabled = true;
+                lables.ElementAt(j + 2).Enabled = true;
+
                 lables.ElementAt(j).Text = item.Tray1.Name;
                 lables.ElementAt(j + 1).Text = item.Tray2.Name;
                 lables.ElementAt(j + 2).Text = item.Tray3.Name;
@@ -147,18 +151,21 @@ namespace KiyoskWall
                 lables.ElementAt(j).Parent = picturs.ElementAt(j);
                 lables.ElementAt(j).Location = pos;
                 lables.ElementAt(j).BackColor = Color.Transparent;
+             
 
-                 pos = this.PointToScreen(lables.ElementAt(j+1).Location);
+                pos = this.PointToScreen(lables.ElementAt(j+1).Location);
                 pos = picturs.ElementAt(j+1).PointToClient(pos);
                 lables.ElementAt(j+1).Parent = picturs.ElementAt(j+1);
                 lables.ElementAt(j+1).Location = pos;
                 lables.ElementAt(j+1).BackColor = Color.Transparent;
+       
 
                 pos = this.PointToScreen(lables.ElementAt(j+2).Location);
                 pos = picturs.ElementAt(j+2).PointToClient(pos);
                 lables.ElementAt(j+2).Parent = picturs.ElementAt(j+2);
                 lables.ElementAt(j+2).Location = pos;
                 lables.ElementAt(j+2).BackColor = Color.Transparent;
+              
 
                 lables.ElementAt(j+3).Text = item.Date + "\n" + item.Day;
                 if (item.Meal == 2)
@@ -222,8 +229,9 @@ namespace KiyoskWall
                     {
 
                     }
-
+                    picturs.ElementAt(x * 4 - 1).Enabled = true;
                     del.ElementAt(x - 1).Visible = true;
+                    del.ElementAt(x - 1).Enabled = true;
 
 
                 }

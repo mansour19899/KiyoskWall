@@ -131,7 +131,7 @@ namespace KiyoskWall
             Labels.Add(lbl21);
             Labels.Add(lbl22);
             Labels.Add(lbl23);
-            Labels.Add(lbl24);
+           
 
         }
 
