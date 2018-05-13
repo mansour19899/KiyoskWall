@@ -19,7 +19,7 @@ namespace KiyoskWall
         private string _date;
         private string _dayName;
         private int _meal;
-        private KiyoskWall.PoonehEntities1 db;  // Change DataBase 
+        private KiyoskWall.PoonehEntities db;  // Change DataBase 
         List<Schedule> Schedules;
         List<Schedule> AllSchedules;
         private List<Tray> AllTrays;
@@ -47,7 +47,7 @@ namespace KiyoskWall
             AllSchedules = need.Schedules;
             AllTrays = need.Trays;
             AllDays = need.AllDays;
-            db = new PoonehEntities1();
+            db = new PoonehEntities();
             tableLayoutPanel1.Visible = false;
             loop = false;
 
@@ -56,9 +56,9 @@ namespace KiyoskWall
 
         private void ReserveFood_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            //this.WindowState = FormWindowState.Maximized;
+            //this.Location = new Point(0, 0);
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
             if (_date == "")
             {

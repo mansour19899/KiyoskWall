@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="PoonehModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PoonehModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Company">
           <Key>
             <PropertyRef Name="Id" />
@@ -313,7 +313,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PoonehModel1StoreContainer">
+        <EntityContainer Name="PoonehModelStoreContainer">
           <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ExtraTime" EntityType="Self.ExtraTime" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoliDay" EntityType="Self.HoliDay" Schema="dbo" store:Type="Tables" />
@@ -384,7 +384,7 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="PoonehModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="PoonehModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Company">
           <Key>
             <PropertyRef Name="Id" />
@@ -396,16 +396,7 @@
           <NavigationProperty Name="People" Relationship="Self.FK_Person_Company" FromRole="Company" ToRole="Person" />
           <NavigationProperty Name="PoonehReservations" Relationship="Self.FK_PoonehReservation_Company" FromRole="Company" ToRole="PoonehReservation" />
           <NavigationProperty Name="Restaurants" Relationship="Self.FK_Restaurant_Company" FromRole="Company" ToRole="Restaurant" />
-          <NavigationProperty Name="ExtraTimes" Relationship="PoonehModel1.FK_ExtraTime_Company" FromRole="Company" ToRole="ExtraTime" />
-        </EntityType>
-        <EntityType Name="HoliDay">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="HolidayDate" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="ExtraTimes" Relationship="PoonehModel.FK_ExtraTime_Company" FromRole="Company" ToRole="ExtraTime" />
         </EntityType>
         <EntityType Name="Person">
           <Key>
@@ -435,8 +426,8 @@
           <NavigationProperty Name="Company" Relationship="Self.FK_Person_Company" FromRole="Person" ToRole="Company" />
           <NavigationProperty Name="WorkSheet" Relationship="Self.FK_Person_WorkSheet1" FromRole="Person" ToRole="WorkSheet" />
           <NavigationProperty Name="PoonehReservations" Relationship="Self.FK_PoonehReservation_Person" FromRole="Person" ToRole="PoonehReservation" />
-          <NavigationProperty Name="Person_Restaurant" Relationship="PoonehModel1.FK_Person_Restaurant_Person" FromRole="Person" ToRole="Person_Restaurant" />
-          <NavigationProperty Name="ExtraTimes" Relationship="PoonehModel1.FK_ExtraTime_Person" FromRole="Person" ToRole="ExtraTime" />
+          <NavigationProperty Name="ExtraTimes" Relationship="PoonehModel.FK_ExtraTime_Person" FromRole="Person" ToRole="ExtraTime" />
+          <NavigationProperty Name="Person_Restaurant" Relationship="PoonehModel.FK_Person_Restaurant_Person" FromRole="Person" ToRole="Person_Restaurant" />
         </EntityType>
         <EntityType Name="PoonehReservation">
           <Key>
@@ -476,7 +467,7 @@
           <NavigationProperty Name="Company" Relationship="Self.FK_Restaurant_Company" FromRole="Restaurant" ToRole="Company" />
           <NavigationProperty Name="PoonehReservations" Relationship="Self.FK_PoonehReservation_Restaurant" FromRole="Restaurant" ToRole="PoonehReservation" />
           <NavigationProperty Name="Schedules" Relationship="Self.FK_Schedule_Restaurant" FromRole="Restaurant" ToRole="Schedule" />
-          <NavigationProperty Name="Person_Restaurant" Relationship="PoonehModel1.FK_Person_Restaurant_Restaurant" FromRole="Restaurant" ToRole="Person_Restaurant" />
+          <NavigationProperty Name="Person_Restaurant" Relationship="PoonehModel.FK_Person_Restaurant_Restaurant" FromRole="Restaurant" ToRole="Person_Restaurant" />
         </EntityType>
         <EntityType Name="Schedule">
           <Key>
@@ -640,9 +631,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PoonehEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PoonehEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Companies" EntityType="Self.Company" />
-          <EntitySet Name="HoliDays" EntityType="Self.HoliDay" />
           <EntitySet Name="People" EntityType="Self.Person" />
           <EntitySet Name="PoonehReservations" EntityType="Self.PoonehReservation" />
           <EntitySet Name="Restaurants" EntityType="Self.Restaurant" />
@@ -689,60 +679,35 @@
             <End Role="Tray" EntitySet="Trays" />
             <End Role="Schedule" EntitySet="Schedules" />
           </AssociationSet>
-          <EntitySet Name="Person_Restaurant" EntityType="PoonehModel1.Person_Restaurant" />
-          <AssociationSet Name="FK_Person_Restaurant_Person" Association="PoonehModel1.FK_Person_Restaurant_Person">
-            <End Role="Person" EntitySet="People" />
-            <End Role="Person_Restaurant" EntitySet="Person_Restaurant" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Person_Restaurant_Restaurant" Association="PoonehModel1.FK_Person_Restaurant_Restaurant">
-            <End Role="Restaurant" EntitySet="Restaurants" />
-            <End Role="Person_Restaurant" EntitySet="Person_Restaurant" />
-          </AssociationSet>
-          <EntitySet Name="ExtraTimes" EntityType="PoonehModel1.ExtraTime" />
-          <AssociationSet Name="FK_ExtraTime_Company" Association="PoonehModel1.FK_ExtraTime_Company">
+          <EntitySet Name="HoliDays" EntityType="PoonehModel.HoliDay" />
+          <EntitySet Name="ExtraTimes" EntityType="PoonehModel.ExtraTime" />
+          <EntitySet Name="Person_Restaurant" EntityType="PoonehModel.Person_Restaurant" />
+          <AssociationSet Name="FK_ExtraTime_Company" Association="PoonehModel.FK_ExtraTime_Company">
             <End Role="Company" EntitySet="Companies" />
             <End Role="ExtraTime" EntitySet="ExtraTimes" />
           </AssociationSet>
-          <AssociationSet Name="FK_ExtraTime_Person" Association="PoonehModel1.FK_ExtraTime_Person">
+          <AssociationSet Name="FK_ExtraTime_Person" Association="PoonehModel.FK_ExtraTime_Person">
             <End Role="Person" EntitySet="People" />
             <End Role="ExtraTime" EntitySet="ExtraTimes" />
           </AssociationSet>
+          <AssociationSet Name="FK_Person_Restaurant_Person" Association="PoonehModel.FK_Person_Restaurant_Person">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Person_Restaurant" EntitySet="Person_Restaurant" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Person_Restaurant_Restaurant" Association="PoonehModel.FK_Person_Restaurant_Restaurant">
+            <End Role="Restaurant" EntitySet="Restaurants" />
+            <End Role="Person_Restaurant" EntitySet="Person_Restaurant" />
+          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Person_Restaurant">
+        <EntityType Name="HoliDay">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Person_Id_Fk" Type="Int32" />
-          <Property Name="Restaurant_Id_Fk" Type="Int32" />
-          <Property Name="PoonehArchived" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Person" Relationship="PoonehModel1.FK_Person_Restaurant_Person" FromRole="Person_Restaurant" ToRole="Person" />
-          <NavigationProperty Name="Restaurant" Relationship="PoonehModel1.FK_Person_Restaurant_Restaurant" FromRole="Person_Restaurant" ToRole="Restaurant" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HolidayDate" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
-        <Association Name="FK_Person_Restaurant_Person">
-          <End Type="PoonehModel1.Person" Role="Person" Multiplicity="0..1" />
-          <End Type="PoonehModel1.Person_Restaurant" Role="Person_Restaurant" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Person">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Person_Restaurant">
-              <PropertyRef Name="Person_Id_Fk" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Person_Restaurant_Restaurant">
-          <End Type="PoonehModel1.Restaurant" Role="Restaurant" Multiplicity="0..1" />
-          <End Type="PoonehModel1.Person_Restaurant" Role="Person_Restaurant" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Restaurant">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Person_Restaurant">
-              <PropertyRef Name="Restaurant_Id_Fk" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="ExtraTime">
           <Key>
             <PropertyRef Name="Id" />
@@ -762,12 +727,23 @@
           <Property Name="RegDate" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Person_Id_Fk" Type="Int32" />
           <Property Name="PoonehArchived" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Company" Relationship="PoonehModel1.FK_ExtraTime_Company" FromRole="ExtraTime" ToRole="Company" />
-          <NavigationProperty Name="Person" Relationship="PoonehModel1.FK_ExtraTime_Person" FromRole="ExtraTime" ToRole="Person" />
+          <NavigationProperty Name="Company" Relationship="PoonehModel.FK_ExtraTime_Company" FromRole="ExtraTime" ToRole="Company" />
+          <NavigationProperty Name="Person" Relationship="PoonehModel.FK_ExtraTime_Person" FromRole="ExtraTime" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="Person_Restaurant">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Person_Id_Fk" Type="Int32" />
+          <Property Name="Restaurant_Id_Fk" Type="Int32" />
+          <Property Name="PoonehArchived" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Person" Relationship="PoonehModel.FK_Person_Restaurant_Person" FromRole="Person_Restaurant" ToRole="Person" />
+          <NavigationProperty Name="Restaurant" Relationship="PoonehModel.FK_Person_Restaurant_Restaurant" FromRole="Person_Restaurant" ToRole="Restaurant" />
         </EntityType>
         <Association Name="FK_ExtraTime_Company">
-          <End Type="PoonehModel1.Company" Role="Company" Multiplicity="0..1" />
-          <End Type="PoonehModel1.ExtraTime" Role="ExtraTime" Multiplicity="*" />
+          <End Type="PoonehModel.Company" Role="Company" Multiplicity="0..1" />
+          <End Type="PoonehModel.ExtraTime" Role="ExtraTime" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Company">
               <PropertyRef Name="Id" />
@@ -778,8 +754,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ExtraTime_Person">
-          <End Type="PoonehModel1.Person" Role="Person" Multiplicity="0..1" />
-          <End Type="PoonehModel1.ExtraTime" Role="ExtraTime" Multiplicity="*" />
+          <End Type="PoonehModel.Person" Role="Person" Multiplicity="0..1" />
+          <End Type="PoonehModel.ExtraTime" Role="ExtraTime" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Person">
               <PropertyRef Name="Id" />
@@ -789,14 +765,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Person_Restaurant_Person">
+          <End Type="PoonehModel.Person" Role="Person" Multiplicity="0..1" />
+          <End Type="PoonehModel.Person_Restaurant" Role="Person_Restaurant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Person_Restaurant">
+              <PropertyRef Name="Person_Id_Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Person_Restaurant_Restaurant">
+          <End Type="PoonehModel.Restaurant" Role="Restaurant" Multiplicity="0..1" />
+          <End Type="PoonehModel.Person_Restaurant" Role="Person_Restaurant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Restaurant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Person_Restaurant">
+              <PropertyRef Name="Restaurant_Id_Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PoonehModel1StoreContainer" CdmEntityContainer="PoonehEntities1">
+        <EntityContainerMapping StorageEntityContainer="PoonehModelStoreContainer" CdmEntityContainer="PoonehEntities">
           <EntitySetMapping Name="Companies">
-            <EntityTypeMapping TypeName="PoonehModel1.Company">
+            <EntityTypeMapping TypeName="PoonehModel.Company">
               <MappingFragment StoreEntitySet="Company">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -805,18 +805,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HoliDays">
-            <EntityTypeMapping TypeName="PoonehModel1.HoliDay">
-              <MappingFragment StoreEntitySet="HoliDay">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="HolidayDate" ColumnName="HolidayDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="People">
-            <EntityTypeMapping TypeName="PoonehModel1.Person">
+            <EntityTypeMapping TypeName="PoonehModel.Person">
               <MappingFragment StoreEntitySet="Person">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Rc_Id" ColumnName="Rc_Id" />
@@ -843,7 +833,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PoonehReservations">
-            <EntityTypeMapping TypeName="PoonehModel1.PoonehReservation">
+            <EntityTypeMapping TypeName="PoonehModel.PoonehReservation">
               <MappingFragment StoreEntitySet="PoonehReservation">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Tray_Id_Fk" ColumnName="Tray_Id_Fk" />
@@ -858,7 +848,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Restaurants">
-            <EntityTypeMapping TypeName="PoonehModel1.Restaurant">
+            <EntityTypeMapping TypeName="PoonehModel.Restaurant">
               <MappingFragment StoreEntitySet="Restaurant">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -876,7 +866,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Schedules">
-            <EntityTypeMapping TypeName="PoonehModel1.Schedule">
+            <EntityTypeMapping TypeName="PoonehModel.Schedule">
               <MappingFragment StoreEntitySet="Schedule">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="SDate" ColumnName="SDate" />
@@ -893,7 +883,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Trays">
-            <EntityTypeMapping TypeName="PoonehModel1.Tray">
+            <EntityTypeMapping TypeName="PoonehModel.Tray">
               <MappingFragment StoreEntitySet="Tray">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -905,7 +895,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="WorkSheets">
-            <EntityTypeMapping TypeName="PoonehModel1.WorkSheet">
+            <EntityTypeMapping TypeName="PoonehModel.WorkSheet">
               <MappingFragment StoreEntitySet="WorkSheet">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -914,18 +904,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Person_Restaurant">
-            <EntityTypeMapping TypeName="PoonehModel1.Person_Restaurant">
-              <MappingFragment StoreEntitySet="Person_Restaurant">
-                <ScalarProperty Name="PoonehArchived" ColumnName="PoonehArchived" />
-                <ScalarProperty Name="Restaurant_Id_Fk" ColumnName="Restaurant_Id_Fk" />
-                <ScalarProperty Name="Person_Id_Fk" ColumnName="Person_Id_Fk" />
+          <EntitySetMapping Name="HoliDays">
+            <EntityTypeMapping TypeName="PoonehModel.HoliDay">
+              <MappingFragment StoreEntitySet="HoliDay">
+                <ScalarProperty Name="HolidayDate" ColumnName="HolidayDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ExtraTimes">
-            <EntityTypeMapping TypeName="PoonehModel1.ExtraTime">
+            <EntityTypeMapping TypeName="PoonehModel.ExtraTime">
               <MappingFragment StoreEntitySet="ExtraTime">
                 <ScalarProperty Name="PoonehArchived" ColumnName="PoonehArchived" />
                 <ScalarProperty Name="Person_Id_Fk" ColumnName="Person_Id_Fk" />
@@ -941,6 +931,16 @@
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />
                 <ScalarProperty Name="Company_Id_Fk" ColumnName="Company_Id_Fk" />
                 <ScalarProperty Name="Unit_Id_Fk" ColumnName="Unit_Id_Fk" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_Restaurant">
+            <EntityTypeMapping TypeName="PoonehModel.Person_Restaurant">
+              <MappingFragment StoreEntitySet="Person_Restaurant">
+                <ScalarProperty Name="PoonehArchived" ColumnName="PoonehArchived" />
+                <ScalarProperty Name="Restaurant_Id_Fk" ColumnName="Restaurant_Id_Fk" />
+                <ScalarProperty Name="Person_Id_Fk" ColumnName="Person_Id_Fk" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

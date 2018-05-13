@@ -13,7 +13,7 @@ namespace KiyoskWall
     public partial class SeeAllReserved : Form
     {
         Person p;
-        PoonehEntities1 db; // Change DataBase 
+        PoonehEntities db; // Change DataBase 
         public List<Label> Labels;
         public List<PerMeal> Meals;
      public   int timer;
@@ -24,16 +24,16 @@ namespace KiyoskWall
             Meals = AllMeal;
             timer = 0;
 
-            this.WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            //this.WindowState = FormWindowState.Maximized;
+            //this.Location = new Point(0, 0);
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
         }
 
 
         private void SeeAllReserved_Load(object sender, EventArgs e)
         {
             int id = p.Id;
-            db = new PoonehEntities1();
+            db = new PoonehEntities();
             db.Configuration.LazyLoadingEnabled = true;
 
             string dtnow = DateTime.Now.ToPersianDateString();

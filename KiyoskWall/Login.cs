@@ -16,7 +16,7 @@ namespace KiyoskWall
         public static List<Tray> TempTrays;
         string y;
         string yy;
-        PoonehEntities1 db;  // Change DataBase 
+        PoonehEntities db;  // Change DataBase 
         public static bool RamezanDay;
 
         public Login()
@@ -37,17 +37,17 @@ namespace KiyoskWall
 
         private void Login_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            //this.WindowState = FormWindowState.Maximized;
+            //this.Location = new Point(0, 0);
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
 
 
         }
 
+    
 
-
-
+ 
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
@@ -100,7 +100,7 @@ namespace KiyoskWall
                 try
                 {
                     y = DateTime.Now.ToPersianDateString();
-                    db = new PoonehEntities1();
+                    db = new PoonehEntities();
                     db.Configuration.LazyLoadingEnabled = true;
 
                     tempSchedules = db.Schedules.Where(p => p.SDate.CompareTo(y) == 1).Distinct().ToList();

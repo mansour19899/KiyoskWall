@@ -17,15 +17,9 @@ namespace KiyoskWall
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Person()
         {
-            this.ExtraTimes = new HashSet<ExtraTime>();
-            this.MidNights = new HashSet<MidNight>();
-            this.Person_IdentifyInfo = new HashSet<Person_IdentifyInfo>();
-            this.Person_IdentifyInfo_Bup = new HashSet<Person_IdentifyInfo_Bup>();
-            this.Person_IdentifyInfo_Bup1 = new HashSet<Person_IdentifyInfo_Bup>();
-            this.Person_Meal = new HashSet<Person_Meal>();
-            this.Person_Restaurant = new HashSet<Person_Restaurant>();
             this.PoonehReservations = new HashSet<PoonehReservation>();
-            this.PoonehWebUsers = new HashSet<PoonehWebUser>();
+            this.ExtraTimes = new HashSet<ExtraTime>();
+            this.Person_Restaurant = new HashSet<Person_Restaurant>();
         }
     
         public int Id { get; set; }
@@ -50,31 +44,13 @@ namespace KiyoskWall
         public Nullable<int> WorkSheet_Id_FK { get; set; }
         public Nullable<System.DateTime> PoonehArchived { get; set; }
     
-        public virtual Card Card { get; set; }
         public virtual Company Company { get; set; }
-        public virtual Contractor Contractor { get; set; }
-        public virtual EmploymentType EmploymentType { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ExtraTime> ExtraTimes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MidNight> MidNights { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Person_IdentifyInfo> Person_IdentifyInfo { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Person_IdentifyInfo_Bup> Person_IdentifyInfo_Bup { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Person_IdentifyInfo_Bup> Person_IdentifyInfo_Bup1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Person_Meal> Person_Meal { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Person_Restaurant> Person_Restaurant { get; set; }
-        public virtual Sex Sex { get; set; }
-        public virtual Status Status { get; set; }
-        public virtual Unit Unit { get; set; }
         public virtual WorkSheet WorkSheet { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PoonehReservation> PoonehReservations { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PoonehWebUser> PoonehWebUsers { get; set; }
+        public virtual ICollection<ExtraTime> ExtraTimes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Person_Restaurant> Person_Restaurant { get; set; }
     }
 }
