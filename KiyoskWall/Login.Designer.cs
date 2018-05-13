@@ -122,9 +122,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(1086, 951);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 32);
+            this.label3.Size = new System.Drawing.Size(176, 32);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Version 1.2";
+            this.label3.Text = "Version 1.26";
             // 
             // Login
             // 

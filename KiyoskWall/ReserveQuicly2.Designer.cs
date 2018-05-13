@@ -166,7 +166,6 @@
             // 
             // btnTimer
             // 
-            this.btnTimer.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnTimer.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.btnTimer.Font = new System.Drawing.Font("B Nazanin", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnTimer.Location = new System.Drawing.Point(952, 898);

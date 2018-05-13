@@ -127,7 +127,6 @@
             // 
             // btnNextDay
             // 
-            this.btnNextDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNextDay.BackgroundImage = global::KiyoskWall.Resource1.lunch;
             this.btnNextDay.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnNextDay.Location = new System.Drawing.Point(941, 863);
