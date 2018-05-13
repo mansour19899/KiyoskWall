@@ -17,8 +17,11 @@ namespace KiyoskWall
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tray()
         {
+            this.CookOrders = new HashSet<CookOrder>();
+            this.MiniRestRequests = new HashSet<MiniRestRequest>();
             this.PoonehReservations = new HashSet<PoonehReservation>();
             this.Schedules = new HashSet<Schedule>();
+            this.TrayItems = new HashSet<TrayItem>();
         }
     
         public int Id { get; set; }
@@ -29,8 +32,14 @@ namespace KiyoskWall
         public Nullable<System.DateTime> PoonehArchived { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CookOrder> CookOrders { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MiniRestRequest> MiniRestRequests { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PoonehReservation> PoonehReservations { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Schedule> Schedules { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TrayItem> TrayItems { get; set; }
     }
 }

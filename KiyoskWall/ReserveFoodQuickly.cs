@@ -17,7 +17,7 @@ namespace KiyoskWall
     public partial class ReserveFoodQuickly : Form
     {
         private Person p1;
-        private KiyoskWall.PoonehEntities db; // Change DataBase 
+        private KiyoskWall.PoonehEntities1 db; // Change DataBase 
         private List<Schedule> PerSchedules;
         private List<Schedule> Schedules;
         private List<Tray> PerTrays;
@@ -34,9 +34,9 @@ namespace KiyoskWall
             InitializeComponent();
             tableLayoutPanel1.Visible = false;
 
-            //this.WindowState = FormWindowState.Maximized;
-            //this.Location = new Point(0, 0);
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.WindowState = FormWindowState.Maximized;
+            this.Location = new Point(0, 0);
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
             p1 = per;
            time = 60;
@@ -54,7 +54,7 @@ namespace KiyoskWall
         {
           
 
-            db = new PoonehEntities();
+            db = new PoonehEntities1();
 
             //p1 = db.People.Where(pp => pp.NationalCode == "0440005191").FirstOrDefault(); //rozkar
          

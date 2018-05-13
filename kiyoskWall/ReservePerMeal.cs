@@ -17,7 +17,7 @@ namespace KiyoskWall
         int Day;
         Person Person;
         private PoonehReservation t;
-        private KiyoskWall.PoonehEntities db;// Change DataBase 
+        private KiyoskWall.PoonehEntities1 db;// Change DataBase 
         bool Loop;
         int Time;
         bool AllowClick;
@@ -29,11 +29,12 @@ namespace KiyoskWall
             Person = Person1;
             Time = 0;
             AllowClick = true;
-            //this.WindowState = FormWindowState.Maximized;
-            //this.Location = new Point(0, 0);
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
 
-            db = new PoonehEntities();
+            this.WindowState = FormWindowState.Maximized;
+            this.Location = new Point(0, 0);
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+
+            db = new PoonehEntities1();
             db.Configuration.LazyLoadingEnabled = true;
             t = new PoonehReservation();
             panel1.Visible = false;

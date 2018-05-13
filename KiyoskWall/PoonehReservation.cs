@@ -25,9 +25,11 @@ namespace KiyoskWall
         public Nullable<System.DateTime> PoonehArchived { get; set; }
     
         public virtual Company Company { get; set; }
+        public virtual Meal Meal { get; set; }
         public virtual Person Person { get; set; }
         public virtual Restaurant Restaurant { get; set; }
         public virtual Schedule Schedule { get; set; }
         public virtual Tray Tray { get; set; }
+        public virtual Unit Unit { get; set; }
     }
 }

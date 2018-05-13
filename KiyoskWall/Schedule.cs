@@ -32,8 +32,10 @@ namespace KiyoskWall
         public Nullable<int> RemainPorsNo { get; set; }
         public Nullable<System.DateTime> PoonehArchived { get; set; }
     
+        public virtual Meal Meal { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PoonehReservation> PoonehReservations { get; set; }
+        public virtual Res_Cont_Contract Res_Cont_Contract { get; set; }
         public virtual Restaurant Restaurant { get; set; }
         public virtual Tray Tray { get; set; }
     }

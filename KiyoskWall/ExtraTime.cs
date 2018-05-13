@@ -32,5 +32,7 @@ namespace KiyoskWall
     
         public virtual Company Company { get; set; }
         public virtual Person Person { get; set; }
+        public virtual PoonehWebUser PoonehWebUser { get; set; }
+        public virtual Unit Unit { get; set; }
     }
 }
