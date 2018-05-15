@@ -78,16 +78,18 @@ namespace KiyoskWall
             lbDate.Text = Meals.ElementAt(Day).Day + "     "+ Meals.ElementAt(Day).Date+"\n" + GiveMealName(Meals.ElementAt(Day).Meal);
 
             t = null;
-            int f = Meals.ElementAt(Day).schedule1.Id;
-            int ff = Meals.ElementAt(Day).schedule2.Id;
-            int fff = Meals.ElementAt(Day).schedule3.Id;
+
+
+            var _sdate = Meals.ElementAt(Day).Date;
+            var _meal = Meals.ElementAt(Day).Meal;
 
             t = (from r in db.PoonehReservations
-                 where r.Person_Id_Fk == Person.Id & (r.Schedule_Id_Fk == f || 
-                 r.Schedule_Id_Fk ==ff  || r.Schedule_Id_Fk == fff)
+                 where r.Person_Id_Fk == Person.Id & r.Schedule.SDate==_sdate&
+                 r.Meal_Id_Fk==_meal
                  select r).FirstOrDefault();
             if (t != null)
             {
+
                 var reservefood = Meals.ElementAt(Day).Trays.Where(p => p.Id == t.Tray_Id_Fk).FirstOrDefault();
                 lblReserved.Text = reservefood.Name + "  +  " + reservefood.Note;
                 label1.Text = "غذای رزرو شده:";
@@ -145,9 +147,51 @@ namespace KiyoskWall
                 AllowClick = false;
                 if (t != null)
                 {
-                    t.Tray_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Tray_Id_Fk;
-                    t.Schedule_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Id;
-                    db.SaveChanges();
+                    if(t.Restaurant_Id_Fk==Meals.ElementAt(Day).schedule1.Restaurant_Id_Fk)
+                    {
+                        t.Tray_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Tray_Id_Fk;
+                        t.Schedule_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Id;
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+
+                        db.PoonehReservations.Remove(t);
+
+
+                        PoonehReservation reserv = new PoonehReservation()
+                        {
+                            Tray_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Tray_Id_Fk,
+                            Person_Id_Fk = Person.Id,
+                            Schedule_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Id,
+                            Company_Id_Fk = Person.Company_Id_Fk,
+                            Unit_Id_Fk = Person.Unit_Id_Fk,
+                            Restaurant_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Restaurant_Id_Fk,
+                            Meal_Id_Fk = Meals.ElementAt(Day).Schedules.ElementAt(food).Meal_Id_Fk
+
+                        };
+                        db.PoonehReservations.Add(reserv);
+
+
+
+
+
+                        try
+                        {
+                            db.SaveChanges();
+
+
+                        }
+                        catch (Exception)
+                        {
+
+                            Alarm frm = new Alarm();
+                            frm.ShowDialog();
+                            this.Close();
+                        }
+
+                    }
+
                     if (Loop)
                     {
                         Day = Day + 1;

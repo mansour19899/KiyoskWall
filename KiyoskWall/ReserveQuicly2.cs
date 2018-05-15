@@ -203,24 +203,31 @@ namespace KiyoskWall
             foreach (var item in Meal5)
             {
                 t = null;
+
+
                 t = (from r in db.PoonehReservations
-                    where r.Person_Id_Fk == p.Id &(r.Schedule_Id_Fk ==item.schedule1.Id || r.Schedule_Id_Fk == item.schedule2.Id || r.Schedule_Id_Fk == item.schedule3.Id)
+                     where r.Person_Id_Fk == p.Id & r.Schedule.SDate == item.Date &
+                     r.Meal_Id_Fk == item.Meal
                      select r).FirstOrDefault();
+
+
+
+
                 item.reservation = null;
                 if(t!=null)
                 {
                     item.reservation = t;
-                    if (t.Schedule_Id_Fk == item.schedule1.Id)
+                    if (t.Tray_Id_Fk == item.Tray1.Id)
                     {
                         picturs.ElementAt(x * 4 - 1).Image = item.pictuer1;
                     }
                         
-                  else if (t.Schedule_Id_Fk == item.schedule2.Id)
+                  else if (t.Tray_Id_Fk == item.Tray2.Id)
                     {
                         picturs.ElementAt(x * 4 - 1).Image = item.pictuer2;
                     }
                        
-                    else if (t.Schedule_Id_Fk == item.schedule3.Id)
+                    else if (t.Tray_Id_Fk == item.Tray3.Id)
                     {
                         picturs.ElementAt(x * 4 - 1).Image = item.pictuer3;
                     }
@@ -269,13 +276,39 @@ namespace KiyoskWall
             {
                 t = null;
                 t = (from r in db.PoonehReservations
-                     where r.Person_Id_Fk == p.Id & (r.Schedule_Id_Fk == item.schedule1.Id || r.Schedule_Id_Fk == item.schedule2.Id || r.Schedule_Id_Fk == item.schedule3.Id)
+                     where r.Person_Id_Fk == p.Id & r.Schedule.SDate == item.Date &
+                     r.Meal_Id_Fk == item.Meal
                      select r).FirstOrDefault();
 
-                t.Tray_Id_Fk = item.Schedules.ElementAt(food).Tray_Id_Fk;
-                t.Schedule_Id_Fk = item.Schedules.ElementAt(food).Id;
-               // MessageBox.Show("رزرو تغییر کرد");
-                int tt = db.SaveChanges();
+                if (t.Restaurant_Id_Fk ==item.schedule1.Restaurant_Id_Fk)
+                {
+                    t.Tray_Id_Fk = item.Schedules.ElementAt(food).Tray_Id_Fk;
+                    t.Schedule_Id_Fk = item.Schedules.ElementAt(food).Id;
+                    int tt = db.SaveChanges();
+                }
+                else
+                {
+                    db.PoonehReservations.Remove(t);
+
+                    PoonehReservation reserv = new PoonehReservation()
+                    {
+                        Tray_Id_Fk = item.Schedules.ElementAt(food).Tray_Id_Fk,
+                        Person_Id_Fk = p.Id,
+                        Schedule_Id_Fk = item.Schedules.ElementAt(food).Id,
+                        Company_Id_Fk = p.Company_Id_Fk,
+                        Unit_Id_Fk = p.Unit_Id_Fk,
+                        Restaurant_Id_Fk = item.Schedules.ElementAt(food).Restaurant_Id_Fk,
+                        Meal_Id_Fk = item.Schedules.ElementAt(food).Meal_Id_Fk
+
+                    };
+                    db.PoonehReservations.Add(reserv);
+                    item.reservation = reserv;
+                    int x = db.SaveChanges();
+
+                }
+
+
+
 
             }
 
