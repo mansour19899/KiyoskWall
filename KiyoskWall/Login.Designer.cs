@@ -124,14 +124,14 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 32);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Version 1.26";
+            this.label3.Text = "Version 1.27";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KiyoskWall.Resource1.blue;
-            this.ClientSize = new System.Drawing.Size(1280, 1024);
+            this.ClientSize = new System.Drawing.Size(1280, 788);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
