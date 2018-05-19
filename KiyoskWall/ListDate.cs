@@ -383,7 +383,7 @@ namespace KiyoskWall
         {
             Schedules = new List<Schedule>();
             List<Date> DatesAll = GetList();
-          var  Dates=DatesAll.Take(lenght);
+          var  Dates=DatesAll.OrderBy(p=>p.date).ThenBy(p=>p.meal).Take(lenght);
             foreach (var item in Dates)
             {
                 PerMeal per = new PerMeal(item);

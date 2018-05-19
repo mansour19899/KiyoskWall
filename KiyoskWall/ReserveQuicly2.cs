@@ -314,8 +314,11 @@ namespace KiyoskWall
 
             picturs.ElementAt(day * 4 + 3).Image = item.Images.ElementAt(food);
             del.ElementAt(day).Visible = true;
+            del.ElementAt(day).Enabled = true;
+            picturs.ElementAt(day * 4 + 3).Enabled = true;
 
-            
+
+
 
 
         }
@@ -326,9 +329,13 @@ namespace KiyoskWall
             var item = Meal5.ElementAt(day);
 
             t = null;
+
             t = (from r in db.PoonehReservations
-                 where r.Person_Id_Fk == p.Id & (r.Schedule_Id_Fk == item.schedule1.Id || r.Schedule_Id_Fk == item.schedule2.Id || r.Schedule_Id_Fk == item.schedule3.Id)
+                 where r.Person_Id_Fk == p.Id & r.Schedule.SDate == item.Date &
+                 r.Meal_Id_Fk == item.Meal
                  select r).FirstOrDefault();
+
+   
             if(t!=null)
             {
                 db.PoonehReservations.Remove(t);
@@ -337,6 +344,9 @@ namespace KiyoskWall
                 item.reservation = null;
                 del.ElementAt(day).Visible = false;
                 picturs.ElementAt(day * 4 + 3).Image = null;
+                del.ElementAt(day).Enabled = false;
+                picturs.ElementAt(day * 4 + 3).Enabled = false;
+
             }
           
 
