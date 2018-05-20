@@ -38,35 +38,41 @@ namespace KiyoskWall
 
             string dtnow = DateTime.Now.ToPersianDateString();
             string date = dtnow.AddDaysToShamsiDate(-1);
-            var t = db.PoonehReservations.Where(p => p.Person_Id_Fk == id & p.Schedule.SDate.CompareTo(date) == 1)
-                .Select(pp => new { date = pp.Schedule.SDate, NameFood = pp.Tray.Name, meal = pp.Meal_Id_Fk, note = pp.Tray.Note }).OrderBy(u => u.date).ToList();
-
 
             Labels = new List<Label>();
             SetLabel();
             string MealName;
 
-            if (t.ElementAt(0).date.CompareTo(dtnow) == 0)
+            if (Meals.Count() != 0)
             {
-                if (t.ElementAt(0).meal == 1)
-                    MealName = "وعده:  ناهار";
-                else if (t.ElementAt(0).meal == 2)
-                    MealName = "وعده:  شام";
-                else if (t.ElementAt(0).meal == 4)
-                    MealName = "وعده:  سحر";
-                else if (t.ElementAt(0).meal == 5)
-                    MealName = "وعده: افطار";
-                else
-                    MealName = "وعده: ";
+                var t = db.PoonehReservations.Where(p => p.Person_Id_Fk == id & p.Schedule.SDate.CompareTo(date) == 1)
+              .Select(pp => new { date = pp.Schedule.SDate, NameFood = pp.Tray.Name, meal = pp.Meal_Id_Fk, note = pp.Tray.Note }).OrderBy(u => u.date).ToList();
 
-                lblToday.Text = "رزرو امروز :   " + t.ElementAt(0).NameFood + "    (" + t.ElementAt(0).note + ")             " + MealName;
-                t.RemoveAt(0);
-            }
+                if (t.Count() != 0)
+                {
+                    if (t.ElementAt(0).date.CompareTo(dtnow) == 0)
+                    {
+                        if (t.ElementAt(0).meal == 1)
+                            MealName = "وعده:  ناهار";
+                        else if (t.ElementAt(0).meal == 2)
+                            MealName = "وعده:  شام";
+                        else if (t.ElementAt(0).meal == 4)
+                            MealName = "وعده:  سحر";
+                        else if (t.ElementAt(0).meal == 5)
+                            MealName = "وعده: افطار";
+                        else
+                            MealName = "وعده: ";
+
+                        lblToday.Text = "رزرو امروز :   " + t.ElementAt(0).NameFood + "    (" + t.ElementAt(0).note + ")             " + MealName;
+                        t.RemoveAt(0);
+                    }
+                }
 
 
-           if(Meals.Count()!=0)
-            {
-                for (int i = 0; i < Meals.Count(); i++)
+
+
+
+                for (int i = 0; i < Meals.Count() & i < 23; i++)
                 {
 
                     if (Meals.ElementAt(i).Meal == 1)
@@ -101,6 +107,7 @@ namespace KiyoskWall
 
                 }
             }
+
 
             int x = 0;
 
