@@ -63,7 +63,8 @@ namespace KiyoskWall
 
         private void LoadMealDay()
         {
-     
+
+            Time = 0;
 
             btnDeleteReserved.Visible = false;
 
