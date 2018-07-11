@@ -393,40 +393,44 @@ namespace KiyoskWall
                                                               & p.Meal_Id_Fk == item.meal
                              select p).ToList();
 
+                if(Schedules.Count()!=0)
+                {
+                    per.Schedules.Add(Schedules.ElementAt(0));
+                    per.Schedules.Add(Schedules.ElementAt(1));
+                    per.Schedules.Add(Schedules.ElementAt(2));
 
-                per.Schedules.Add(Schedules.ElementAt(0));
-                per.Schedules.Add(Schedules.ElementAt(1));
-                per.Schedules.Add(Schedules.ElementAt(2));
+                    per.schedule1 = Schedules.ElementAt(0);
+                    per.schedule2 = Schedules.ElementAt(1);
+                    per.schedule3 = Schedules.ElementAt(2);
 
-                per.schedule1 = Schedules.ElementAt(0);
-                per.schedule2 = Schedules.ElementAt(1);
-                per.schedule3 = Schedules.ElementAt(2);
+                    Trays = (from qqq in TempTrays
+                             where qqq.Id == per.schedule1.Tray_Id_Fk || qqq.Id == per.schedule2.Tray_Id_Fk || qqq.Id == per.schedule3.Tray_Id_Fk
+                             select qqq).ToList();
+                    per.Trays.Add(Trays.ElementAt(0));
+                    per.Trays.Add(Trays.ElementAt(1));
+                    per.Trays.Add(Trays.ElementAt(2));
 
-                Trays = (from qqq in TempTrays
-                         where qqq.Id == per.schedule1.Tray_Id_Fk || qqq.Id == per.schedule2.Tray_Id_Fk || qqq.Id == per.schedule3.Tray_Id_Fk
-                         select qqq).ToList();
-                per.Trays.Add(Trays.ElementAt(0));
-                per.Trays.Add(Trays.ElementAt(1));
-                per.Trays.Add(Trays.ElementAt(2));
+                    per.Tray1 = Trays.ElementAt(0);
+                    per.Tray2 = Trays.ElementAt(1);
+                    per.Tray3 = Trays.ElementAt(2);
 
-                per.Tray1 = Trays.ElementAt(0);
-                per.Tray2 = Trays.ElementAt(1);
-                per.Tray3 = Trays.ElementAt(2);
+                    MemoryStream mStream = new MemoryStream(Trays.ElementAt(0).Image);
+                    per.pictuer1 = Image.FromStream(mStream);
 
-                MemoryStream mStream = new MemoryStream(Trays.ElementAt(0).Image);
-                per.pictuer1 = Image.FromStream(mStream);
+                    MemoryStream mStreamm = new MemoryStream(Trays.ElementAt(1).Image);
+                    per.pictuer2 = Image.FromStream(mStreamm);
 
-                MemoryStream mStreamm = new MemoryStream(Trays.ElementAt(1).Image);
-                per.pictuer2 = Image.FromStream(mStreamm);
+                    MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(2).Image);
+                    per.pictuer3 = Image.FromStream(mStreammm);
 
-                MemoryStream mStreammm = new MemoryStream(Trays.ElementAt(2).Image);
-                per.pictuer3 = Image.FromStream(mStreammm);
+                    per.Images.Add(Image.FromStream(mStream));
+                    per.Images.Add(Image.FromStream(mStreamm));
+                    per.Images.Add(Image.FromStream(mStreammm));
 
-                per.Images.Add(Image.FromStream(mStream));
-                per.Images.Add(Image.FromStream(mStreamm));
-                per.Images.Add(Image.FromStream(mStreammm));
+                    PerMEAL.Add(per);
+                }
 
-                PerMEAL.Add(per);
+               
 
 
             }
